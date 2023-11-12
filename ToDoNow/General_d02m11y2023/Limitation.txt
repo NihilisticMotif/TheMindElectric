@@ -1,0 +1,17 @@
+General Limitation
+1. No: Relational Database
+2. No: non-Eucledean Geometry
+3. No: Complex Number unless when use with some algorithm e.g. FFT etc.
+5. No: Group By
+6. No: 3D Plot and higher dimensional data visualization
+7. No: Append Table
+8. Have: Replace NaN with 0 as the Default Value
+9. Have: Some Numerical Methods that can be used with this app directly are selected
+
+Include
+1. Table Manipulation
+2. Data Visualization 
+3. Machine Learning
+4. Numerical Method
+5. Interactive Learning Content (Document)
+6. User Document

@@ -1,0 +1,55 @@
+Q: What is Source Map?
+A: It is file.js.map that used for map your original code and the optimized code that run on the browser,
+for making debugging more easily.
+(https://web.dev/articles/source-maps)
+
+//************************************************************************************************************************************
+
+// in tsconfig.json
+{
+  "compilerOptions": {
+    ...,
+    // SourceMap is a file that describe
+    // how each line of our typescript code
+    // maps to the generated javascript code.
+    // e.g. file.js.map
+    "sourceMap": true
+    ...,
+  }
+}
+
+For more advanced debugging scenarios, 
+you can create your own debug configuration launch.json file.
+1. Run and Debug (left triangle logo with a 6 legs bug)
+2. select the create a launch.json file link.
+
+This will create a launch.json file in a .vscode folder with default values detected in your project.
+
+// in launch.json file
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      // Directory of the ts code
+      "program": "${workspaceFolder}/helloworld.ts",
+      // Directory of the tsconfig.json file 
+      // https://stackoverflow.com/questions/55846442/could-not-find-the-task-tsc-build-tsconfig-json
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": ["${workspaceFolder}/out/**/*.js"]
+    }
+  ]
+}
+
+//************************************************************************************************************************************
+
+Reference:
+1. https://code.visualstudio.com/docs/typescript/typescript-debugging
+2. https://youtu.be/d56mG7DezGs?si=pEjcfgr5VFGT26Kb
+3. https://web.dev/articles/source-maps
+4. https://stackoverflow.com/questions/55846442/could-not-find-the-task-tsc-build-tsconfig-json

@@ -1,0 +1,11 @@
+
+Read this:
+1. https://dev.to/collegewap/how-to-render-array-of-components-in-react-fma
+2. https://youtu.be/XtS14dXwvwE?si=BahBAV1gwVJpyfgg
+
+To Do Now
+1. Correctly Delete Column Name in C02_Column
+2. Correctly Filter Column Name in C02_Column
+3. Add IsSelect State
+4. No Duplicate Name 
+5. Column Setting

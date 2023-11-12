@@ -1,0 +1,5 @@
+See ".../TypeScriptTutorial/Code/tsconfig.json"
+
+Reference
+1. https://youtu.be/d56mG7DezGs?si=axEx1FV776EYhmnF
+2. https://medium.com/@bobjunior542/maximizing-typescript-project-quality-the-best-configuration-settings-for-tsconfig-json-15b383b2502d

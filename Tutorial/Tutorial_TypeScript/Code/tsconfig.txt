@@ -1,0 +1,44 @@
+// Tu03_ConfigFile.txt
+// create tsconfig.json file
+// $ tsc --init
+
+
+// tsconfig.json 
+// [control] + [space] => see all the avaible setting option
+{
+  "compilerOptions": {
+    ...
+    ...
+    // This option specifies the ECMAScript target version to use when compiling your TypeScript code. 
+    // It's important to set this option to the lowest version that your code requires to run, 
+    // as this will ensure maximum compatibility with older browsers and environments.
+    "target": "es2016", 
+    ...
+    // The module compiler option specifies which module format to use when compiling your TypeScript code. 
+    // e.g. commonjs, amd, system, and es2015
+    "module": "common.js",
+    ...
+    // Directory that contain the source code.
+    // src = source
+    "rootDir": "./src",    
+    ...
+    // Directory that contain JS File.
+    // dist = distribute
+    "outDir": "./dist",           
+    ...
+    // Remove all the comment of the complied JS files.
+    "removeComments": true, 
+    ...
+    // Remove all the bug (error code) of the complied JS files.
+    "onEmitOnError": true,  
+    ...
+  }
+}
+// compile MyFile.ts
+// $ tsc MyFile.ts
+// compile all file in the project
+// $ tsc
+
+Reference
+1. https://youtu.be/d56mG7DezGs?si=O-0VGtE2fdqKh8KN
+2. https://medium.com/@bobjunior542/maximizing-typescript-project-quality-the-best-configuration-settings-for-tsconfig-json-15b383b2502d

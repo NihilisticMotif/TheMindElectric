@@ -1,0 +1,70 @@
+Note
+ * Table similar to Excel and can be used for ML prediction and Data Visualization
+ * CRUD = Create Read Update Delete
+
+Table Page
+
+C00_Header (File Safing System and Open Panel)
+ * Import/Export Table
+ * Export All Data
+ * Export Filtered Data
+ * Export Visualized Data
+ * Save (Table, Visualization Setting, Filter Setting and etc.)
+ * Undo
+ * Open Documentation Page
+ * Open/Close New Panel
+
+C01_Table
+ * [C]
+ * Import/Export Table
+ * Create Index Column
+ * [R]
+ * Shape
+ * Correlation Matrix
+ * ColumnInspection
+ * [U]
+ * Update Column
+ * [D]
+ * Delete Table (Prompt: Do you want to export data?)
+
+C02_Column
+ * [C]
+ * np.linspace/np.arange
+ * duplicate column
+ * [R]
+ * Search Column
+ * [U]
+ * Rename
+ * IsSelect [Visual, ReadCell, ColumnInspection]
+ * Filter Editor [and,or,>,<,=,!=,<=,>=,IsNaN,IsInt] => [Visual, ReadCell, Replace, Delete]
+ * Transform Data
+ * [D]
+ * Delete
+
+C03_Row 
+ * [C]
+ * Create Row
+ * [R]
+ * Search Row
+ * [U]
+ * Update Row
+ * [D]
+ * Delete Row
+
+C04_Data Visualization
+ 4.1 Canvas
+ * Export Image
+ * Label XY and Title
+ 4.2 Visualization Setting
+ * [1D][DistributionHistogram]: DH(X, bin=30, IsScale)*RGBA*LineWidth
+ * [2D][Plot2D]: [X,Y] = [Col1,Col2]*RGBA*LineWidth
+ * [3D][Contour]: [X,Y,Z] = [Col1,Col2,Col3]*RGBA
+ 4.3 Visualization Filter
+ 
+C05_Machine Learning
+ * Model {Type: [Neural Network, Random Forest ...], function: [SelectType,Export/Import Type]}
+ * Create Predicted Column 
+ * Evaluation Score (Train Test Split, Final Score, EpochLoss)
+
+C06_Numerical Analysis
+ * etc.

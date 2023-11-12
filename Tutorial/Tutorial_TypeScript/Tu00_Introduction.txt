@@ -1,0 +1,15 @@
+Q: What is Type Script?
+A: Type Script is the statically typed programming language that is developed on top of Java Script.
+
+It is used for checking if the programmer write code with wrong variable.
+
+It have to run on top of Type Script Complier before run on the browser.
+
+It is good for medium to large project.
+
+Q: What is different between Type Script and Java Script
+A: 
+    // index.js
+    // index.ts
+
+Reference: https://youtu.be/d56mG7DezGs?si=V2xDvCJks1Wx9hWY

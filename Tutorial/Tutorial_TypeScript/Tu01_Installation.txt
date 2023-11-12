@@ -1,0 +1,2 @@
+$ sudo npm i -g typescript # install typescript
+$ tsc -v # Version of Type Script

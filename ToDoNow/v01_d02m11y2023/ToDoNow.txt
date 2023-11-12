@@ -1,0 +1,12 @@
+To Do Now
+1. Create Panels
+2. Design Panels 
+
+Type of Panels
+1. Table Inspection, Column Search and File Saving System
+2. Column Editor
+3. Insert Row, Create Row
+4. Data Visualization Setting 
+5. Data Visualization Canvas 
+6. Not Now: Machine Learning
+7. Not Now: Numerical Method

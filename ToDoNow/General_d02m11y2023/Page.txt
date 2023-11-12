@@ -1,0 +1,6 @@
+Page
+1. Table Page
+ * Table similar to Excel and can be used for ML prediction and Data Visualization
+2. Documentation Page
+ * User Document (About Me and Programming Advice)
+ * Learning Mathematics with interactive UXUI

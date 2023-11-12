@@ -1,0 +1,12 @@
+Limitation in Version No.1
+01. No: Machine Learning
+02. No: Numerical Method 
+03. No: XYZ Contour
+04. No: BackEnd
+05. No: Import/Export Data
+06. No: ML and Numerical Method
+07. No: Documentation Page
+08. No: Filter Data
+09. Have: Default CSV File
+10. Have: np.linspace and Transform
+11. Have: Table and Data Visualization Canvas

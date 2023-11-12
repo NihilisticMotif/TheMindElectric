@@ -1,0 +1,9 @@
+
+I will go to fitness.
+
+After that I will
+1. [SS_NewColumn,setSS_NewColumn] = useState() // Use with Create, Search and Sort Column
+ * SS_NewColumnIndex = SS_NewColumn
+2. Scroll Bar
+3. IsViewC01, IsViewC02 // View in C01_Table and C02_Column
+4. Write Comment.

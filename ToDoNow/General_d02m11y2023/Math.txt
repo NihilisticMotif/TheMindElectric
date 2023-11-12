@@ -1,0 +1,18 @@
+Mathematical Fields
+1. Statistics 
+ * e.g. Probability Distribution, Corelation Matrix , P value etc.
+ * etc.
+2. Supervised ML 
+ * [A] Data Prediction
+ * e.g. Linear Algebra and Derivative, Big O time complexity, Statistical Evaluation etc.
+ * etc.
+3. Unsupervised ML
+ * [A] Feature Extraction
+ * [A] Group Similar Data
+ * e.g. K mean etc.
+ * etc.
+4. Numerical Method 
+ * [A] Feature Extraction
+ * [A] Data Approximation
+ * e.g. Taylor Series, FFT etc.
+ * etc.
