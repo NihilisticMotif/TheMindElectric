@@ -1,0 +1,4 @@
+{AnyName}
+// Avoid using string 'let', 'id' in {AnyName}
+// Keep Name Short
+// Write // from 'directory'

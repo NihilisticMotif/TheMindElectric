@@ -1,0 +1,4 @@
+const JSX_ + {DOM_Tag?} + _? + {AnyName}:JSX.Element
+// DOM_Tag e.g. H1, BUTTON, TABLE, DIV etc.
+// DOM_Tag? = Optional
+// _? = Optional

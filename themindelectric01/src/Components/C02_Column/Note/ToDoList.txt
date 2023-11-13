@@ -1,0 +1,27 @@
+Introvert Column
+0. A_Column
+1. C_CreateColumn
+2. D_DeleteColumn
+3. R_SearchColumn
+4. U_SelectColumn
+5. U_RenameColumn
+
+Extrovert Column
+1. [R]: Filter Data
+2. [R]: Inspect Column
+3. [U]: Transform Column
+4. [U]: Replace Data
+5. [R]: Visualization
+
+File.js 
+ * INPUT
+ * HOOK 
+ * FUNCTION_00: Function Comment No. 00
+ * ...
+ * FUNCTION_N: Comment No. N
+ * JSX_00: Comment No. 00
+ * ...
+ * JSX_N: Comment No. N
+ * OUTPUT
+
+Note: By default FUNCTION and VARIABLE are group together as FUNCTION

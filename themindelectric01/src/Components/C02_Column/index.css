@@ -1,0 +1,55 @@
+
+#C02id_Div {
+    margin: auto;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(122, 122, 122);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    display: block;
+    width: 500px
+}
+
+.C02id {
+    font-size: 16px;
+    border: 1px solid rgb(205, 205, 205, 0);
+    border-left: 5px solid rgb(205, 205, 205, 0);
+    border-right: 5px solid rgb(205, 205, 205, 0);
+}
+
+.C02id_DivSelect {
+    display: grid;
+    grid-template-columns: repeat(3, 90px 2fr) 0px;
+}
+
+.C02id_Select{
+    font-size: 16px;
+    display: grid;
+}
+
+.C02id input[type="text"] {
+    font-size: 18px;
+}
+
+button.C02id,
+button.C02id_Select,
+button {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+/*
+https: //stackoverflow.com/questions/50891589/how-to-add-a-scroll-bar-to-a-component-in-react
+*/
+#C02id_ScrollColumnName {
+    overflow-y: scroll;
+    height: 250px;
+}
+
+#C02id_SelectAllButton {
+    font-size: 20px;
+    padding: auto;
+}
+
+#C02id_SelectAll {
+    font-size: 15px;
+}

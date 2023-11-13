@@ -1,0 +1,5 @@
+// If the Component is in index.tsx,
+// it should have the same name as its folder and name like this.
+C+{N}+_+{AnyName}
+
+// If the Component is in Coms Folder, it should name as its folder.

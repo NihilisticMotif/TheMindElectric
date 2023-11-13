@@ -1,0 +1,8 @@
+const [SS_Something, setSS_Something] = useState<TypeSomething>(DefaultValue)
+// SS = Set State
+// type of DefaultValue === type of SS_Something === TypeSomething
+
+// In case that Something is an Array
+let ss_Somethings:TypeSomething[] = [...SS_Somethings]
+ss_Somethings = f_DoSomething(ss_Somethings)
+setSS_Somethings(ss_Somethings)

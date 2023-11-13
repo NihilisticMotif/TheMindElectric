@@ -1,0 +1,3 @@
+function f_DoSomething(x:typeX,y:typeY,z:typeZ):typeOutput{
+    ...
+}

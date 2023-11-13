@@ -1,0 +1,26 @@
+This is the folder pattern for developing the front end components in React JS and TypeScript.
+
+FolderName: C+{N}+_+{AnyName}
+// C = Components No.
+// const AnyName:string
+// const N:number // 2 Digits
+    [f] Coms
+    // Coms = Components
+        C_+{AnyName}+.tsx
+        // C = [Create, Copy, Define, Initialize, Import, Export]
+        R_+{AnyName}+.tsx
+        // R = [Read, Select, Filter, Visualize]
+        U_+{AnyName}+.tsx
+        // U = [Update, Transform, Convert, Delete]
+        etc_+{AnyName}+.tsx
+        // etc = Other
+    [f] Note 
+        {AnyName}+'.txt'
+        // Other Description 
+        // e.g. ToDoNow, Bugs, Limitation of the App etc.
+    [f] Type 
+        {AnyName}+'.tsx'
+        // Type of custom Object
+    index.css
+    index.tsx   
+    // export default 'C'+N+'_'+AnyName

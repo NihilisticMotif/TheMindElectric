@@ -1,0 +1,31 @@
+#C01id_Table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 20px;
+}
+
+#C01id_Table td,
+#C01id_Table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#C01id_Table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#C01id_Table tr:hover {
+    background-color: #ddd;
+}
+
+#C01id_Table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0481aa;
+    color: white;
+}
+
+#C01_Button button {
+    font-size: 17px;
+}

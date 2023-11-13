@@ -1,0 +1,5 @@
+// for loop
+for(let i:number=0;i<...;i++){
+    // do not use leti
+    // do not use thing naming technique with loop, map, render
+}

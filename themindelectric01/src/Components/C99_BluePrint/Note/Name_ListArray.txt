@@ -1,0 +1,2 @@
+const {AnyName}+s:AnyType[]
+// List of Something

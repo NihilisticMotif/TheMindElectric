@@ -1,0 +1,5 @@
+let_ + {AnyName}:any
+
+// Avoid using any
+// if the variable is JSX.Element, then not use let and see 'Name_JSX.txt'
+// name let when the variable is initialized by let and/or const

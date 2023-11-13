@@ -1,0 +1,11 @@
+ Common Name     |  Meaning
+01. ShortName    | loop, parameter, map, 
+02. let_ + ...   | string | number | boolean | null
+03. ... + s      | type []
+04. f_ + ...     | function
+05. JSX_ + ...   | JSX.Element
+06. SS_ + ...    | useState()
+07. TS_ + ...    | type defined
+08. C + {N} + id_ + {AnyName} | id and/or class of JSX object
+09. C + {N} + _ + {AnyName}   | in index.tsx
+10. {FileName}   | in Coms folder

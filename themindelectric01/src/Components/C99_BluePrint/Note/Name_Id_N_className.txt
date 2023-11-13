@@ -1,0 +1,3 @@
+const C + {N} + id_ + {AnyName} + {key?}:string
+// Id and/or className of the components for input tag and CSS class
+// key? = add key index, if it is exist

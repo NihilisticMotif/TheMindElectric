@@ -1,0 +1,815 @@
+let let_CountDelete:number=0
+ 
+IsSelect:boolean
+ 
+SS_IsDeleteSelect
+ 
+false
+ 
+true
+ 
+    const [SS_IsDeleteSelect,setSS_IsDeleteSelect]= useState<boolean>(true)
+ 
+IsSelect:boolean
+ 
+        // Is Delete selected column?
+        setSS_IsDeleteSelect(IsSelect)
+ 
+        // Is Delete selected column?
+        setSS_IsDeleteSelect(IsSelect)
+ 
+        // Count Normally
+        setSS_IsDeleteSelect(true)
+ 
+    for(let i:number=0;i<ss_Columns.length;i++){
+        if(ss_Columns[i].IsSelect===true){
+            Let_CountColumn+=1
+        }
+    }
+    let let_CountColumn2:number
+    if(SS_IsDeleteSelect){
+        
+    }
+ 
+IsSelect:boolean
+ 
+            setSS_IsDeleteSelect(IsSelect)
+ 
+Open
+ 
+SS_IsDeleteSelect
+ 
+    function f_OpenDeleteSelect(){
+        
+    }
+ 
+f_SelectAll
+ 
+//****************************************************************************
+// FUNCTION_03: Un Select AllColumns
+//****************************************************************************
+    function f_DeleteUnSelect():void{
+        let ss_Columns:TS_Column[]= [...SS_Columns];
+        for(let i:number=0;i<ss_Columns.length;i++){
+            ss_Columns[i].IsSelect=false
+        }
+        f_Reset(ss_Columns);
+    }
+ 
+UnSelectAl
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Reset(Math.random()
+ 
+        setSS_Reset(Math.random())
+ 
+        let ss_Columns:TS_Column[]= [...SS_Columns];
+        for(let i:number=0;i<ss_Columns.length;i++){
+            ss_Columns[i].IsSelect=true
+        }
+ 
+ Filtered 
+ 
+Filter
+ 
+p
+ 
+{
+        let ss_Columns:TS_Column[]= [...let_FilterColumns];
+        for(let i:number=0;i<ss_Columns.length;i++){
+            ss_Columns[i].IsSelect=true
+        }
+        setSS_Columns(ss_Columns);
+        setSS_Reset(Math.random())
+    }
+ 
+            if(ss_Columns[i].Key===ThisColumn.Key){
+                let let_IsSelect:boolean
+                if(ThisColumn.IsSelect===false){
+                    let_IsSelect=true
+                }
+                else{
+                    let_IsSelect=false
+                }
+                ss_Columns[i].IsSelect=let_IsSelect
+            }
+ 
+SS_Columns:TS_Column[],
+ 
+SS_Columns,
+ 
+<h1 id='C02id_Title'>Column</h1>
+ 
+#C02id_Title{
+    font-size: 25px;
+    display: block;
+}
+ 
+    border: 1px solid rgb(205, 205, 205, 0);
+    border-left: 5px solid rgb(205, 205, 205, 0);
+    border-right: 5px solid rgb(205, 205, 205, 0);
+ 
+ .C02id
+ 
+            alert(ss_Columns[i].Name+':'+ss_Columns[i].IsSelect.toString())
+ 
+    // Selecting only some Columns in the C01_Table
+    const [SS_IsSelect,setSS_IsSelect]= useState<boolean>(ThisColumn.IsSelect)
+ 
+ if(SS_IsSelect===true)
+ 
+        if(SS_IsSelect===false){setSS_IsSelect(true)}
+        else if(SS_IsSelect===true){setSS_IsSelect(false)}
+ 
+alert(ss_Columns[i].Name+':'+ss_Columns[i].IsSelect.toString())
+ 
+let ss_Columns:TS_Column[]= [...SS_Columns];
+ 
+let JSX_SelectButton:JSX.Element
+    const C02id_CheckButton:string = 'C02id_CheckButton'+ThisColumn.Key.toString()
+ 
+        // if (SS_IsSelect===true){
+        //     (document.getElementById(C02id_CheckButton)as HTMLInputElement).style.backgroundColor = "red";
+        //     setSS_IsSelect(false)
+        // }
+        // else if (SS_IsSelect===false){
+        //     (document.getElementById(C02id_CheckButton)as HTMLInputElement).style.backgroundColor = "white";
+        //     setSS_IsSelect(true)}
+ 
+        // if (SS_IsSelect===true){
+        //     (document.getElementById(C02id_CheckButton)as HTMLInputElement).style.backgroundColor = "red";
+        //     setSS_IsSelect(false)
+        // }
+        // else if (SS_IsSelect===false){
+        //     (document.getElementById(C02id_CheckButton)as HTMLInputElement).style.backgroundColor = "white";
+        //     setSS_IsSelect(true)}
+ 
+        // Replace the previous name (the name with selected key) with new name
+ 
+                ss_Columns.splice(i, 1,{
+                Key: ThisColumn.Key,
+                Name: ThisColumn.Name, 
+                IsSelect: SS_IsSelect,
+                IsVisible: true
+            });
+ 
+[...
+ 
+    FilterColumns={let_FilterColumns}
+ 
+    AllColumns,
+ 
+    AllColumns:TS_Column[]
+ 
+<h1 id='C02id_Title'>Column</h1>
+ 
+#C02id_Title{
+    font-size: 25px;
+    height: 15px;
+    display: grid;
+}
+ 
+    height: 100px;
+ 
+<h1>Column</h1>
+ 
+div className='C02id_DivSelect'
+ 
+div
+ 
+</div>
+ 
+ 100px
+ 
+, 50px 1fr
+ 
+
+.C02id button {
+    background-color: rgb(255, 255, 255);
+}
+ 
+    mask-repeat: ;
+ 
+    font-size: 16px;
+ 
+<td>
+ 
+<td>
+ 
+</td>
+ 
+    height:100%;
+ 
+    margin: 0;
+ 
+        <div className='C02id'>
+ 
+        </div>
+ 
+</div>
+ 
+</div>
+ 
+</div>
+ 
+        <h1 className='C02id'>Wellcome to the Amazing Digital Circus</h1>
+ 
+border-top: 100px;
+ 
+    display: block;
+    padding: 10px;
+ 
+    position: relative;
+ 
+    display: block;
+    height:100px
+ 
+    height:100px
+ 
+    height: 100%;
+ 
+    height: 100px;
+ 
+    display: grid;
+    height: 40px;
+ 
+    .C02id;
+    
+ 
+.C02id
+ 
+</div>
+ 
+</td>
+ 
+    padding:3px
+ 
+</td>
+ 
+</td>
+ 
+</td>
+ 
+</td>
+        <td>
+ 
+        <td><button className='C02id'>Select All Filtered</button></td>
+ 
+    </>)
+ 
+{
+    // JSX.Element
+}
+ 
+import './index.css';
+ 
+import { useState , useEffect} from 'react';
+ 
+import C_DefineObject from './Coms/C_DefineObject';
+ 
+import TS_Object from './Type/TS_Object';
+ 
+// Import Order
+ 
+Add 
+ 
+    font-size: 18px;
+ 
+_Main
+ 
+#C02id_Main h1{
+    font-size: 10px;
+}
+
+ 
+#C02id_CreateNewColumn {}
+ 
+_Main
+ 
+_Main
+ 
+_Main
+ 
+.C02id_Main{
+    font-size: 3em sans-serif;
+}
+ 
+.#C02id_Main{
+    display: grid
+}
+ 
+</div>
+ 
+</div>
+ 
+</>
+ 
+</td>
+ 
+<h1>
+ 
+</h1>
+ 
+</ti>
+ 
+inline-block
+ 
+lexbox
+ 
+#C02id_CreateNewColumn{
+}
+ 
+    display: grid
+ 
+        alert(let_NewName)
+        /*
+ 
+6. SS_ + ...  | useState()
+7. TS_ + ...  | type defined
+ 
+7. ShortName  | loop, parameter
+ 
+2. f_ + ...   | function
+ 
+1. JSX_ + ... | JSX.Element
+ 
+3. SS_ + ...  | useState()
+ 
+number
+ 
+primative
+ 
+letP
+ 
+_
+ 
+ have same name as its file (if it
+ 
+ have same name as its folder (if it
+ 
+// Component have same name as its folder (if it is in index.tsx)
+ 
+,index
+ 
+// for loop
+for(let i:number=0;i<...;i++){
+    // do not use leti
+    // do not use thing naming technique with loop, map, render
+}
+ 
+S
+ 
+import TS_Person from './Type/TS_Person.tsx';
+ 
+type TS_ColumnList={
+    Name:string,
+    Gender:boolean,
+    Age:number
+}
+ 
+
+const + {AnyName}:any
+ 
+    let num:number=0
+ 
+SS
+ 
+const JSX_ + {DOM_Tag?} + _? + {AnyName}:JSX.Element
+// DOM_Tag e.g. H1, BUTTON, TABLE, DIV etc.
+// DOM_Tag? = Optional
+// _? = Optional
+ 
+const C + {N} + id_ + {AnyName} + {key?}:string
+// Id and/or className of the components for input tag and CSS class
+// key? = add key index, if it is exist
+ 
+const [SS_Something, setSS_Something] = useState<type_of_SS_Something>(DefaultValue)
+// SS = Set State
+// type of DefaultValue === type of SS_Something === type_of_SS_Something
+ 
+type TS_ + {AnyName} ={...}
+// TS = Type Script
+ 
+// PARAMETER
+ 
+import C_CreateColumn from './Coms/C_CreateColumn';
+import C_DefineColumn from './Coms/C_DefineColumn';
+ 
+const AnyName+_S:AnyType[]
+// List of Something
+ 
+const JSX_ + {DOM_Tag} + _ + AnyName:JSX.Element
+ 
+TH_Column
+ 
+// 
+ 
+        'C_'+AnyName
+ 
+:JSX.Element
+ 
+import C_CreateColumn from './Coms/C_CreateColumn';
+import C_DefineColumn from './Coms/C_DefineColumn';
+ 
+function
+ 
+//****************************************
+ 
+import C01_Table from "./C01_Table";
+import C02_Column from "./C02_Column";
+
+ 
+import { useState , useEffect} from 'react';
+ 
+import C01_Table from "./C01_Table";
+import C02_Column from "./C02_Column";
+ 
+import TS_Column from './Type/TS_Column';
+ 
+<U_SelectAll
+    // SS_SelectAll={SS_SelectAll}
+    // setSS_SelectAll={setSS_SelectAll}
+    SS_Column={SS_Column}
+    setSS_Column={setSS_Column}
+    setSS_Reset={setSS_Reset}
+/>
+<U_UnSelect
+    //SS_SelectAll={SS_SelectAll}
+    //setSS_SelectAll={setSS_SelectAll}
+    SS_Column={SS_Column}
+    setSS_Column={setSS_Column}
+    setSS_Reset={setSS_Reset}
+/>
+ 
+        // any is used with f_Sort 
+ 
+:void
+ 
+// Default Column JSX
+ 
+=
+<>
+<div>
+{JSX_SelectButton}
+<td><button className='C02id' onClick={f_OpenRename}>Rename</button></td>
+<td><button className='C02id' onClick={f_OpenDelete}>Delete</button></td>
+<td><button className='C02id' onClick={f_OpenSetting}>...</button></td>
+<td><h1 className='C02id'>{ThisColumn.Name}</h1></td>
+</div>
+</>
+ 
+ 2 => 
+ 
+// SS_Display == 1 
+// SS_Display ==
+ 
+ 2 => Delete JSX Column  | f_OpenDelete => setSS_Display(2) => Open Delete JSX Column 
+ 
+=> Rename JSX Column  | f_OpenRename => setSS_Display(1) => Open Rename JSX Column 
+ 
+// SS_Display == 0 => 
+ 
+Default JSX Column | f_Cancel     => setSS_Display(0) => Open Default JSX Column
+ 
+let_
+ 
+let_
+ 
+SS_
+ 
+setSS_Reset,     // from ../index.js, f_Rename, f_Delete | Reset and Update Page
+ 
+setSS_Reset,
+ 
+                Index={index+1}
+ 
+// DEFAULT: Math.random()
+ 
+require
+ 
+                    
+ 
+// DEFAULT: false
+ 
+// DEFAULT: true
+ 
+                        /////////////////////////////
+ 
+                        /////////////////////////////
+ 
+                        /////////////////////////////
+ 
+                        /////////////////////////////
+ 
+boolean
+ 
+     // from ../index.js, f_Rename, f_Delete | Reset and Update Page
+    // https://stackoverflow.com/questions/56649094/how-to-reload-a-component-part-of-page-in-reactjs
+ 
+                     // 1
+                     // 2
+                     // 3
+                     // T
+ 
+import { useState } from 'react';
+ 
+import { useState } from 'react';
+ 
+import './index.css';
+ 
+import { useState , useEffect} from 'react';
+
+ 
+import R_FilterColumn from './Coms/R_FilterColumn';
+import C_CreateColumn from './Coms/C_CreateColumn';
+import C_DefineColumn from './Coms/C_DefineColumn';
+ 
+    Index,           // Position of each Column in SS_Column
+ 
+    Index:number,           // Position of each Column in SS_Column
+ 
+// TYPE
+ 
+{
+    SS_Column,       // from ../index.js, Update Columns
+    setSS_Column,    // from ../index.js, Update Columns
+    setSS_Reset      // from ../index.js, Reset after update Column
+}:
+ 
+} onClick={f_CreateColumn}
+ 
+// https://stackoverflow.com/questions/31048953/what-are-these-three-dots-in-react-doing
+ 
+{
+                // Property of the New Column 
+                Key: let_NewKey,    
+                Name: NewColumn, 
+                IsSelect:false,
+                IsVisible: true
+                }
+ 
+// HOOK: setState()
+ 
+:(S:number)=>void
+ 
+(S:TS_Column)=>void
+ 
+TS_Column[]
+ 
+:{
+    TS_Column[],
+    React.Dispatch<React.SetStateAction<any>>,
+    // https://stackoverflow.com/questions/65823778/how-can-i-define-type-for-setstate-when-react-dispatchreact-setstateactionstri
+    React.Dispatch<React.SetStateAction<any>>
+}
+ 
+:{
+    TS_Column[],
+    React.Dispatch<React.SetStateAction<any>>,
+    // https://stackoverflow.com/questions/65823778/how-can-i-define-type-for-setstate-when-react-dispatchreact-setstateactionstri
+    React.Dispatch<React.SetStateAction<any>>
+}
+ 
+value:TS_Column[])=>void
+ 
+React.Dispatch<React.SetStateAction<TS_Column[]>>
+ 
+</React.SetStateAction>
+ 
+
+
+    React.Dispatch<React.SetStateAction<boolean>>
+ 
+import './index.css';
+ 
+    type TS_Column={
+    // Properties of Each Column
+        Key:number,
+        Name:string,        // Column Name
+        IsSelect:boolean,   // Is the Column display in C01_Table
+        IsVisible:boolean   // Is the Column display in C02_Column
+    }
+ 
+</React.SetStateAction>
+ 
+/React.SetStateAction>
+ 
+    
+    // Select All Column
+    const [SS_SelectAll,setSS_SelectAll]=useState(false)
+ 
+    // Properties of Each Column
+    // 0. Key        
+    // 1. ColumnName
+    // 2. IsSelect          // Is the Column display in C01_Table
+    // 3. IsVisible      // Is the Column display in C02_Column
+ 
+import U_SelectAll from './subcomponents/U_SelectAll'
+import U_UnSelect from './subcomponents/U_UnSelect';
+ 
+import { useState } from 'react';
+ 
+HTML
+ 
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+ 
+<C00_Header/>
+ 
+<C02_Column/>
+ 
+import { useState , useEffect} from 'react';
+import './index.css';
+import R_FilterColumn from './Coms/R_FilterColumn';
+import C_CreateColumn from './Coms/C_CreateColumn';
+import C_DefineColumn from './Coms/C_DefineColumn';
+
+const C02_Column = (
+//****************************************************************************
+// INPUT
+//****************************************************************************
+) => {
+//****************************************************************************
+// HOOK
+//****************************************************************************
+    // Reset Column List after Update Column List (Create, Rename, Delete, Filter and Sort)
+    const [SS_Reset, setSS_Reset] = useState<number>(1);
+    // https://stackoverflow.com/questions/56649094/how-to-reload-a-component-part-of-page-in-reactjs
+
+    // SS_Column = Set State Column List
+    // Properties of Each Column
+    // 0. Key        
+    // 1. ColumnName
+    // 2. IsSelect          // Is the Column display in C01_Table
+    // 3. IsVisible      // Is the Column display in C02_Column
+    const [SS_Column,setSS_Column]=useState([
+        {Key: 0, Name: 'Row Index'            , IsSelect: false, IsVisible: true},
+        {Key: 1, Name: 'Weezer'               , IsSelect: false, IsVisible: true},
+        {Key: 2, Name: 'Tally Hall'           , IsSelect: false, IsVisible: true},
+        {Key: 3, Name: 'Que, The Human Editor', IsSelect: false, IsVisible: true},
+        {Key: 4, Name: 'Human Centipede'      , IsSelect: false, IsVisible: true},
+        ]);
+
+    // SS_Filter filter Column by Search Name
+    const [SS_Filter,setSS_Filter]=useState('');
+    
+    // Select All Column
+    const [SS_SelectAll,setSS_SelectAll]=useState(false)
+
+//****************************************************************************
+// JSX_00: Filter SS_Column.Name by IsVisible=true
+//****************************************************************************
+    let ss_Column=[...SS_Column]
+
+    // Every columns that satisfy 1 of 3 conditions will IsVisible = true and appear in C02_Column
+    //
+    // 1. Consist of SS_Filter in their name
+    //
+    // 2. Created (C_CreateColumn: [f_CreateColumn]) as the New Column 
+    // before being update (R_FilterColumn.js: [f_Filter, f_SortD])
+    //
+    // 3. Renamed (C_DefineColumn: [f_Rename]) Column 
+    // before being update (R_FilterColumn.js: [f_Filter, f_SortD])
+    //
+    // Filter Every Column the satisfy the condition
+    for(let i=0;i<ss_Column.length;i++){
+        if(ss_Column[i].Name.includes(SS_Filter)===true || ss_Column[i].IsVisible===true){
+            ss_Column[i].IsVisible=true
+        }
+        else{ss_Column[i].IsVisible=false}
+    }
+    let let_FilterColumn = (SS_Column.filter(Column=>
+        Column.IsVisible===true
+        // https://react.dev/learn/rendering-lists
+    ));
+    let JSX_Column = let_FilterColumn.map(
+        (Column,index) => 
+            <div key={Column.Key}>
+            <C_DefineColumn
+                // Property
+                Index={index+1}
+                Key={Column.Key} 
+                ColumnName={Column.Name}
+                IsSelect={Column.IsSelect}
+                IsVisible={Column.IsVisible}
+                // Set State Hook
+                setSS_Reset={setSS_Reset}
+                SS_Column={SS_Column}
+                setSS_Column={setSS_Column}
+            />
+            </div>
+            );
+    // https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key
+    // https://youtu.be/XtS14dXwvwE?si=rYQOe_tJbxmSnDWE
+    // https://react.dev/learn/rendering-lists#where-to-get-your-key
+    // https://stackoverflow.com/questions/72217570/insert-counter-in-a-reactjs-map
+
+//****************************************************************************
+// JSX_01: Indicate the structure of let_FilterColumn and SS_Column
+//****************************************************************************
+    const Indicator = <>
+<h1>Indicator</h1>
+<h3>SS_Column Length: {SS_Column.length}</h3>
+<h3>SS_Filter: {SS_Filter}</h3>
+<h3>let_FilterColumn Type: {
+    JSON.stringify(let_FilterColumn)
+    // https://stackoverflow.com/questions/5612787/converting-an-object-to-a-string
+}</h3>
+<h3>let_FilterColumn Length: {
+    let_FilterColumn.length}</h3>
+<h3>let_FilterColumn: {
+    let_FilterColumn.constructor.toString()
+    // https://stackoverflow.com/questions/11182924/how-to-check-if-javascript-object-is-json
+}</h3>
+<hr/>
+</>
+//****************************************************************************
+// OUTPUT
+//****************************************************************************
+    return (
+<>
+<div id='C02id_Div'>
+{
+// Create New Column in Column List
+}
+<C_CreateColumn 
+    SS_Column={SS_Column} 
+    setSS_Column={setSS_Column}
+    setSS_Reset={setSS_Reset}
+/>
+<hr/>
+{
+// Filter and Sort Column List
+}
+<R_FilterColumn 
+    setSS_Filter={setSS_Filter} 
+    setSS_Reset={setSS_Reset}
+    SS_Column={SS_Column}
+    setSS_Column={setSS_Column}
+/>
+<hr/>
+<U_SelectAll
+    SS_SelectAll={SS_SelectAll}
+    setSS_SelectAll={setSS_SelectAll}
+    SS_Column={SS_Column}
+    setSS_Column={setSS_Column}
+    setSS_Reset={setSS_Reset}
+/>
+<U_UnSelect
+    SS_SelectAll={SS_SelectAll}
+    setSS_SelectAll={setSS_SelectAll}
+    SS_Column={SS_Column}
+    setSS_Column={setSS_Column}
+    setSS_Reset={setSS_Reset}
+/>
+<hr/>
+{
+// JSX_Column = List of all visible column
+// SS_Reset only reset {JSX_Column}
+}
+<div key={SS_Reset} id='C02id_ScrollColumnName'>
+{JSX_Column}
+</div>
+
+<hr/>
+</div>
+</>
+)
+}
+//****************************************************************************
+export default C02_Column
+ 
+import U_SelectAll from './subcomponents/U_SelectAll'
+import U_UnSelect from './subcomponents/U_UnSelect';
+ 
+
+function MyButton({ title }: { title: string }) {
+  return (
+    <button>{title}</button>
+  );
+}
+
+function MyApp() {
+  return (
+    <div>
+      <h1>Welcome to my app</h1>
+      <MyButton title="I'm a button" />
+    </div>
+  );
+}
+ 
+: { title: string }
+ 
