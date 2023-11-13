@@ -8,12 +8,12 @@ import C_DefineColumn from './Coms/C_DefineColumn';
 import R_SelectAll from './Coms/R_SelectAll';
 
 // Type
-import TS_Column from './Type/TS_Column';
+import TS_ColumnName from '../Type/TS_ColumnName';
 
 // CSS
 import './index.css';
 
-const C02_Column = (
+const C02_ColumnName = (
 //****************************************************************************
 // INPUT
 //****************************************************************************
@@ -21,10 +21,14 @@ const C02_Column = (
 // PARAMETER
 // PERPERTY
 // HOOK
+SS_Columns,
+setSS_Columns,
 }:{
 // TYPE
 // PERPERTY
 // HOOK
+SS_Columns:TS_ColumnName[],
+setSS_Columns:(S:TS_ColumnName[])=>void
 }
 ) => {
 //****************************************************************************
@@ -34,22 +38,13 @@ const C02_Column = (
     const [SS_Reset, setSS_Reset] = useState<number>(1);
     // https://stackoverflow.com/questions/56649094/how-to-reload-a-component-part-of-page-in-reactjs
 
-    // SS_Column = Set State Column List
-    const [SS_Columns,setSS_Columns]=useState<TS_Column[]>([
-        {Key: 0, Name: 'Row Index'            , IsSelect: false, IsVisible: true},
-        {Key: 1, Name: 'Weezer'               , IsSelect: false, IsVisible: true},
-        {Key: 2, Name: 'Tally Hall'           , IsSelect: false, IsVisible: true},
-        {Key: 3, Name: 'Que, The Human Editor', IsSelect: false, IsVisible: true},
-        {Key: 4, Name: 'Human Centipede'      , IsSelect: false, IsVisible: true},
-        ]);
-
     // SS_Filter filter Column by Search Name
     const [SS_Filter,setSS_Filter]=useState<string>('');
 
 //****************************************************************************
 // JSX_00: Filter SS_Column.Name by IsVisible=true
 //****************************************************************************
-    let ss_Columns:TS_Column[]=[...SS_Columns]
+    let ss_Columns:TS_ColumnName[]=[...SS_Columns]
 
     // Every columns that satisfy 1 of 3 conditions will IsVisible = true and appear in C02_Column
     //
@@ -68,7 +63,7 @@ const C02_Column = (
         }
         else{ss_Columns[i].IsVisible=false}
     }
-    let let_FilterColumns:TS_Column[] = (SS_Columns.filter(Column=>
+    let let_FilterColumns:TS_ColumnName[] = (SS_Columns.filter(Column=>
         Column.IsVisible===true
         // https://react.dev/learn/rendering-lists
     ));
@@ -158,4 +153,4 @@ const C02_Column = (
 )
 }
 //****************************************************************************
-export default C02_Column
+export default C02_ColumnName

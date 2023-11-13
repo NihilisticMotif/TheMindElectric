@@ -1,3 +1,113 @@
+    let ss_Columns:TS_ColumnName[]=[...SS_Columns]
+    let let_SelectColumns
+ 
+:TS_ColumnName[] = (ss_Columns.filter(Column=>
+        Column.IsSelect===true
+        // https://react.dev/learn/rendering-lists
+    ));
+ 
+SS_Columns
+ 
+={SS_Columns}
+setSS_Columns={setSS_Columns}
+ 
+setSS_Columns={setSS_Columns}
+ 
+    // SS_Column = Set State Column List
+    const [SS_Columns,setSS_Columns]=useState<TS_ColumnName[]>(SS_COLUMNS);
+ 
+// HOOK
+ 
+SS_COLUMNS,
+ 
+    for(let i:number=0;i<ss_Columns.length;i++){
+        if(ss_Columns[i].IsVisible===true){
+            ss_Columns[i].IsVisible=true
+        }
+        else{ss_Columns[i].IsVisible=false}
+    }
+ 
+ss_Columns[i].Name.includes(SS_Filter)===true || 
+ 
+const Input:TS_ColumnName[]=
+ 
+[
+        {Key: 0, Name: 'Row Index'            , IsSelect: false, IsVisible: true},
+        {Key: 1, Name: 'Weezer'               , IsSelect: false, IsVisible: true},
+        {Key: 2, Name: 'Tally Hall'           , IsSelect: false, IsVisible: true},
+        {Key: 3, Name: 'Que, The Human Editor', IsSelect: false, IsVisible: true},
+        {Key: 4, Name: 'Human Centipede'      , IsSelect: false, IsVisible: true},
+        ]
+ 
+
+<div id='Body'>
+<C01_Table INPUT={Input}/>
+</div>
+ 
+<div>
+<table>
+<td>hdhdh</td>
+<td>hdhdh</td>
+<td>hdhdh</td>
+<td>hdhdh</td>
+<td>hdhdh</td>
+<td>hdhdh</td>
+<td>hdhdh</td>
+<td>hdhdh</td>
+<td>hdhdh</td>
+<td>hdhdh</td>
+</table>
+</div>
+</div>
+ 
+<C01_Table INPUT={Input}/>
+ 
+<C01_Table/>
+ 
+_Columns
+ 
+_Columns
+ 
+_Columns
+ 
+_Columns
+ 
+     
+ 
+
+const AllType=[
+    TS_ColumnName,
+    TS_Person
+]
+ 
+
+export default TS_Person
+ 
+export 
+ 
+
+export default TS_ColumnName
+ 
+Age.toString()
+ 
++','+Column.Gender.toString()+','+Column.
+ 
+    <td>-</td>
+ 
+    <th>Edit</th>
+ 
+</td>
+ 
+    <th>Edit</th>
+ 
+                alert(JSON.stringify(ss_Columns[i]))
+                alert(IsSelect.toString())
+ 
+f_Reset(let_NewColumns);
+ 
+setSS_IsDefault(true)
+        setSS_IsDeleteSelect(true)
+ 
 let let_CountDelete:number=0
  
 IsSelect:boolean

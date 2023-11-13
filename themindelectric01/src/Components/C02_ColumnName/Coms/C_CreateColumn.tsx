@@ -3,7 +3,8 @@
 // Components
 
 // Type
-import TS_Column from '../Type/TS_Column';
+import TS_ColumnName from '../../Type/TS_ColumnName';
+
 
 // CSS
 
@@ -22,9 +23,9 @@ const C_CreateColumn = (
 }:
 {   // TYPE
     // HOOK: setState()
-    SS_Columns       :TS_Column[],
-    setSS_Columns    :(S:TS_Column[])=>void,
-    setSS_Reset      :(S:number     )=>void
+    SS_Columns       :TS_ColumnName[],
+    setSS_Columns    :(S:TS_ColumnName[])=>void,
+    setSS_Reset      :(S:number)=>void
     // https://stackoverflow.com/questions/60130319/react-typescript-how-to-setstate
 }
 ) => 
@@ -50,8 +51,8 @@ const C_CreateColumn = (
             
             // Add New Column in List of All Column
             // https://stackoverflow.com/questions/31048953/what-are-these-three-dots-in-react-doing
-            let ss_Columns:TS_Column[] = [...SS_Columns]
-            let let_NewColumn:TS_Column={
+            let ss_Columns:TS_ColumnName[] = [...SS_Columns]
+            let let_NewColumn:TS_ColumnName={
                 // Property of the New Column 
                 Key: let_NewKey,    
                 Name: let_NewName, 

@@ -5,7 +5,7 @@ import { useState } from "react"
  
 
 // Type
-import TS_Column from "../Type/TS_Column"
+import TS_ColumnName from '../../Type/TS_ColumnName';
 
 // CSS
 
@@ -26,8 +26,8 @@ const R_SelectAll = (
     // PROPERTY
     SS_Filter:string,
     // HOOK
-    SS_Columns:TS_Column[],
-    setSS_Columns:(S:TS_Column[])=>void,
+    SS_Columns:TS_ColumnName[],
+    setSS_Columns:(S:TS_ColumnName[])=>void,
     setSS_Reset:(S:number       )=>void,
 }
 )=>{
@@ -39,7 +39,7 @@ const R_SelectAll = (
 //****************************************************************************
 // FUNCTION_00: Reset and Update
 //****************************************************************************
-    function f_Reset(ss_Columns:TS_Column[]):void{
+    function f_Reset(ss_Columns:TS_ColumnName[]):void{
         setSS_Columns(ss_Columns);
         setSS_Reset(Math.random())
     }
@@ -48,7 +48,7 @@ const R_SelectAll = (
 // FUNCTION_01: Select All Columns
 //****************************************************************************
     function f_SelectAll():void{
-        let ss_Columns:TS_Column[]= [...SS_Columns];
+        let ss_Columns:TS_ColumnName[]= [...SS_Columns];
         for(let i:number=0;i<ss_Columns.length;i++){
             ss_Columns[i].IsSelect=true
         }
@@ -58,7 +58,7 @@ const R_SelectAll = (
 // FUNCTION_02: Select All Filtered Columns
 //****************************************************************************
     function f_SelectAllFilter():void{
-        let ss_Columns:TS_Column[]= [...SS_Columns];
+        let ss_Columns:TS_ColumnName[]= [...SS_Columns];
         for(let i:number=0;i<ss_Columns.length;i++){
             if(ss_Columns[i].Name.includes(SS_Filter)===true){
                 ss_Columns[i].IsSelect=true
@@ -70,7 +70,7 @@ const R_SelectAll = (
 // FUNCTION_03: Un Select AllColumns
 //****************************************************************************
     function f_UnSelectAll():void{
-        let ss_Columns:TS_Column[]= [...SS_Columns];
+        let ss_Columns:TS_ColumnName[]= [...SS_Columns];
         for(let i:number=0;i<ss_Columns.length;i++){
             ss_Columns[i].IsSelect=false
         }
@@ -81,14 +81,16 @@ const R_SelectAll = (
 // FUNCTION_04: Delete Columns
 //****************************************************************************
     function f_DeleteSelect(IsSelect:boolean):void{
-        let ss_Columns:TS_Column[]= [...SS_Columns];
-        let let_NewColumns:TS_Column[]=[]
+        let ss_Columns:TS_ColumnName[]= [...SS_Columns];
+        let let_NewColumns:TS_ColumnName[]=[]
         for(let i:number=0;i<ss_Columns.length;i++){
-            if(ss_Columns[i].IsSelect===IsSelect){
+            if(ss_Columns[i].IsSelect!==IsSelect){
                 let_NewColumns.push(ss_Columns[i])
             }
         }
         f_Reset(let_NewColumns);
+        setSS_IsDefault(true)
+        setSS_IsDeleteSelect(true)
     }
 //****************************************************************************
 // FUNCTION_05: Delete Columns Warning
@@ -111,7 +113,7 @@ const R_SelectAll = (
 // JAX_00:
 //****************************************************************************
     let JSX_Buttons:JSX.Element;
-    let ss_Columns:TS_Column[]=[...SS_Columns]
+    let ss_Columns:TS_ColumnName[]=[...SS_Columns]
     let let_CountColumn:number=0
     for(let i:number=0;i<ss_Columns.length;i++){
         if(ss_Columns[i].IsSelect===true){let_CountColumn+=1}
@@ -140,9 +142,9 @@ const R_SelectAll = (
             let_CountDelete=ss_Columns.length-let_CountColumn
         }
         JSX_Buttons=<div className='C02id'>
-        <td><h1 className='C02id'>Are you sure you want to delete {let_CountDelete} Columns from {"Table00"}</h1></td>
+        <td><h1 className='C02id'>Are you sure you want to delete {let_CountDelete} out of {ss_Columns.length} Columns from {"Table00"}</h1></td>
         <div className='C02id'>
-        <td><button className='C02id' onClick={()=>{f_DeleteSelect(SS_IsDeleteSelect)}}>Ok</button></td>
+        <td><button className='C02id' onClick={()=>{f_DeleteSelect(SS_IsDeleteSelect)}}>OK</button></td>
         <td><button className='C02id' onClick={f_Cancel}>Cancel</button></td>
         </div>
         </div>

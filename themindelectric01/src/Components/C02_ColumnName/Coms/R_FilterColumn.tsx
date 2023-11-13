@@ -3,7 +3,7 @@
 // Components
 
 // Type
-import TS_Column from '../Type/TS_Column';
+import TS_ColumnName from '../../Type/TS_ColumnName';
 
 // CSS
 
@@ -25,13 +25,13 @@ const R_FilterColumn = (
     // HOOK: setState()
     setSS_Reset:(S:number)=>void,   
     setSS_Filter:(S:string)=>void,  
-    SS_Columns:TS_Column[],
-    setSS_Columns:(S:TS_Column[])=>void
+    SS_Columns:TS_ColumnName[],
+    setSS_Columns:(S:TS_ColumnName[])=>void
 }) => {
 //****************************************************************************
 // FUNCTION_00: Update SS_Filter, so that index.js update the new filter word.
 //****************************************************************************
-    function f_Filter(ss_Columns:TS_Column[]):void{
+    function f_Filter(ss_Columns:TS_ColumnName[]):void{
         let let_Input:string = (document.getElementById('C02id_FilterColumnName') as HTMLInputElement).value
         // Reset IsVisible to false,
         // so that the only column that will appear
@@ -60,7 +60,7 @@ const R_FilterColumn = (
     }
 
     function f_DSort(IsD:boolean):void{
-        let ss_Columns:TS_Column[] = [...SS_Columns]
+        let ss_Columns:TS_ColumnName[] = [...SS_Columns]
         ss_Columns.sort(f_Sort("Name"));
         if(IsD===true){ss_Columns.reverse();}
         // https://www.w3schools.com/jsref/jsref_sort.asp

@@ -4,7 +4,7 @@ import { useState } from 'react';
 // Components
 
 // Type
-import TS_Column from '../Type/TS_Column';
+import TS_ColumnName from '../../Type/TS_ColumnName';
 
 // CSS
 
@@ -28,11 +28,11 @@ const C_DefineColumn = (
 }:{
     // TYPE
     // PROPERTY
-    ThisColumn:TS_Column,
+    ThisColumn:TS_ColumnName,
 
     // HOOK: setState()
-    SS_Columns:TS_Column[],
-    setSS_Columns:(S:TS_Column[])=>void,
+    SS_Columns:TS_ColumnName[],
+    setSS_Columns:(S:TS_ColumnName[])=>void,
     setSS_Reset:(S:number       )=>void,
 }) => 
 {
@@ -58,7 +58,7 @@ const C_DefineColumn = (
         // https://react.dev/learn/responding-to-events#preventing-default-behavior
         // https://www.w3schools.com/jsref/met_document_getelementbyid.asp
         
-        let ss_Columns:TS_Column[]= [...SS_Columns];
+        let ss_Columns:TS_ColumnName[]= [...SS_Columns];
         for(let i:number=0;i<ss_Columns.length;i++){
             if(ss_Columns[i].Key===ThisColumn.Key){
                 let let_IsSelect:boolean
@@ -166,7 +166,7 @@ const C_DefineColumn = (
 // FUNCTION_02: Utility, Will Develop Later
 //****************************************************************************
     function f_OpenSetting():void{
-        let ss_Columns:TS_Column[] = [...SS_Columns];
+        let ss_Columns:TS_ColumnName[] = [...SS_Columns];
         //alert(JSON.stringify(list))
         alert(ss_Columns.length)
         // https://stackoverflow.com/questions/5612787/converting-an-object-to-a-string

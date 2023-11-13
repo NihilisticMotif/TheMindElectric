@@ -1,5 +1,5 @@
 // Type Script Column
-type TS_Column={
+type TS_ColumnName={
 // Properties of Each Column
 
     Key:number,         // DEFAULT: Math.random()
@@ -23,4 +23,4 @@ type TS_Column={
                         
 }
 
-export default TS_Column
+export default TS_ColumnName
