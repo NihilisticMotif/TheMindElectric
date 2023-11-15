@@ -1,3 +1,28 @@
+.C01id {
+    font-size: 16px;
+    border: 1px solid rgb(205, 205, 205, 0);
+    border-left: 5px solid rgb(205, 205, 205, 0);
+    border-right: 5px solid rgb(205, 205, 205, 0);
+    height: 30px;
+    display: flex
+}
+
+td.C01id{
+    height:0px;
+}
+
+button.C01id{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+}
+
+#C01id_Div{
+    width: 1000px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
 #C01id_Table {
     border-collapse: collapse;
     width: 100%;
@@ -7,7 +32,7 @@
 #C01id_Table td,
 #C01id_Table th {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 5px;
 }
 
 #C01id_Table tr:nth-child(even) {

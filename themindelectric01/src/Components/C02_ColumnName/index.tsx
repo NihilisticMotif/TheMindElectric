@@ -1,14 +1,13 @@
 // React
-import { useState , useEffect} from 'react';
+import { useState } from 'react';
 
 // Components
 import R_FilterColumn from './Coms/R_FilterColumn';
 import C_CreateColumn from './Coms/C_CreateColumn';
-import C_DefineColumn from './Coms/C_DefineColumn';
 import R_SelectAll from './Coms/R_SelectAll';
-
+import C_DefineColumn from './Coms/C_DefineColumn'
 // Type
-import TS_ColumnName from '../Type/TS_ColumnName';
+import TS_ColumnName from '../T02_ColumnName/An_Index';
 
 // CSS
 import './index.css';

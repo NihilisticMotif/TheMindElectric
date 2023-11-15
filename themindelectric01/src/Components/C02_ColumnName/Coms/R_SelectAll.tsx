@@ -5,7 +5,8 @@ import { useState } from "react"
  
 
 // Type
-import TS_ColumnName from '../../Type/TS_ColumnName';
+import TS_ColumnName from '../../T02_ColumnName/An_Index';
+import { U_IsSelect } from "../../T02_ColumnName/U_IsSelect";
 
 // CSS
 
@@ -28,7 +29,7 @@ const R_SelectAll = (
     // HOOK
     SS_Columns:TS_ColumnName[],
     setSS_Columns:(S:TS_ColumnName[])=>void,
-    setSS_Reset:(S:number       )=>void,
+    setSS_Reset:(S:number)=>void,
 }
 )=>{
 //****************************************************************************
@@ -49,32 +50,24 @@ const R_SelectAll = (
 //****************************************************************************
     function f_SelectAll():void{
         let ss_Columns:TS_ColumnName[]= [...SS_Columns];
-        for(let i:number=0;i<ss_Columns.length;i++){
-            ss_Columns[i].IsSelect=true
-        }
-        f_Reset(ss_Columns);
+        let let_UpdateColumns:TS_ColumnName[]=U_IsSelect(ss_Columns,true)
+        f_Reset(let_UpdateColumns);
     }
 //****************************************************************************
 // FUNCTION_02: Select All Filtered Columns
 //****************************************************************************
     function f_SelectAllFilter():void{
         let ss_Columns:TS_ColumnName[]= [...SS_Columns];
-        for(let i:number=0;i<ss_Columns.length;i++){
-            if(ss_Columns[i].Name.includes(SS_Filter)===true){
-                ss_Columns[i].IsSelect=true
-            }
-        }
-        f_Reset(ss_Columns);
+        let let_UpdateColumns:TS_ColumnName[]=U_IsSelect(ss_Columns,true,SS_Filter)
+        f_Reset(let_UpdateColumns);
     }
 //****************************************************************************
 // FUNCTION_03: Un Select AllColumns
 //****************************************************************************
     function f_UnSelectAll():void{
         let ss_Columns:TS_ColumnName[]= [...SS_Columns];
-        for(let i:number=0;i<ss_Columns.length;i++){
-            ss_Columns[i].IsSelect=false
-        }
-        f_Reset(ss_Columns);
+        let let_UpdateColumns:TS_ColumnName[]=U_IsSelect(ss_Columns,false)
+        f_Reset(let_UpdateColumns);
     }
 
 //****************************************************************************
@@ -106,7 +99,6 @@ const R_SelectAll = (
     function f_Cancel():void{
         // Open Default Page
         setSS_IsDefault(true)
-
     }
 
 //****************************************************************************

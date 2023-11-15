@@ -1,5 +1,5 @@
 // React
-import { useState } from'react';
+import { useState } from 'react';
 
 // Components
 
@@ -12,7 +12,7 @@ import {D_DeleteColumnName} from '../../T02_ColumnName/D_DeleteColumnName'
 //****************************************************************************
 
 // Define what is Column
-const C_DefineColumn = (
+const C_DefineColumnButton = (
 //****************************************************************************
 // INPUT
 //****************************************************************************
@@ -52,7 +52,7 @@ const C_DefineColumn = (
 // FUNCTION_00: Select function that will appear in C01_Table with IsSelect 
 //****************************************************************************
     let JSX_SelectButton:JSX.Element
-    const C02id_CheckButton:string ='C02id_CheckButton'+ThisColumn.Key.toString()
+    const C02id_CheckButton:string = 'C01id_CheckButton'+ThisColumn.Key.toString()
 
     function f_Select():void{
         // https://react.dev/learn/responding-to-events#preventing-default-behavior
@@ -77,17 +77,17 @@ const C_DefineColumn = (
     }
 
     if(ThisColumn.IsSelect===true){
-        JSX_SelectButton=<td><button className={'C02id'} onClick={f_Select} id={C02id_CheckButton} style={{backgroundColor: "red"}}>X</button></td>
+        JSX_SelectButton=<button className={'C01id'} onClick={f_Select} id={C02id_CheckButton} style={{backgroundColor: "red"}}>X</button>
     }
     else{
-        JSX_SelectButton=<td><button className={'C02id'} onClick={f_Select} id={C02id_CheckButton} style={{backgroundColor: "white"}}>X</button></td>
+        JSX_SelectButton=<button className={'C01id'} onClick={f_Select} id={C02id_CheckButton} style={{backgroundColor: "white"}}>X</button>
     }
 
 //****************************************************************************
 // FUNCTION_01: Change Mode of C_DefineColumn Components for Rename and Delete 
 //****************************************************************************
     function f_Cancel():void{setSS_Display(0)}
-    const C02id_Rename:string='C02id_Rename'+ThisColumn.Key.toString()
+    const C02id_Rename:string='id_Rename'+ThisColumn.Key.toString()
     function f_OpenRename():void{setSS_Display(1)}
     function f_Rename():void{
         let let_NewName:string= (document.getElementById(C02id_Rename)as HTMLInputElement).value 
@@ -112,13 +112,10 @@ const C_DefineColumn = (
     // Default Column JSX
     let JSX_Column:JSX.Element=
 <>
-<div>
 {JSX_SelectButton}
-<td><button className={'C02id'} onClick={f_OpenRename}>Rename</button></td>
-<td><button className={'C02id'} onClick={f_OpenDelete}>Delete</button></td>
-<td><button className={'C02id'} onClick={f_OpenSetting}>...</button></td>
-<td><h1 className={'C02id'}>{ThisColumn.Name}</h1></td>
-</div>
+<button className={'C01id'} onClick={f_OpenRename}>Rename</button>
+<button className={'C01id'} onClick={f_OpenDelete}>Delete</button>
+<button className={'C01id'} onClick={f_OpenSetting}>...</button>
 </>
     // Default Column JSX
     if (SS_Display===0){
@@ -126,21 +123,17 @@ const C_DefineColumn = (
     }else if (SS_Display===1){
         JSX_Column=
 <>
-<div>
-<td><h1 className={'C02id'}>"{ThisColumn.Name}"" to </h1><input className={'C02id'} id={C02id_Rename}></input></td>
-<td><button className={'C02id'} onClick={f_Rename}>OK</button></td>
-<td><button className={'C02id'} onClick={f_Cancel}>Cancel</button></td>
-</div>
+<h1 className={'C01id'}>Rename to </h1><input className={'C01id'} id={C02id_Rename}></input>
+<button className={'C01id'} onClick={f_Rename}>OK</button>
+<button className={'C01id'} onClick={f_Cancel}>Cancel</button>
 </>
     // Delete Column JSX
     }else if (SS_Display===2){
         JSX_Column=
 <>
-<div>
-<td><h1 className={'C02id'}>Do you sure that you want to delete "{ThisColumn.Name}"</h1></td>
-<td><button className={'C02id'} onClick={f_Delete}>OK</button></td>
-<td><button className={'C02id'} onClick={f_Cancel}>Cancel</button></td>
-</div>
+<h1 className={'C01id'}>Do you sure that you want to delete "{ThisColumn.Name}"</h1>
+<button className={'C01id'} onClick={f_Delete}>OK</button>
+<button className={'C01id'} onClick={f_Cancel}>Cancel</button>
 </>
 }
 
@@ -167,7 +160,7 @@ const C_DefineColumn = (
 //****************************************************************************
 return (
 <div 
-    className={'C02id'} 
+    className={'C01id'} 
     key={ThisColumn.Key} 
 >
 {JSX_Column}
@@ -175,4 +168,4 @@ return (
 )
 }
 //****************************************************************************
-export default C_DefineColumn
+export default C_DefineColumnButton

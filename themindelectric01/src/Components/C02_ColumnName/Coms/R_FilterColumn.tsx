@@ -3,8 +3,8 @@
 // Components
 
 // Type
-import TS_ColumnName from '../../Type/TS_ColumnName';
-
+import TS_ColumnName from '../../T02_ColumnName/An_Index';
+import {U_IsVisibleFalse} from '../../T02_ColumnName/U_IsVisibleFalse'
 // CSS
 
 //****************************************************************************
@@ -36,10 +36,8 @@ const R_FilterColumn = (
         // Reset IsVisible to false,
         // so that the only column that will appear
         // are the column with name that match with SS_Filter
-        for(let i:number=0;i<ss_Columns.length;i++){
-            ss_Columns[i].IsVisible=false
-        }
-        setSS_Columns(ss_Columns)
+        let let_UpdateColumns=U_IsVisibleFalse(ss_Columns)
+        setSS_Columns(let_UpdateColumns)
         setSS_Filter(let_Input)
         setSS_Reset(Math.random())
     }

@@ -1,0 +1,15 @@
+Big Idea
+1. Simple Data Visualization App
+2. Create small simulation projects (widgets) and its documentation
+ * Type
+ 1.1 ML
+ 1.2 Numerical Method
+ * e.g. Neural Network, FFT, Random Forest etc.
+2. Tree of Time (inspired by Orange Data Mining App)
+3. Convert Image to Tabular data (with the user defined distribution) and/or Matrix
+
+Advice
+1. Do small project. Add small features.
+2. After the project have ML simulation features, try to compare pros and cons of Excel, Google Sheet, Google Drive, Power Bi and Google Colab.
+   Then defined what is the unique purpose of our app.
+3. Avoid adding too many feature. I do not want to create data sci general purpose app.

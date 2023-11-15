@@ -1,7 +1,6 @@
 // Type Script Column
 type TS_ColumnName={
 // Properties of Each Column
-
     Key:number,         // DEFAULT: Math.random()
                         // Unique Key
 

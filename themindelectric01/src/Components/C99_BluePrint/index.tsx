@@ -1,3 +1,4 @@
+/*
 // React
 //import { useState , useEffect} from 'react';
 
@@ -5,7 +6,6 @@
 //import R_FilterColumn from './Coms/R_FilterColumn';
 
 // Type
-import TS_Person from './Type/TS_Person';
 
 // CSS
 import './index.css';
@@ -70,3 +70,5 @@ return(
 }
 
 export default C99_BluePrint
+*/
+export default {}

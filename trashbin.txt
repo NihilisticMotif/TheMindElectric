@@ -1,3 +1,414 @@
+</div>
+ 
+<div>
+ 
+</div>
+ 
+<div>
+ 
+</div>
+ 
+<div className='C01id_ColumnButton'>
+ 
+</td>
+ 
+</td>
+ 
+</td>
+ 
+<td>
+ 
+<td>
+ 
+<td><h1 className={'C01id'}>{ThisColumn.Name}</h1></td>
+ 
+            CSS='C01'
+ 
+CSS+
+ 
+
+    // CSS
+    CSS:string
+ 
+    // CSS
+    // Belong to which component, mainly for CSS purpose
+ 
+    CSS
+ 
+                CSS='C02'
+ 
+CSS+
+ 
+
+    // CSS
+    CSS:string
+ 
+    // CSS
+    // Belong to which component, mainly for CSS purpose
+    CSS
+ 
+    visibility:hidden
+ 
+button 
+ 
+,
+button.C02id_Select,
+button 
+ 
+,
+button.C01id_Select,
+button 
+ 
+,
+button.C01id_Select,
+button 
+ 
+,
+button.C01id_Select,
+button 
+ 
+C02
+ 
+C02
+ 
+ Class Name
+ 
+    // 
+ 
+
+    function f_Inspection():void{
+        alert('Index')
+    }
+ 
+,index
+ 
+                Index={index+1}
+ 
+    Index:number,
+ 
+,index
+ 
+            Index={index}
+ 
+    Index,
+ 
+            Index={index}
+ 
+
+//****************************************************************************
+// FUNCTION_01: Drag and Drop Column
+//****************************************************************************
+    // https://youtu.be/_nZCvxJOPwU?si=ixJXOlrb40z19L2p
+    function f_Drag(ss_Celumns:TS_ColumnName[]):void{
+        const let_DragColumnCurrent:TS_ColumnName=ss_Celumns[Ref_DragColumn.current]
+        ss_Celumns[Ref_DragColumn.current] = ss_Celumns[Ref_DragOverColumn.current]
+        ss_Celumns[Ref_DragOverColumn.current] = let_DragColumnCurrent
+        setSS_Columns(ss_Celumns)
+        setSS_Reset(Math.random())
+    }
+ 
+    // Drag and Drop Columns
+    const Ref_DragColumn = useRef<number>(0)
+    const Ref_DragOverColumn = useRef<number>(0)
+ 
+, useRef 
+ 
+            draggable
+            onDragStart={()=>{Ref_DragColumn.current=index}}
+            onDragEnter={()=>{Ref_DragOverColumn.current=index}}
+            onDragEnd={()=>f_Drag(let_FilterColumns)}
+            onDragOver={(e)=>e.preventDefault()}
+            
+ 
+ draggable
+            onDragStart={()=>{Ref_DragColumn.current=index}}
+            onDragEnter={()=>{Ref_DragOverColumn.current=index}}
+            onDragEnd={()=>f_Drag(let_VisibleColumn)}
+            onDragOver={(e)=>e.preventDefault()}
+        
+ 
+    // Drag and Drop
+ 
+import C_DefineColumn from './Coms/C_DefineColumn';
+ 
+import C_DefineColumnHeader from './Coms/C_DefineColumnHeader'
+ 
+ss_Celumns
+ 
+:TS_ColumnName[]=[...SS_Columns]
+ 
+        alert()
+ 
+        alert
+ 
+// Drag and Drop Columns
+    const Ref_DragColumn = useRef<number>(Index)
+    const Ref_DragOverColumn = useRef<number>(0)
+ 
+//****************************************************************************
+// FUNCTION_03: Drag and Drop Column
+//****************************************************************************
+    // https://youtu.be/_nZCvxJOPwU?si=ixJXOlrb40z19L2p
+    function f_Drag():void{
+        let ss_Celumns:TS_ColumnName[]=SS_Columns
+        const let_Column:TS_ColumnName=ss_Celumns[Ref_DragColumn.current]
+        ss_Celumns[Ref_DragColumn.current] = ss_Celumns[Ref_DragOverColumn.current]
+        ss_Celumns[Ref_DragOverColumn.current] = let_Column
+        setSS_Columns(ss_Celumns)
+        setSS_Reset(Math.random())
+    }
+ 
+//    draggable
+//    onDragStart={()=>{Ref_DragColumn.current=Index}}
+//    onDragEnter={()=>{Ref_DragOverColumn.current=Index}}
+//    onDragEnd={f_Drag}
+ 
+//    
+ 
+    //onDragOver={(e)=>e.preventDefault()}
+ 
+ThisColumn.
+ 
+ThisColumn.
+ 
+ThisColumn.
+ 
+                  Index:ThisColumn.Index,
+ 
+                Index:0,
+ 
+            ss_Columns[i].Index=i
+ 
+    Index:number,       // Index
+ 
+        // 
+ 
+draggable
+ 
+draggable
+ 
+Row Index
+ 
+const 
+ 
+:JSX.Element[]
+ 
+let_VisibleColumn.map(Column => 
+ 
+const 
+ 
+:JSX.Element[] 
+ 
+overflow-x: scroll;
+ 
+    overflow-x: scroll;
+ 
+</td>
+ 
+    type TS_Display=
+            0|  // Default JSX Column | f_Cancel     => setSS_Display(0) => Open Default JSX Column
+            1|  // Rename JSX Column  | f_OpenRename => setSS_Display(1) => Open Rename JSX Column 
+            2   // Delete JSX Column  | f_OpenDelete => setSS_Display(2) => Open Delete JSX Column 
+ 
+    const [SS_Display,setSS_Display]=useState<TS_Display>(0)
+ 
+<td><h1 className='C02id'>{ThisColumn.Name}</h1></td>
+ 
+<h1 className='C02id'>"{ThisColumn.Name}" to </h1>
+ 
+const [SS_Reset,setSS_Reset]=useState<number>(1)
+ 
+        /*
+ 
+        */
+        <>
+        <div id='C01id_Button'>
+        <td><h1 className='C02id'>Do you sure that you want to delete "{Column.Name}"</h1></td>
+        <td><button className='C02id'>OK</button></td>
+        <td><button className='C02id'>Cancel</button></td>
+        </div>
+        </>
+ 
+f_Cancel
+ 
+f_Delete
+ 
+       
+ 
+True
+ 
+True
+ 
+True
+ 
+True(
+ 
+        for(let i:number=0;i<ss_Columns.length;i++){
+            if(ss_Columns[i].Name.includes(SS_Filter)===true){
+                ss_Columns[i].IsSelect=true
+            }
+        }
+ 
+_
+ 
+ from C02_ColumnName
+ 
+        // SS_Columns from C02_ColumnName
+ 
+        // New Column Name
+        NewName:string
+ 
+import TS_ColumnName from "."
+
+export function C_CreateColumnName(        
+        // SS_Columns from C02_ColumnName
+        Columns:TS_ColumnName[],
+        // New Column Name
+        NewName:string):TS_ColumnName[]{
+
+    return Columns
+}
+
+ 
+// Delete the column with selected key
+ 
+        for(let i:number=0;i<ss_Columns.length;i++){
+            if(ss_Columns[i].Key===ThisColumn.Key){
+                ss_Columns.splice(i, 1);
+            }
+        }
+ 
+ from C02_ColumnName
+ 
+
+export default {C_CreateColumnName}
+ 
+                // Property of the New Column 
+ 
+        // Check if the name is duplicate
+ 
+ThisColumn:TS_ColumnName,
+ 
+            let Columns = [...Columns];
+ 
+        if(SS_Columns.map(Column=>Column.Name).includes(let_NewName)===false){
+            let ss_Columns = [...SS_Columns];
+            // Replace the previous name (the name with selected key) with new name
+            for(let i:number=0;i<ss_Columns.length;i++){
+                if(ss_Columns[i].Key===ThisColumn.Key){
+                    ss_Columns.splice(i, 1,{
+                    Key: ThisColumn.Key,
+                    Name: let_NewName, 
+                    IsSelect: ThisColumn.IsSelect,
+                    IsVisible: true
+                });
+                }
+            }
+            return Columns
+        }
+ 
+if(SS_Columns.map(Column=>Column.Name).includes(let_NewName)===false){
+            let ss_Columns = [...SS_Columns];
+            // Replace the previous name (the name with selected key) with new name
+            for(let i:number=0;i<ss_Columns.length;i++){
+                if(ss_Columns[i].Key===ThisColumn.Key){
+                    ss_Columns.splice(i, 1,{
+                    Key: ThisColumn.Key,
+                    Name: let_NewName, 
+                    IsSelect: ThisColumn.IsSelect,
+                    IsVisible: true
+                });
+                }
+            }
+        }
+ 
+export default {C_CreateColumnName}
+ 
+export {C_CreateColumnName}
+ 
+ default
+ 
+        }
+ 
+// If the name is not longer than 50 and unique, then Create new column
+        if(let_NewName.toString().length>0 
+            && let_NewName.toString().length<50 
+            && SS_Columns.map(Column=>Column.Name).includes(let_NewName)===false){
+            // https://stackoverflow.com/questions/43846531/check-if-dictionary-object-in-array-contains-certain-value-in-javascript
+
+            // Generate New Key
+            let let_NewKey:number = Math.random()
+            while(SS_Columns.map(Column=>Column.Key).includes(let_NewKey)===true){
+                let_NewKey = Math.random()
+            }
+            
+            // Add New Column in List of All Column
+            // https://stackoverflow.com/questions/31048953/what-are-these-three-dots-in-react-doing
+            let ss_Columns:TS_ColumnName[] = [...SS_Columns]
+            let let_NewColumn:TS_ColumnName={
+                // Property of the New Column 
+                Key: let_NewKey,    
+                Name: let_NewName, 
+                IsSelect:false,
+                IsVisible: true
+                }
+ 
+                ..
+ 
+                let_NewColumn,
+ 
+    // Other Columns
+            
+ 
+// New Column Name
+ 
+return [
+                {
+                // Property of the New Column 
+                Key: let_NewKey,    
+                Name: NewName, 
+                IsSelect:false,
+                IsVisible: true
+                },
+                ...Columns    // Other Columns
+            ]
+ 
+        Key:number,
+ 
+            setColumns([
+                let_NewColumn,
+                ...Columns    // Other Columns
+            ])
+ 
+            let let_Columns:TS_ColumnName[] = [...Columns]
+ 
+            let Columns:TS_ColumnName[]=Columns
+ 
+            setSS_Reset(Math.random())
+ 
+setSS_Reset(Math.random())
+ 
+        SelectedKey:number,
+ 
+C99_BluePrint
+ 
+    const letPerson_S:TS_Person[]=[
+        {Name:'Mumu'  , Gender:false, Age: 25},
+        {Name:'CheChe', Gender: true, Age: 22},
+        {Name:'Tata'  , Gender: true, Age: 19}
+    ]
+
+    const JSX_TH_Column_S:JSX.Element[] = letPerson_S.map(Column => <th>{Column.Name+','+Column.Gender.toString()+','+Column.Age.toString()}</th>);
+    const JSX_BUTTON_Column_S:JSX.Element[] = letPerson_S.map(Column=>
+        <td>
+            <div id='C99id_Button'>
+            <button>Edit</button>
+            </div>
+        </td>
+        );
+ 
+import TS_Person from './Type/TS_Person';
+ 
     let ss_Columns:TS_ColumnName[]=[...SS_Columns]
     let let_SelectColumns
  
