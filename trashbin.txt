@@ -1,3 +1,276 @@
+        alert(JSON.stringify(let_UpdateColumns))
+ 
+        alert('Hello')
+ 
+import './index.css';
+ 
+/C02_ColumnName
+ 
+alert(JSON.stringify(let_UpdateColumns))
+ 
+//****************************************************************************
+// HOOK
+//****************************************************************************
+
+//****************************************************************************
+// FUNCTION_00: By default JSX and function are in the same group.
+//****************************************************************************
+
+//****************************************************************************
+// JAX_00:
+//****************************************************************************
+ 
+                {
+                    //<p style={{ whiteSpace: 'nowrap' }}> {Column.Name}? </p>
+                }
+ 
+                }
+ 
+                {
+ 
+ {Column.Name}
+ 
+</h1>
+ 
+</h1>
+ 
+style={{ whiteSpace: 'nowrap' }}
+ 
+{Column.Name} to 
+ 
+Rename 
+ 
+Rename {Column.Name} to 
+ 
+.C01id input[type="text"] {
+    font-size: 5px;
+}
+ 
+_Input
+ 
+ Column
+ 
+<button className={'C01id_EmptyButton'}>...</button>
+<button className={'C01id_EmptyButton'}>...</button>
+<button className={'C01id_EmptyButton'}>...</button>
+ 
+ onClick={f_OpenSetting}
+ 
+<h1 className={'C01id'}>Rename to </h1><input className={'C01id'} id={C02id_Rename}></input>
+ 
+<h1 className={'C01id'}>Rename to </h1><input className={'C01id'} id={C02id_Rename}></input>
+ 
+        {
+ 
+ || Column.Display===1
+ 
+<h1 className={'C01id_Delete'}>Delete This Column?</h1>
+ 
+        setSS_Display(2)
+ 
+        setSS_Display(1)
+ 
+        setSS_Display(0)
+ 
+setSS_Reset(Math.random())
+ 
+setSS_Reset(Math.random())
+ 
+setSS_Reset(Math.random())
+ 
+setSS_Reset(Math.random())
+ 
+{
+ 
+for(let i:number=0;i<ss_Celumns.length,)
+ 
+    Key:number
+ 
+for(let i:number=0;i<ss_Celumns.length,)
+ 
+    background-color: #023445;
+ 
+    bottom: 100px
+ 
+    bottom: 100px;
+ 
+    top: 100px;
+ 
+o you sure that you want to d
+ 
+</div>
+ 
+<div className='C01id_DeleteButton'>
+ 
+
+.C01id_DeleteButton{
+    background-color: rgb(185, 29, 18);
+    width: 100px;
+}
+
+ 
+.C01id_DeleteButton{
+}
+ 
+    background-color: rgb(185, 29, 18);
+    width: 100px;
+ 
+127)8
+ 
+        <button className={'C01id'}>Cancel</button>
+ 
+ onClick={f_CreateColumn}
+ 
+<button className={'C01id'} onClick={f_ResetInput}>Cancel</button>
+ 
+<>
+<table id='C99id_Table'>
+<tr>
+    {JSX_TH_Column_S}
+    <th>Edit</th>
+</tr>
+<tr>
+    {JSX_BUTTON_Column_S}
+    <td>-</td>
+</tr>
+
+</table>
+</>
+ 
+    const letPerson_S:TS_Person[]=[
+        {Name:'Mumu'  , Gender:false, Age: 25},
+        {Name:'CheChe', Gender: true, Age: 22},
+        {Name:'Tata'  , Gender: true, Age: 19}
+    ]
+
+    const JSX_TH_Column_S:JSX.Element[] = letPerson_S.map(Column => <th>{Column.Name+','+Column.Gender.toString()+','+Column.Age.toString()}</th>);
+    const JSX_BUTTON_Column_S:JSX.Element[] = letPerson_S.map(Column=>
+        <td>
+            <div id='C99id_Button'>
+            <button>Edit</button>
+            </div>
+        </td>
+        );
+ 
+import {U_IsVisibleFalse} from '../../T02_ColumnName/U_IsVisibleFalse'
+ 
+    setSS_Filter:(S:string)=>void,  
+ 
+//****************************************************************************
+// FUNCTION_00: Update SS_Filter, so that index.js update the new filter word.
+//****************************************************************************
+    function f_Reset(ss_Columns:TS_ColumnName[]):void{
+        
+        
+    }
+ 
+    setSS_Filter,   // from ../index.js, Filter Column that match with SS_Filter
+ 
+        let let_Input:string = (document.getElementById('C02id_FilterColumnName') as HTMLInputElement).value
+        // Reset IsVisible to false,
+        // so that the only column that will appear
+        // are the column with name that match with SS_Filter
+ 
+        setSS_Filter(let_Input)
+ 
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(false)}*/>Add New Column</button></td>
+ 
+import './index.css';
+ 
+<U_DefineTableHeader/>
+ 
+import U_DefineTableHeader from './Coms/U_DefineTableHeader'
+ 
+<div className='C01id_DivHeader'>
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Import Data</button></td>
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Export Data</button></td>
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Export Filtered Data</button></td>
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Rename Table</button></td>
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Inspecting Table</button></td>
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Descending Sort Columns</button></td>
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(false)}*/>Ascending Sort Columns</button></td>
+<td><button className='C01id_Header' /*onClick={()=>f_DSort(false)}*/>Add New Column</button></td>
+</div>
+ 
+<>
+<table id='C99id_Table'>
+<tr>
+    {JSX_TH_Column_S}
+    <th>Edit</th>
+</tr>
+<tr>
+    {JSX_BUTTON_Column_S}
+    <td>-</td>
+</tr>
+
+</table>
+</>
+ 
+const letPerson_S:TS_Person[]=[
+        {Name:'Mumu'  , Gender:false, Age: 25},
+        {Name:'CheChe', Gender: true, Age: 22},
+        {Name:'Tata'  , Gender: true, Age: 19}
+    ]
+
+    const JSX_TH_Column_S:JSX.Element[] = letPerson_S.map(Column => <th>{Column.Name+','+Column.Gender.toString()+','+Column.Age.toString()}</th>);
+    const JSX_BUTTON_Column_S:JSX.Element[] = letPerson_S.map(Column=>
+        <td>
+            <div id='C99id_Button'>
+            <button>Edit</button>
+            </div>
+        </td>
+        );
+ 
+<input></input>
+ 
+</div>
+ 
+overflow: hidden;
+ 
+    height: 20px;
+ 
+<input type='text'></input>
+ 
+, #C01id_Table div
+ 
+</div>
+ 
+<div>
+ 
+        <div>
+ 
+        </div>
+ 
+</div>
+ 
+</div>
+ 
+<h1 className='C01id'>
+ 
+ </h1>
+ 
+    <th><h1 className='C01id'>Create new column as </h1><input type='text'></input></th>
+ 
+    <th><h1 className='C01id'>Create new column as </h1><input type='text'></input></th
+ 
+</div>
+ 
+border-top: 100px;
+ 
+    padding-top: 120px;
+ 
+    height:100px
+ 
+top: 100px;
+ 
+height: 100px;
+ 
+<td><button className='C01id_Sort' /*onClick={()=>f_Filter([...SS_Columns])}*/>OK</button></td>
+ 
+<div className='C01id_DivSort'>
+ 
+    function 
+ 
 </div>
  
 <div>

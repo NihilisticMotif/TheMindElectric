@@ -2,6 +2,8 @@
 import { useState , useRef } from 'react';
 // Components
 import C_DefineColumnButton from './Coms/C_DefineColumnButton'
+import U_DefineTableHeader from './Coms/U_DefineTableHeader'
+import C_CreateNewColumn from './Coms/C_CreateColumn';
 // Type
 import TS_ColumnName from '../T02_ColumnName/An_Index';
 
@@ -59,13 +61,26 @@ setSS_Columns:(S:TS_ColumnName[])=>void
         // https://react.dev/learn/rendering-lists
     ));
     const JSX_TH_Columns:JSX.Element[] = let_VisibleColumn.map((Column,index) => 
-        <th
+        {
+        // https://stackoverflow.com/questions/44969877/if-condition-inside-of-map-react
+        if (Column.Display===undefined || Column.Display===0)
+        {return <th
             draggable
             onDragStart={()=>{Ref_DragColumn.current=index}}
             onDragEnter={()=>{Ref_DragOverColumn.current=index}}
             onDragEnd={()=>f_Drag(let_VisibleColumn)}
             onDragOver={(e)=>e.preventDefault()}
-        >{Column.Name}</th>);
+        >{Column.Name}</th>}
+        else if (Column.Display===1){
+            return <th><input type='text' className='C01id' id={'C01id_Rename'+Column.Key.toString()}></input></th>
+        }
+        else{
+            return  <th >
+                    <p style={{ whiteSpace: 'nowrap' }}>Do you want to delete {Column.Name}</p> 
+                    </th>
+        }
+        }
+        );
     const JSX_BUTTON_Columns:JSX.Element[] = let_VisibleColumn.map((Column)=>
         <td>
         <C_DefineColumnButton
@@ -76,18 +91,32 @@ setSS_Columns:(S:TS_ColumnName[])=>void
         />
         </td>
         );
+
     return (
 <div id='C01id_Div'>
+<U_DefineTableHeader
+    setSS_Reset   = {setSS_Reset  }
+    SS_Columns    = {SS_Columns   }
+    setSS_Columns = {setSS_Columns}
+/>
+<div id='C01id_DivTable'>
 <table id='C01id_Table' key={SS_Reset}>
 <tr>
     <th>Row Index</th>
     {JSX_TH_Columns}
+    <th>Create new column as</th>
 </tr>
 <tr>
     <td><button>...</button></td>
     {JSX_BUTTON_Columns}
+    <C_CreateNewColumn
+        SS_Columns={SS_Columns}
+        setSS_Columns={setSS_Columns}
+        setSS_Reset={setSS_Reset}
+    />
 </tr>
 </table>
+</div>
 </div>
     )
 }

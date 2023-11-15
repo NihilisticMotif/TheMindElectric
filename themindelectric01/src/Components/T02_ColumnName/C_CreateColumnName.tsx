@@ -8,7 +8,7 @@ export function C_CreateColumnName(
         ):TS_ColumnName[]{
     // Check duplicate Column Name
     if(NewName.toString().length>0 
-            && NewName.toString().length<50 
+            && NewName.toString().length<30 
             && Columns.map(Column=>Column.Name).includes(NewName)===false){
             // https://stackoverflow.com/questions/43846531/check-if-dictionary-object-in-array-contains-certain-value-in-javascript
 
