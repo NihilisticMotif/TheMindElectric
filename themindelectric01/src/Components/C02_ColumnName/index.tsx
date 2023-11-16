@@ -22,28 +22,31 @@ const C02_ColumnName = (
 // HOOK
 SS_Columns,
 setSS_Columns,
+setSS_Reset,
 }:{
 // TYPE
 // PERPERTY
 // HOOK
 SS_Columns:TS_ColumnName[],
-setSS_Columns:(S:TS_ColumnName[])=>void
+setSS_Columns:(S:TS_ColumnName[])=>void,
+setSS_Reset:(S:number)=>void,
 }
 ) => {
 //****************************************************************************
 // HOOK
 //****************************************************************************
-    // Reset Column List after Update Column List (Create, Rename, Delete, Filter and Sort)
-    const [SS_Reset, setSS_Reset] = useState<number>(1);
-    // https://stackoverflow.com/questions/56649094/how-to-reload-a-component-part-of-page-in-reactjs
-
     // SS_Filter filter Column by Search Name
     const [SS_Filter,setSS_Filter]=useState<string>('');
-
+    
+    // SS_PrivateColumns is identical to SS_Columns except its object order.
+    const [SS_PrivateColumns,setSS_PrivateColumns]=useState<TS_ColumnName[]>(SS_Columns)
+    // Reset everything in C01_Table
+    const [SS_PrivateReset,setSS_PrivateReset]=useState<number>(0)
+    
 //****************************************************************************
 // JSX_00: Filter SS_Column.Name by IsVisible=true
 //****************************************************************************
-    let ss_Columns:TS_ColumnName[]=[...SS_Columns]
+    let ss_Columns:TS_ColumnName[]=[...SS_PrivateColumns]
 
     // Every columns that satisfy 1 of 3 conditions will IsVisible = true and appear in C02_Column
     //
@@ -62,13 +65,16 @@ setSS_Columns:(S:TS_ColumnName[])=>void
         }
         else{ss_Columns[i].IsVisible=false}
     }
-    let let_FilterColumns:TS_ColumnName[] = (SS_Columns.filter(Column=>
+    let let_FilterColumns:TS_ColumnName[] = (ss_Columns.filter(Column=>
         Column.IsVisible===true
         // https://react.dev/learn/rendering-lists
     ));
-    let JSX_Columns:JSX.Element[] = let_FilterColumns.map(
+    /*
+    let JSX_Columns:JSX.Element[] = [...SS_PrivateColumns].map(
         (Column) => 
-            <div key={Column.Key}>
+            {
+            if(Column.IsVisible===true )
+            return <div key={Column.Key}>
             <C_DefineColumn
                 // Property
                 ThisColumn={Column}
@@ -78,7 +84,32 @@ setSS_Columns:(S:TS_ColumnName[])=>void
                 setSS_Columns={setSS_Columns}
             />
             </div>
+            else if(Column.Name.includes(SS_Filter))
+            return <div key={Column.Key}>
+            <C_DefineColumn
+                // Property
+                ThisColumn={Column}
+                // Set State Hook
+                setSS_Reset={setSS_Reset}
+                SS_Columns={SS_Columns}
+                setSS_Columns={setSS_Columns}
+            />
+            </div>
+            else return <></>
+        }
             );
+            */
+    let JSX_Columns:JSX.Element[] = let_FilterColumns.map(
+        (Column) => <div key={Column.Key}>
+            <C_DefineColumn
+                // Property
+                ThisColumn={Column}
+                // Set State Hook
+                setSS_Reset={setSS_Reset}
+                SS_Columns={SS_Columns}
+                setSS_Columns={setSS_Columns}
+            />
+            </div>)
     // https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key
     // https://youtu.be/XtS14dXwvwE?si=rYQOe_tJbxmSnDWE
     // https://react.dev/learn/rendering-lists#where-to-get-your-key
@@ -107,8 +138,8 @@ setSS_Columns:(S:TS_ColumnName[])=>void
 // OUTPUT
 //****************************************************************************
     return (
-<>
-<div id='C02id_Div'>
+
+<div id='C02id_Div' >
 {
 // Create New Column in Column List
 }
@@ -122,10 +153,10 @@ setSS_Columns:(S:TS_ColumnName[])=>void
 // Filter and Sort Column List
 }
 <R_FilterColumn 
+    setSS_Reset={setSS_PrivateReset}
     setSS_Filter={setSS_Filter} 
-    setSS_Reset={setSS_Reset}
-    SS_Columns={SS_Columns}
-    setSS_Columns={setSS_Columns}
+    SS_Columns={SS_PrivateColumns}
+    setSS_Columns={setSS_PrivateColumns}
 />
 <hr/>
 {
@@ -142,13 +173,15 @@ setSS_Columns:(S:TS_ColumnName[])=>void
 // JSX_Column = List of all visible column
 // SS_Reset only reset {JSX_Column}
 }
-<div key={SS_Reset} id='C02id_ScrollColumnName'>
+<div key={SS_PrivateReset} id='C02id_ScrollColumnName'>
+<div >
 {JSX_Columns}
+</div>
 </div>
 
 <hr/>
 </div>
-</>
+
 )
 }
 //****************************************************************************

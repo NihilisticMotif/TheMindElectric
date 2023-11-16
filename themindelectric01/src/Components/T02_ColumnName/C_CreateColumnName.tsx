@@ -4,7 +4,9 @@ export function C_CreateColumnName(
         // SS_Columns
         Columns:TS_ColumnName[],
         // New Column Name
-        NewName:string              
+        NewName:string,
+        IsNewSelect:boolean,
+        IsFirst?:boolean
         ):TS_ColumnName[]{
     // Check duplicate Column Name
     if(NewName.toString().length>0 
@@ -23,14 +25,13 @@ export function C_CreateColumnName(
             const let_NewColumn:TS_ColumnName={
                 Key: let_NewKey,    
                 Name: NewName, 
-                IsSelect:false,
+                IsSelect:IsNewSelect,
                 IsVisible: true
                 }
-            
-            return [
-                let_NewColumn,
-                ...Columns    // Other Columns
-            ]
+            if(typeof IsFirst === 'undefined' || IsFirst === true)
+            {return [let_NewColumn,...Columns]}
+            else if (IsFirst === false)
+            {return [...Columns,let_NewColumn]}
         }
         return Columns
 }

@@ -1,0 +1,15 @@
+
+1. Both SS_SelectColumns (from C01_Table) and SS_Columns (from C02_ColumnName) are list of TS_ColumnName = TS_ColumnName[]
+2. SS_SelectColumns consist of only SS_Columns[i].IsSelect=true
+3. SS_Filter does not effect SS_SelectColumns
+2. SS_SelectColumns (C01) and SS_Columns (C02) can be sort in different order.
+3. When either SS_SelectColumns or SS_Columns rename, or delete its element,
+   the other TS_ColumnName[] must be update.
+
+
+Function (C02_ColumnName)
+1. f_CreateColumn
+2. f_Rename
+3. f_Delete
+4. f_Select 
+

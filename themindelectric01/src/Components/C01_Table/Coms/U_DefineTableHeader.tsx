@@ -16,15 +16,15 @@ const U_DefineTableHeader = (
 {
     // PARAMETER
     // HOOK: setState()
-    setSS_Reset,    // from ../index.js, Reset After update activate setSS_Filter
-    SS_Columns,      // from ../index.js, Sort Column
-    setSS_Columns,   // from ../index.js, Sort Column
+    setSS_PrivateReset,    // from ../index.js, Reset After update activate setSS_Filter
+    SS_PrivateColumns,      // from ../index.js, Sort Column
+    setSS_PrivateColumns,   // from ../index.js, Sort Column
 }:{
     // TYPE
     // HOOK: setState()
-    setSS_Reset:(S:number)=>void,   
-    SS_Columns:TS_ColumnName[],
-    setSS_Columns:(S:TS_ColumnName[])=>void
+    setSS_PrivateReset:(S:number)=>void,   
+    SS_PrivateColumns:TS_ColumnName[],
+    setSS_PrivateColumns:(S:TS_ColumnName[])=>void
 }
 ) => {
 //****************************************************************************
@@ -44,13 +44,13 @@ const U_DefineTableHeader = (
     }
 
     function f_DSort(IsD:boolean):void{
-        let ss_Columns:TS_ColumnName[] = [...SS_Columns]
-        ss_Columns.sort(f_Sort("Name"));
-        if(IsD===true){ss_Columns.reverse();}
+        let ss_PrivateColumns:TS_ColumnName[] = [...SS_PrivateColumns]
+        ss_PrivateColumns.sort(f_Sort("Name"));
+        if(IsD===true){ss_PrivateColumns.reverse();}
         // https://www.w3schools.com/jsref/jsref_sort.asp
         // https://stackoverflow.com/questions/11182924/how-to-check-if-javascript-object-is-json
-        setSS_Columns(ss_Columns)
-        setSS_Reset(Math.random())
+        setSS_PrivateColumns(ss_PrivateColumns)
+        setSS_PrivateReset(Math.random())
     }
 
 return(
@@ -60,7 +60,7 @@ return(
 <td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Export Filtered Data</button></td>
 <td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Rename Table</button></td>
 <td><button className='C01id_Header' /*onClick={()=>f_DSort(true)}*/>Inspecting Table</button></td>
-<td><button className='C01id_Header'  onClick={()=>f_DSort(true)}>Descending Sort Columns</button></td>
+<td><button className='C01id_Header' onClick={()=>f_DSort(true)}>Descending Sort Columns</button></td>
 <td><button className='C01id_Header' onClick={()=>f_DSort(false)}>Ascending Sort Columns</button></td>
 </div>
     )

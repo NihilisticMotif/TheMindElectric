@@ -1,3 +1,554 @@
+//****************************************************************************
+// JSX_01: Testing
+//****************************************************************************
+    const JSX_TestPrivateColumn:JSX.Element[] = let_PrivateColumns.map((Column)=>
+        <td>
+        <div>
+        <td>{Column.Name}</td>
+        <td>{Column.Key}</td>
+        <td>{Column.IsSelect.toString()}</td>
+        <td>{Column.IsVisible}</td>
+        </div>
+        </td>
+        );
+ 
+    // Create JSX Elements 
+ 
+    // const ss_Columns:TS_ColumnName[]=[...SS_Columns]
+    // const ss_SelectColumn:TS_ColumnName[] = (ss_Columns.filter(Column=>
+    //     Column.IsSelect===true
+    //     // https://react.dev/learn/rendering-lists
+    // ));
+ 
+SS_Reset={SS_Reset}
+ 
+SS_Reset={SS_Reset}
+ 
+SS_Reset:number,
+ 
+SS_Reset,
+ 
+SS_Reset:number,
+ 
+SS_Reset,
+ 
+key={SS_Reset}
+ 
+key={SS_Reset}
+ 
+key={SS_Reset}
+ 
+            return 
+ 
+            {
+            if(Column.IsVisible===true )
+ 
+    //
+    // Filter Every Column the satisfy the condition
+    for(let i:number=0;i<ss_Columns.length;i++){
+        if(ss_Columns[i].Name.includes(SS_Filter)===true || ss_Columns[i].IsVisible===true){
+            ss_Columns[i].IsVisible=true
+        }
+        else{ss_Columns[i].IsVisible=false}
+    }
+ 
+    let ss_Columns:TS_ColumnName[]=[...SS_PrivateColumns]
+ 
+else return <h1></h1>
+ 
+//****************************************************************************
+// FUNCTION_00: Sort SS_Column
+//****************************************************************************
+ 
+</div>
+ 
+key={SS_Reset}
+ 
+setSS_Reset={setSS_PrivateReset}
+ 
+        alert()
+ 
+<>
+ 
+
+<div>
+
+</div>
+ 
+<h1>Testing (C01_Table)</h1>
+ 
+<table id='C01id_Table' key={SS_Reset}>
+{JSX_TestColumn}
+</table>
+ 
+<table id='C01id_Table' key={SS_Reset}>
+{JSX_TestPrivateColumn}
+</table>
+ 
+//****************************************************************************
+// JSX_01: Testing
+//****************************************************************************
+    const JSX_TestPrivateColumn:JSX.Element[] = let_FilterColumns.map((Column)=>
+        <td>
+        <div>
+        <td>{Column.Name}</td>
+        <td>{Column.Key}</td>
+        <td>{Column.IsSelect.toString()}</td>
+        <td>{Column.IsVisible}</td>
+        </div>
+        </td>
+        );
+ 
+<table id='C01id_Table' key={SS_Reset}>
+{JSX_TestPrivateColumn}
+</table>
+ 
+key={}
+ 
+ key={SS_PrivateReset}
+ 
+key={SS_Reset}
+ 
+key={SS_Reset}
+ 
+Private
+ 
+</div>
+ 
+<div>
+</div>
+ 
+</div>
+ 
+    <div key={SS_PrivateReset}>
+ 
+<div key={SS_Reset} id='C02id_ScrollColumnName'>
+ 
+</div>
+</div>
+ 
+<div key={SS_PrivateReset}>
+ 
+</div>
+ 
+Private
+ 
+Private
+ 
+<div>
+<h1>Testing</h1>
+<table id='C01id_Table' key={SS_Reset}>
+{JSX_TestPrivateColumn}
+</table>
+</div>
+ 
+<h1>Testing</h1>
+<table id='C01id_Table' key={SS_Reset}>
+{JSX_TestPrivateColumn}
+</table>
+ 
+</table>
+ 
+</div>
+ 
+Name
+ 
+        <h1></h1>
+ 
+<C_DefineColumnButton
+            ThisColumn={Column}
+            SS_Columns={SS_Columns}
+            setSS_Columns={setSS_Columns}
+            setSS_Reset={setSS_Reset}
+        />
+ 
+let_NewColumn
+ 
+            
+ 
+                
+ 
+            ]
+ 
+    // Other Columns
+ 
+useEffect 
+ 
+import { useState } from 'react';
+ 
+        //alert(JSON.stringify(ss_Columns))
+ 
+        //alert(JSON.stringify(ss_Columns))
+ 
+et_Update
+ 
+</div>
+ 
+key={SS_PrivateReset}
+ 
+Private
+ 
+setSS_Filter(let_Input)
+ 
+        setSS_Columns(ss_Columns)
+ 
+setSS_Filter(let_Input)
+ 
+        alert(JSON.stringify(SS_Columns))
+ 
+        alert(JSON.stringify(SS_Columns))
+ 
+            
+ 
+        let ss_SelectColumns:TS_ColumnName[]= [...SS_SelectColumns];
+        let let_UpdateSelectColumn:TS_ColumnName[]=U_IsSelect(ss_SelectColumns,false,undefined,ThisColumn)
+        setSS_SelectColumns(let_UpdateSelectColumn);
+ 
+        let ss_SelectColumns = [...SS_SelectColumns];
+        let let_UpdateSelectColumns=D_DeleteColumnName(ThisColumn,ss_SelectColumns)
+        setSS_SelectColumns(let_UpdateSelectColumns);
+ 
+        let ss_SelectColumns:TS_ColumnName[]=[...SS_SelectColumns]
+        let let_UpdateSelectColumns:TS_ColumnName[]=U_RenameColumnName(ThisColumn,ss_SelectColumns,let_NewName)
+        setSS_SelectColumns(let_UpdateSelectColumns);
+ 
+        f_Display(D,ss_SelectColumns,setSS_SelectColumns)
+ 
+        let ss_SelectColumns:TS_ColumnName[]=[...SS_SelectColumns]
+ 
+    SS_SelectColumns:TS_ColumnName[],
+    setSS_SelectColumns:(S:TS_ColumnName[])=>void,
+ 
+    SS_SelectColumns,   // State of All Columns that appear in C01_Table
+    setSS_SelectColumns,
+ 
+SS_Reset,
+setSS_Reset
+ 
+// HOOK
+ 
+SS_Reset:number,
+setSS_Reset:(S:number)=>void
+ 
+SS_Reset={SS_Reset}
+setSS_Reset={setSS_Reset}
+ 
+    const [SS_Reset,setSS_Reset]=useState<number>(0)
+ 
+Select
+ 
+Select
+ 
+    // Create a copy of SS_Columns for Drag and Drop
+    const [SS_SelectColumns,setSS_SelectColumns] = useState<TS_ColumnName[]>([...SS_Columns])
+ 
+            if()
+ 
+        let let_NewName:string=(document.getElementById('C02id_CreateNewColumn') as HTMLInputElement).value.toString();
+ 
+ Local
+ 
+        let let_NewName:string=(document.getElementById('C01id_CreateNewColumn') as HTMLInputElement).value.toString();
+        
+        // Update All Column
+        let ss_Columns:TS_ColumnName[]=[... SS_Columns]
+        let let_UpdateColumns:TS_ColumnName[]=C_CreateColumnName(ss_Columns,let_NewName)
+        setSS_Columns(let_UpdateColumns)
+ 
+        return Columns
+ 
+                ...Columns    // Other Columns
+            ]
+ 
+[
+                
+ 
+            
+ 
+    // Other Columns
+ 
+                
+ 
+                
+ 
+            
+ 
+    ThisColumn:TS_ColumnName,
+ 
+    ThisColumn,
+ 
+    // PROPERTY
+    ThisColumn,
+ 
+Select
+ 
+Select
+ 
+    
+    useEffect(()=>{setSS_SelectColumns(SS_Columns)},[])
+ 
+
+>(SS_Columns)
+ 
+    // Create a copy of SS_Columns
+    const [SS_C02Columns,setSS_C02Columns]=useState<TS_ColumnName[]
+ 
+    const [SS_Reset,setSS_Reset]= useState<number>(0)
+ 
+ for Drag and Drop
+ 
+Select
+ 
+Select
+ 
+,let_NewName
+ 
+Select
+ 
+Select
+ 
+et_VisibleColumns
+ 
+[...
+ 
+.filter(Column=>
+        Column.IsSelect===true
+        // https://react.dev/learn/rendering-lists
+    )
+ 
+            SS_SelectColumns={SS_SelectColumns}
+            setSS_SelectColumns={setSS_SelectColumns}
+ 
+        let ss_SelectColumns:TS_ColumnName[]= [...SS_SelectColumns];
+        let let_UpdateSelectColumn:TS_ColumnName[]=U_IsSelect(ss_SelectColumns,false,undefined,ThisColumn)
+        setSS_SelectColumns(let_UpdateSelectColumn);
+ 
+        let ss_SelectColumns = [...SS_SelectColumns];
+        let let_UpdateSelectColumns=D_DeleteColumnName(ThisColumn,ss_SelectColumns)
+        setSS_SelectColumns(let_UpdateSelectColumns);
+ 
+        let ss_SelectColumns:TS_ColumnName[]=[...SS_SelectColumns]
+        let let_UpdateSelectColumns:TS_ColumnName[]=U_RenameColumnName(ThisColumn,ss_SelectColumns,let_NewName)
+        setSS_SelectColumns(let_UpdateSelectColumns);
+ 
+        let ss_SelectColumns:TS_ColumnName[]=[...SS_SelectColumns]
+ 
+        f_Display(D,ss_SelectColumns,setSS_SelectColumns)
+ 
+    SS_SelectColumns:TS_ColumnName[],
+    setSS_SelectColumns:(S:TS_ColumnName[])=>void,
+ 
+    SS_SelectColumns,   // State of All Columns that appear in C01_Table
+    setSS_SelectColumns,
+ 
+    useEffect(()=>{alert('Hello')},[])
+ 
+        for(let i:number=0;i<ss_Columns.length;i++){
+            if(ss_Columns[i].Key===ThisColumn.Key){
+                let let_IsSelect:boolean
+                if(ThisColumn.IsSelect===false){
+                    let_IsSelect=true
+                }
+                else{
+                    let_IsSelect=false
+                }
+                ss_Columns[i].IsSelect=let_IsSelect
+                ss_Columns[i].Display=0
+            }
+        }
+ 
+U_IsSelect()
+ 
+    function f_UpdateBothList(){
+        let ss_Columns:TS_ColumnName[]=[...SS_Columns]
+        let ss_SelectColumns:TS_ColumnName[]=[...SS_SelectColumns]
+    }
+ 
+et let_NewName:string= (document.getElementById(C01id_Rename)as HTMLInputElement).value 
+        let ss_Columns:TS_ColumnName[]=[...SS_Columns]
+        let let_UpdateColumns:TS_ColumnName[]=U_RenameColumnName(ThisColumn,ss_Columns,let_NewName)
+        setSS_Columns(let_UpdateColumns);
+        setSS_Reset(Math.random())
+ 
+setSS_Reset(Math.random())
+ 
+let let_UpdateColumns:TS_ColumnName[]=U_UpdateDisplay(ThisColumn,ss_Columns,0)
+        setSS_Columns(let_UpdateColumns)
+        setSS_Reset(Math.random())  
+ 
+f_UpdateDisplay(0)
+ 
+        let ss_Columns:TS_ColumnName[]=[...SS_Columns]
+ 
+        U_UpdateDisplay(ThisColumn,ss_Columns,1)
+ 
+let let_UpdateColumns:TS_ColumnName[]=
+ 
+setSS_Columns(
+ 
+Select
+ 
+let ss_SelectColumns = [...SS_SelectColumns];
+ 
+setSS_Columns(let_UpdateColumns);
+ 
+        for(let i:number=0;i<ss_Columns.length;i++){
+            if(ss_Columns[i].Key===ThisColumn.Key){
+                ss_Columns[i].IsSelect=false
+                ss_Columns[i].Display=0
+            }
+        }
+ 
+ThisColumns?:TS_ColumnName,
+ 
+for(let i:number=0;i<Columns.length;i++){
+        Columns[i].IsSelect=IsSelect
+    }
+ 
+                let let_IsSelect:boolean
+                if(ThisColumn.IsSelect===false){
+                    let_IsSelect=true
+                }
+                else{
+                    let_IsSelect=false
+                }
+ 
+    const ss_Columns:TS_ColumnName[]=[...SS_SelectColumns]
+ 
+.filter(Column=>
+        Column.IsSelect===true
+        // https://react.dev/learn/rendering-lists
+    )
+ 
+        alert(JSON.stringify(SS_Columns))
+ 
+        alert(JSON.stringify(SS_Columns))
+ 
+Select
+ 
+Select
+ 
+SS_Reset={SS_Reset}
+setSS_Reset={setSS_Reset}
+ 
+SS_Reset={SS_Reset}
+setSS_Reset={setSS_Reset}
+ 
+SS_Reset:number
+setSS_Reset:(S:number)=>void
+ 
+SS_Reset,
+setSS_Reset
+ 
+SS_Reset,
+setSS_Reset
+ 
+SS_Reset:number
+setSS_Reset:(S:number)=>void
+ 
+
+    let ss_SelectColumns:TS_ColumnName[]=SS_SelectColumns
+ 
+//let 
+ 
+    // Reset Column List after Update Column List (Create, Rename, Delete, Filter and Sort)
+    // https://stackoverflow.com/questions/56649094/how-to-reload-a-component-part-of-page-in-reactjs
+ 
+    const [SS_Reset, setSS_Reset] = useState<number>(1);
+ 
+    // Reset Column List after Update Column List (Create, Rename, Delete, Filter and Sort)
+    const [SS_Reset, setSS_Reset] = useState<number>(1)
+ 
+={setSS_Reset}
+ 
+    const [SS_Reset,setSS_Reset]=useState<number>(1)
+ 
+    const ss_Columns:TS_ColumnName[]=SS_Columns
+ 
+Change Mode of C_DefineColumn Components for
+ 
+        alert(JSON.stringify(ThisColumn))
+        alert(let_DefaultDisplay)
+ 
+Select function that will appear in C01_Table with IsSelect 
+ 
+//****************************************************************************
+// FUNCTION_00: Select function that will appear in C01_Table with IsSelect 
+//****************************************************************************
+    const C02id_CheckButton:string = 'C01id_CheckButton'+ThisColumn.Key.toString()
+    function f_OpenUnselect():void{
+        let ss_Celumns:TS_ColumnName[]=SS_Columns
+        U_UpdateDisplay(ThisColumn,ss_Celumns,3)
+        setSS_Reset(Math.random())
+        alert(JSON.stringify(ThisColumn))
+        alert(let_DefaultDisplay)
+    }
+
+    function f_UnSelect():void{
+        // https://react.dev/learn/responding-to-events#preventing-default-behavior
+        // https://www.w3schools.com/jsref/met_document_getelementbyid.asp
+        
+        let ss_Columns:TS_ColumnName[]= [...SS_Columns];
+        for(let i:number=0;i<ss_Columns.length;i++){
+            if(ss_Columns[i].Key===ThisColumn.Key){
+                let let_IsSelect:boolean
+                if(ThisColumn.IsSelect===false){
+                    let_IsSelect=true
+                }
+                else{
+                    let_IsSelect=false
+                }
+                ss_Columns[i].IsSelect=let_IsSelect
+                ss_Columns[i].Display=0
+            }
+        }
+        setSS_Columns(ss_Columns);
+        setSS_Reset(Math.random())
+        // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
+    }
+ 
+    const [let_DefaultDisplay,setlet_DefaultDisplay]= useState<0|1|2|3>(let_DefaultDisplay)
+ 
+=
+<>
+<button className={'C01id'} onClick={f_OpenUnselect} id={C02id_CheckButton} style={{backgroundColor: "white"}}>X</button>
+<button className={'C01id'} onClick={f_OpenRename}>Rename</button>
+<button className={'C01id'} onClick={f_OpenDelete}>Delete</button>
+<button className={'C01id'} onClick={f_OpenSetting}>...</button>
+</>
+ 
+        alert('Hello')
+ 
+ (Column.Display===3
+ 
+ if
+ 
+    function f_OpenUnselect():void{
+        let ss_Celumns:TS_ColumnName[]=SS_Columns
+        U_UpdateDisplay(ThisColumn,ss_Celumns,3)
+        setSS_Reset(Math.random())
+    }
+ 
+    let  :JSX.Element
+ 
+
+    if(ThisColumn.IsSelect===true){
+         =<button className={'C01id'} onClick={f_Select} id={C02id_CheckButton} style={{backgroundColor: "red"}}>X</button>
+    }
+    else{
+         =<button className={'C01id'} onClick={f_Select} id={C02id_CheckButton} style={{backgroundColor: "white"}}>X</button>
+    }
+ 
+    type TS_Display=
+ 
+ eather
+ 
+    const ss_Columns:TS_ColumnName[]=SS_Columns
+ 
+    let ss_Columns:TS_ColumnName[]=[...SS_Columns]
+ 
+a copy of
+ 
         alert(JSON.stringify(let_UpdateColumns))
  
         alert('Hello')

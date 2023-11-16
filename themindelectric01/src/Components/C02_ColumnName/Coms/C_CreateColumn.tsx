@@ -37,7 +37,7 @@ const C_CreateColumn = (
         // https://stackoverflow.com/questions/12989741/the-property-value-does-not-exist-on-value-of-type-htmlelement
         let let_NewName:string=(document.getElementById('C02id_CreateNewColumn') as HTMLInputElement).value.toString();
         let ss_Columns:TS_ColumnName[]=[... SS_Columns]
-        let let_UpdateColumns:TS_ColumnName[]=C_CreateColumnName(ss_Columns,let_NewName)
+        let let_UpdateColumns:TS_ColumnName[]=C_CreateColumnName(ss_Columns,let_NewName,false)
         setSS_Columns(let_UpdateColumns)
         setSS_Reset(Math.random())
     }

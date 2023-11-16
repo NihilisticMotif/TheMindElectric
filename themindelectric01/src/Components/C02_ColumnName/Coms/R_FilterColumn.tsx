@@ -63,7 +63,9 @@ const R_FilterColumn = (
         if(IsD===true){ss_Columns.reverse();}
         // https://www.w3schools.com/jsref/jsref_sort.asp
         // https://stackoverflow.com/questions/11182924/how-to-check-if-javascript-object-is-json
-        f_Filter(ss_Columns)
+        setSS_Columns(ss_Columns)
+        setSS_Reset(Math.random())
+
     }
 
 //****************************************************************************

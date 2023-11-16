@@ -1,5 +1,4 @@
 // React
-import { useState } from 'react';
 
 // Components
 
@@ -8,6 +7,7 @@ import TS_ColumnName from '../../T02_ColumnName/An_Index';
 import {U_RenameColumnName} from '../../T02_ColumnName/U_RenameColumnName'
 import {D_DeleteColumnName} from '../../T02_ColumnName/D_DeleteColumnName'
 import {U_UpdateDisplay} from '../../T02_ColumnName/U_UpdateDisplay'
+import { U_IsSelect } from '../../T02_ColumnName/U_IsSelect';
 // CSS
 
 //****************************************************************************
@@ -23,9 +23,9 @@ const C_DefineColumnButton = (
     ThisColumn,
     // HOOK: setState()
     // https://stackoverflow.com/questions/56649094/how-to-reload-a-component-part-of-page-in-reactjs
-    SS_Columns,       // from ../index.js, f_Rename, f_Delete | List of All Column that IsVisible !== undefined
-    setSS_Columns,    // from ../index.js, f_Rename, f_Delete | Update SS_Column
-    setSS_Reset,     // from ../index.js, f_Rename, f_Delete | Reset and Update Page
+    SS_Columns,         // from ../index.js, f_Rename, f_Delete | List of All Column that IsVisible !== undefined
+    setSS_Columns,      // from ../index.js, f_Rename, f_Delete | Update SS_Column
+    setSS_Reset,        // from ../index.js, f_Rename, f_Delete | Reset and Update Page
 }:{
     // TYPE
     // PROPERTY
@@ -43,66 +43,45 @@ const C_DefineColumnButton = (
 //****************************************************************************
 
     // Set Mode of this component for Rename and/or Delete itself
-    type TS_Display=
-            0|  // Default JSX Column | f_Cancel     => setSS_Display(0) => Open Default JSX Column
-            1|  // Rename JSX Column  | f_OpenRename => setSS_Display(1) => Open Rename JSX Column 
-            2   // Delete JSX Column  | f_OpenDelete => setSS_Display(2) => Open Delete JSX Column 
-    let let_DefaultDisplay:0|1|2
+    //      0|  // Default JSX Column | f_Cancel     => let_DefaultDisplay(0) => Open Default JSX Column
+    //      1|  // Rename JSX Column  | f_OpenRename => let_DefaultDisplay(1) => Open Rename JSX Column 
+    //      2|  // Delete JSX Column  | f_OpenDelete => let_DefaultDisplay(2) => Open Delete JSX Column 
+    //      3   // UnSelect
+    let let_DefaultDisplay:0|1|2|3
     if(ThisColumn.Display===undefined){
         let_DefaultDisplay=0
     }else{
         let_DefaultDisplay=ThisColumn.Display
     }
-    const [SS_Display,setSS_Display]= useState<TS_Display>(let_DefaultDisplay)
 
 //****************************************************************************
-// FUNCTION_00: Select function that will appear in C01_Table with IsSelect 
+// FUNCTION_00: Change Mode of C_DefineColumn Components for Rename and Delete 
 //****************************************************************************
-    let JSX_SelectButton:JSX.Element
-    const C02id_CheckButton:string = 'C01id_CheckButton'+ThisColumn.Key.toString()
+    function f_Display(
+            D:0|1|2|3,
+            s_Columns:TS_ColumnName[],
+            setS_Columns:(S:TS_ColumnName[])=>void):void{
+        let let_UpdateColumns:TS_ColumnName[]=U_UpdateDisplay(ThisColumn,s_Columns,D)
+        setS_Columns(let_UpdateColumns)    
+    }
 
-    function f_Select():void{
-        // https://react.dev/learn/responding-to-events#preventing-default-behavior
-        // https://www.w3schools.com/jsref/met_document_getelementbyid.asp
-        
-        let ss_Columns:TS_ColumnName[]= [...SS_Columns];
-        for(let i:number=0;i<ss_Columns.length;i++){
-            if(ss_Columns[i].Key===ThisColumn.Key){
-                let let_IsSelect:boolean
-                if(ThisColumn.IsSelect===false){
-                    let_IsSelect=true
-                }
-                else{
-                    let_IsSelect=false
-                }
-                ss_Columns[i].IsSelect=let_IsSelect
-            }
-        }
-        setSS_Columns(ss_Columns);
+    function f_UpdateDisplay(D:0|1|2|3){
+        let ss_Columns:TS_ColumnName[]=[...SS_Columns]
+        f_Display(D,ss_Columns,setSS_Columns)
         setSS_Reset(Math.random())
-        // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
     }
 
-    if(ThisColumn.IsSelect===true){
-        JSX_SelectButton=<button className={'C01id'} onClick={f_Select} id={C02id_CheckButton} style={{backgroundColor: "red"}}>X</button>
-    }
-    else{
-        JSX_SelectButton=<button className={'C01id'} onClick={f_Select} id={C02id_CheckButton} style={{backgroundColor: "white"}}>X</button>
-    }
-
-//****************************************************************************
-// FUNCTION_01: Change Mode of C_DefineColumn Components for Rename and Delete 
-//****************************************************************************
     function f_Cancel():void{
-        let ss_Celumns:TS_ColumnName[]=SS_Columns
-        U_UpdateDisplay(ThisColumn,ss_Celumns,0)
+        f_UpdateDisplay(0)
         setSS_Reset(Math.random())
     }
+
+//****************************************************************************
+// FUNCTION_01: Rename Column
+//****************************************************************************
     const C01id_Rename:string='C01id_Rename'+ThisColumn.Key.toString()
     function f_OpenRename():void{
-        let ss_Celumns:TS_ColumnName[]=SS_Columns
-        U_UpdateDisplay(ThisColumn,ss_Celumns,1)
-        setSS_Reset(Math.random())
+        f_UpdateDisplay(1)
     }
     function f_Rename():void{
         let let_NewName:string= (document.getElementById(C01id_Rename)as HTMLInputElement).value 
@@ -112,10 +91,12 @@ const C_DefineColumnButton = (
         setSS_Reset(Math.random())
         // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
     }
+
+//****************************************************************************
+// FUNCTION_02: Delete Column
+//****************************************************************************
     function f_OpenDelete():void{
-        let ss_Celumns:TS_ColumnName[]=SS_Columns
-        U_UpdateDisplay(ThisColumn,ss_Celumns,2)
-        setSS_Reset(Math.random())
+        f_UpdateDisplay(2)
     }
     function f_Delete():void{
         // https://youtu.be/XtS14dXwvwE?si=rYQOe_tJbxmSnDWE
@@ -125,32 +106,60 @@ const C_DefineColumnButton = (
         setSS_Reset(Math.random())
     }
 
+//****************************************************************************
+// FUNCTION_03: Unselect Column
+//****************************************************************************
+    const C02id_CheckButton:string = 'C01id_CheckButton'+ThisColumn.Key.toString()
+    function f_OpenUnselect():void{
+        f_UpdateDisplay(3)
+    }
+
+    function f_UnSelect():void{
+        // https://react.dev/learn/responding-to-events#preventing-default-behavior
+        // https://www.w3schools.com/jsref/met_document_getelementbyid.asp
+        let ss_Columns:TS_ColumnName[]= [...SS_Columns];
+        let let_UpdateColumn:TS_ColumnName[]=U_IsSelect(ss_Columns,false,undefined,ThisColumn)
+        setSS_Columns(let_UpdateColumn);
+        setSS_Reset(Math.random())
+        // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
+    }
+
+//****************************************************************************
+// JSX_00: JSX_Column (Button)
+//****************************************************************************
     // JSX = representing in JSX
     // Default Column JSX
-    let JSX_Column:JSX.Element=
+    let JSX_Column:JSX.Element=<h1></h1>
+    // Default Column JSX
+    if (let_DefaultDisplay===0){
+    JSX_Column=
 <>
-{JSX_SelectButton}
+<button className={'C01id'} onClick={f_OpenUnselect} id={C02id_CheckButton} style={{backgroundColor: "white"}}>X</button>
 <button className={'C01id'} onClick={f_OpenRename}>Rename</button>
 <button className={'C01id'} onClick={f_OpenDelete}>Delete</button>
 <button className={'C01id'} onClick={f_OpenSetting}>...</button>
 </>
-    // Default Column JSX
-    if (SS_Display===0){
-    // Rename Column JSX
-    }else if (SS_Display===1){
+    }else if (let_DefaultDisplay===1){
         JSX_Column=
 <>
 <button className={'C01id'} onClick={f_Rename}>OK</button>
 <button className={'C01id'} onClick={f_Cancel}>Cancel</button>
 </>
     // Delete Column JSX
-    }else if (SS_Display===2){
+    }else if (let_DefaultDisplay===2){
         JSX_Column=
 <>
 <button className={'C01id'} onClick={f_Delete}>OK</button>
 <button className={'C01id'} onClick={f_Cancel}>Cancel</button>
 </>
-}
+    // Unselect Column JSX
+    }else if (let_DefaultDisplay===3){
+        JSX_Column=
+<>
+<button className={'C01id'} onClick={f_UnSelect}>OK</button>
+<button className={'C01id'} onClick={f_Cancel}>Cancel</button>
+</>
+    }
 
 //****************************************************************************
 // FUNCTION_02: Utility, Will Develop Later

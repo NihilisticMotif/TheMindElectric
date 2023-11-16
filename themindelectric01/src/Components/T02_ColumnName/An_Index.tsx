@@ -20,7 +20,7 @@ type TS_ColumnName={
                         // 3. Renamed Column 
                         // Then it is visible in C02_Column and IsVisible = true
                 
-    Display?:0|1|2,     // Display State
+    Display?:0|1|2|3,     // Display State
 }
 
 export default TS_ColumnName

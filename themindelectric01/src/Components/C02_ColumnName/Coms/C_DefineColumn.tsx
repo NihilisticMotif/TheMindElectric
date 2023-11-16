@@ -84,7 +84,7 @@ const C_DefineColumn = (
     }
 
 //****************************************************************************
-// FUNCTION_01: Change Mode of C_DefineColumn Components for Rename and Delete 
+// FUNCTION_01: Rename Column
 //****************************************************************************
     function f_Cancel():void{setSS_Display(0)}
     const C02id_Rename:string='C02id_Rename'+ThisColumn.Key.toString()
@@ -97,6 +97,9 @@ const C_DefineColumn = (
         setSS_Reset(Math.random())
         // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
     }
+//****************************************************************************
+// FUNCTION_02: Delete Column
+//****************************************************************************
     function f_OpenDelete():void{
         setSS_Display(2)
     }
@@ -107,7 +110,9 @@ const C_DefineColumn = (
         setSS_Columns(let_UpdateColumns);
         setSS_Reset(Math.random())
     }
-
+//****************************************************************************
+// JSX_00: JSXColumn
+//****************************************************************************
     // JSX = representing in JSX
     // Default Column JSX
     let JSX_Column:JSX.Element=
@@ -149,8 +154,8 @@ const C_DefineColumn = (
 //****************************************************************************
     function f_OpenSetting():void{
         let ss_Columns:TS_ColumnName[] = [...SS_Columns];
-        //alert(JSON.stringify(list))
-        alert(ss_Columns.length)
+        alert(JSON.stringify(ss_Columns))
+        //alert(ss_Columns.length)
         // https://stackoverflow.com/questions/5612787/converting-an-object-to-a-string
 
         // * [C]: Create Copy Column
