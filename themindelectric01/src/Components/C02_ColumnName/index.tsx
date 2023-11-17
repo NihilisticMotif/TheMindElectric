@@ -1,5 +1,5 @@
 // React
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Components
 import R_FilterColumn from './Coms/R_FilterColumn';
@@ -22,14 +22,16 @@ const C02_ColumnName = (
 // HOOK
 SS_Columns,
 setSS_Columns,
-setSS_Reset,
+SS_IndexColumns,
+setSS_IndexColumns
 }:{
 // TYPE
 // PERPERTY
 // HOOK
 SS_Columns:TS_ColumnName[],
 setSS_Columns:(S:TS_ColumnName[])=>void,
-setSS_Reset:(S:number)=>void,
+SS_IndexColumns:number[],
+setSS_IndexColumns:(S:number[])=>void
 }
 ) => {
 //****************************************************************************
@@ -38,11 +40,24 @@ setSS_Reset:(S:number)=>void,
     // SS_Filter filter Column by Search Name
     const [SS_Filter,setSS_Filter]=useState<string>('');
     
-    // SS_PrivateColumns is identical to SS_Columns except its object order.
+    // Copy SS_Column usinf useState, because I want to rememder the index of each object inside SS_Columns of C01_Table.
     const [SS_PrivateColumns,setSS_PrivateColumns]=useState<TS_ColumnName[]>(SS_Columns)
-    // Reset everything in C01_Table
-    const [SS_PrivateReset,setSS_PrivateReset]=useState<number>(0)
-    
+
+    // SS_PrivateColumns only updated onces in useEffect.
+    // It determine the order of SS_Columns
+    useEffect(()=>{
+        // https://stackoverflow.com/questions/53332321/react-hook-warnings-for-async-function-in-useeffect-useeffect-function-must-ret
+        let ss_IndexColumn:number[]=[...SS_IndexColumns]
+        let ss_PrivateColumn:TS_ColumnName[]=[...SS_Columns]
+        // By ChatGPT
+        ss_PrivateColumn.sort((a, b) => {
+            return ss_IndexColumn.indexOf(a.Key) - ss_IndexColumn.indexOf(b.Key);
+        });
+        setSS_PrivateColumns(()=>ss_PrivateColumn)
+        //alert(JSON.stringify(SS_PrivateColumn))
+        }
+        ,[SS_Columns,SS_IndexColumns])
+
 //****************************************************************************
 // JSX_00: Filter SS_Column.Name by IsVisible=true
 //****************************************************************************
@@ -69,43 +84,15 @@ setSS_Reset:(S:number)=>void,
         Column.IsVisible===true
         // https://react.dev/learn/rendering-lists
     ));
-    /*
-    let JSX_Columns:JSX.Element[] = [...SS_PrivateColumns].map(
-        (Column) => 
-            {
-            if(Column.IsVisible===true )
-            return <div key={Column.Key}>
-            <C_DefineColumn
-                // Property
-                ThisColumn={Column}
-                // Set State Hook
-                setSS_Reset={setSS_Reset}
-                SS_Columns={SS_Columns}
-                setSS_Columns={setSS_Columns}
-            />
-            </div>
-            else if(Column.Name.includes(SS_Filter))
-            return <div key={Column.Key}>
-            <C_DefineColumn
-                // Property
-                ThisColumn={Column}
-                // Set State Hook
-                setSS_Reset={setSS_Reset}
-                SS_Columns={SS_Columns}
-                setSS_Columns={setSS_Columns}
-            />
-            </div>
-            else return <></>
-        }
-            );
-            */
+
     let JSX_Columns:JSX.Element[] = let_FilterColumns.map(
         (Column) => <div key={Column.Key}>
             <C_DefineColumn
                 // Property
                 ThisColumn={Column}
                 // Set State Hook
-                setSS_Reset={setSS_Reset}
+                SS_IndexColumns={SS_IndexColumns}
+                setSS_IndexColumns={setSS_IndexColumns}
                 SS_Columns={SS_Columns}
                 setSS_Columns={setSS_Columns}
             />
@@ -116,64 +103,48 @@ setSS_Reset:(S:number)=>void,
     // https://stackoverflow.com/questions/72217570/insert-counter-in-a-reactjs-map
 
 //****************************************************************************
-// JSX_01: Indicate the structure of let_FilterColumn and SS_Column
-//****************************************************************************
-    const JSX_Indicator:JSX.Element = <>
-<h1>Indicator</h1>
-<h3>SS_Column Length: {SS_Columns.length}</h3>
-<h3>SS_Filter: {SS_Filter}</h3>
-<h3>let_FilterColumn Type: {
-    JSON.stringify(let_FilterColumns)
-    // https://stackoverflow.com/questions/5612787/converting-an-object-to-a-string
-}</h3>
-<h3>let_FilterColumn Length: {
-    let_FilterColumns.length}</h3>
-<h3>let_FilterColumn: {
-    let_FilterColumns.constructor.toString()
-    // https://stackoverflow.com/questions/11182924/how-to-check-if-javascript-object-is-json
-}</h3>
-<hr/>
-</>
-//****************************************************************************
 // OUTPUT
 //****************************************************************************
     return (
 
 <div id='C02id_Div' >
+<h3>C02_ColumnName</h3>
 {
 // Create New Column in Column List
 }
 <C_CreateColumn 
     SS_Columns={SS_Columns} 
     setSS_Columns={setSS_Columns}
-    setSS_Reset={setSS_Reset}
+    SS_IndexColumns={SS_IndexColumns}
+    setSS_IndexColumns={setSS_IndexColumns}
 />
 <hr/>
 {
 // Filter and Sort Column List
 }
 <R_FilterColumn 
-    setSS_Reset={setSS_PrivateReset}
     setSS_Filter={setSS_Filter} 
-    SS_Columns={SS_PrivateColumns}
-    setSS_Columns={setSS_PrivateColumns}
+    SS_Columns={SS_Columns}
+    setSS_Columns={setSS_Columns}
+    setSS_IndexColumns={setSS_IndexColumns}
 />
 <hr/>
 {
 // Select All Column
+// Delete some columns
 }
 <R_SelectAll
     SS_Filter={SS_Filter}
     SS_Columns={SS_Columns}
     setSS_Columns={setSS_Columns}
-    setSS_Reset={setSS_Reset}
+    setSS_IndexColumns={setSS_IndexColumns}
 />
 <hr/>
 {
 // JSX_Column = List of all visible column
 // SS_Reset only reset {JSX_Column}
 }
-<div key={SS_PrivateReset} id='C02id_ScrollColumnName'>
+<div id='C02id_ScrollColumnName'>
 <div >
 {JSX_Columns}
 </div>

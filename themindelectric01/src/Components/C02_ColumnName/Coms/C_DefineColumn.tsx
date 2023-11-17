@@ -22,18 +22,20 @@ const C_DefineColumn = (
     ThisColumn,
     // HOOK: setState()
     // https://stackoverflow.com/questions/56649094/how-to-reload-a-component-part-of-page-in-reactjs
+    SS_IndexColumns,    // Only used in f_Delete
+    setSS_IndexColumns,
     SS_Columns,       // from ../index.js, f_Rename, f_Delete | List of All Column that IsVisible !== undefined
     setSS_Columns,    // from ../index.js, f_Rename, f_Delete | Update SS_Column
-    setSS_Reset,     // from ../index.js, f_Rename, f_Delete | Reset and Update Page
 }:{
     // TYPE
     // PROPERTY
     ThisColumn:TS_ColumnName,
 
     // HOOK: setState()
+    SS_IndexColumns:number[],
+    setSS_IndexColumns:(S:number[])=>void,
     SS_Columns:TS_ColumnName[],
     setSS_Columns:(S:TS_ColumnName[])=>void,
-    setSS_Reset:(S:number       )=>void,
 }) => 
 {
 
@@ -72,7 +74,7 @@ const C_DefineColumn = (
             }
         }
         setSS_Columns(ss_Columns);
-        setSS_Reset(Math.random())
+          
         // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
     }
 
@@ -94,7 +96,7 @@ const C_DefineColumn = (
         let ss_Columns:TS_ColumnName[]=[...SS_Columns]
         let let_UpdateColumns:TS_ColumnName[]=U_RenameColumnName(ThisColumn,ss_Columns,let_NewName)
         setSS_Columns(let_UpdateColumns);
-        setSS_Reset(Math.random())
+        setSS_Display(0)
         // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
     }
 //****************************************************************************
@@ -105,10 +107,18 @@ const C_DefineColumn = (
     }
     function f_Delete():void{
         // https://youtu.be/XtS14dXwvwE?si=rYQOe_tJbxmSnDWE
+        let ss_IndexColumns:number[] = SS_IndexColumns
+        for(let i:number=0;i<ss_IndexColumns.length;i++){
+            if(ss_IndexColumns[i]===ThisColumn.Key){
+                ss_IndexColumns.splice(i, 1);
+            }
+        }
+
         let ss_Columns = [...SS_Columns];
         let let_UpdateColumns=D_DeleteColumnName(ThisColumn,ss_Columns)
+
         setSS_Columns(let_UpdateColumns);
-        setSS_Reset(Math.random())
+        setSS_IndexColumns(ss_IndexColumns);
     }
 //****************************************************************************
 // JSX_00: JSXColumn

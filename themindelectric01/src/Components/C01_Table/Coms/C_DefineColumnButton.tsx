@@ -23,18 +23,20 @@ const C_DefineColumnButton = (
     ThisColumn,
     // HOOK: setState()
     // https://stackoverflow.com/questions/56649094/how-to-reload-a-component-part-of-page-in-reactjs
-    SS_Columns,         // from ../index.js, f_Rename, f_Delete | List of All Column that IsVisible !== undefined
-    setSS_Columns,      // from ../index.js, f_Rename, f_Delete | Update SS_Column
-    setSS_Reset,        // from ../index.js, f_Rename, f_Delete | Reset and Update Page
+    SS_IndexColumns,    // Only used in f_Delete
+    setSS_IndexColumns,
+    SS_Columns,         // Used for f_Rename, f_Delete, f_UnSelect | List of All Column that IsVisible !== undefined
+    setSS_Columns,      // Used for f_Rename, f_Delete, f_UnSelect | Update SS_Column
 }:{
     // TYPE
     // PROPERTY
     ThisColumn:TS_ColumnName,
 
     // HOOK: setState()
+    SS_IndexColumns:number[],
+    setSS_IndexColumns:(S:number[])=>void,
     SS_Columns:TS_ColumnName[],
     setSS_Columns:(S:TS_ColumnName[])=>void,
-    setSS_Reset:(S:number       )=>void,
 }) => 
 {
 
@@ -43,10 +45,10 @@ const C_DefineColumnButton = (
 //****************************************************************************
 
     // Set Mode of this component for Rename and/or Delete itself
-    //      0|  // Default JSX Column | f_Cancel     => let_DefaultDisplay(0) => Open Default JSX Column
-    //      1|  // Rename JSX Column  | f_OpenRename => let_DefaultDisplay(1) => Open Rename JSX Column 
-    //      2|  // Delete JSX Column  | f_OpenDelete => let_DefaultDisplay(2) => Open Delete JSX Column 
-    //      3   // UnSelect
+    //      0|  // Default JSX Column | f_Cancel       => let_DefaultDisplay(0) => Open Default JSX Column
+    //      1|  // Rename JSX Column  | f_OpenRename   => let_DefaultDisplay(1) => Open Rename JSX Column 
+    //      2|  // Delete JSX Column  | f_OpenDelete   => let_DefaultDisplay(2) => Open Delete JSX Column 
+    //      3|  // UnSelect JSX Column| f_OpenUnSelect => let_DefaultDisplay(3) => Open UnSelect JSX Column
     let let_DefaultDisplay:0|1|2|3
     if(ThisColumn.Display===undefined){
         let_DefaultDisplay=0
@@ -68,12 +70,10 @@ const C_DefineColumnButton = (
     function f_UpdateDisplay(D:0|1|2|3){
         let ss_Columns:TS_ColumnName[]=[...SS_Columns]
         f_Display(D,ss_Columns,setSS_Columns)
-        setSS_Reset(Math.random())
     }
 
     function f_Cancel():void{
         f_UpdateDisplay(0)
-        setSS_Reset(Math.random())
     }
 
 //****************************************************************************
@@ -88,7 +88,6 @@ const C_DefineColumnButton = (
         let ss_Columns:TS_ColumnName[]=[...SS_Columns]
         let let_UpdateColumns:TS_ColumnName[]=U_RenameColumnName(ThisColumn,ss_Columns,let_NewName)
         setSS_Columns(let_UpdateColumns);
-        setSS_Reset(Math.random())
         // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
     }
 
@@ -100,10 +99,17 @@ const C_DefineColumnButton = (
     }
     function f_Delete():void{
         // https://youtu.be/XtS14dXwvwE?si=rYQOe_tJbxmSnDWE
-        let ss_Columns = [...SS_Columns];
-        let let_UpdateColumns=D_DeleteColumnName(ThisColumn,ss_Columns)
+        let ss_IndexColumns:number[] = SS_IndexColumns
+        for(let i:number=0;i<ss_IndexColumns.length;i++){
+            if(ss_IndexColumns[i]===ThisColumn.Key){
+                ss_IndexColumns.splice(i, 1);
+            }
+        }
+
+        let ss_Columns:TS_ColumnName[] = [...SS_Columns];
+        let let_UpdateColumns:TS_ColumnName[]=D_DeleteColumnName(ThisColumn,ss_Columns)
         setSS_Columns(let_UpdateColumns);
-        setSS_Reset(Math.random())
+        setSS_IndexColumns(ss_IndexColumns);
     }
 
 //****************************************************************************
@@ -120,7 +126,6 @@ const C_DefineColumnButton = (
         let ss_Columns:TS_ColumnName[]= [...SS_Columns];
         let let_UpdateColumn:TS_ColumnName[]=U_IsSelect(ss_Columns,false,undefined,ThisColumn)
         setSS_Columns(let_UpdateColumn);
-        setSS_Reset(Math.random())
         // https://stackoverflow.com/questions/11688692/how-to-create-a-list-of-unique-items-in-javascript
     }
 

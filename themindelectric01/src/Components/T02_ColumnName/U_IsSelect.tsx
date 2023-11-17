@@ -19,6 +19,7 @@ export function U_IsSelect(
         if(Columns[i].Key===ThisColumns.Key){
             Columns[i].IsSelect=IsSelect
             Columns[i].Display=0
+            break
         }
     }
     }

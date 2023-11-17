@@ -1,3 +1,538 @@
+SS_IndexColumns01[i]
+ 
+01.find((key) => SS_IndexColumns02.includes(key));
+ 
+    //const let_Key01:number|undefined = SS_IndexColumns02.find((key) => SS_IndexColumns01.includes(key));
+
+    //const let_NewKey02:number|undefined = SS_IndexColumns
+ 
+SS_IndexColumns02[i]
+ 
+    if (let_NewKey02 !== undefined && SS_IndexColumns02.length<SS_IndexColumns01.length) {
+    let ss_IndexColumns02 =[...SS_IndexColumns02] 
+    setSS_IndexColumns02([let_NewKey02,...ss_IndexColumns02]);
+    }
+ 
+(prevSS_IndexColumns02) => [...prevSS_IndexColumns02, let_Key02]
+ 
+.Key
+ 
+.Key
+ 
+<div id='Body' >
+<div>
+<h1>Testing (Main)</h1>
+{JSX_TestColumn}
+</div>
+<hr/>
+<div>
+<h1>JSX_TestColumn01</h1>
+{JSX_TestColumn01}
+</div>
+<hr/>
+<div>
+<h1>JSX_TestColumn02</h1>
+{JSX_TestColumn02}
+</div>
+</div>
+ 
+<hr></hr>
+ 
+</div>
+ 
+</div>
+ 
+        </td>
+ 
+        <td>
+ 
+        </td>
+ 
+        <td>
+ 
+<table id='C01id_Table'  >
+
+</table>
+ 
+{JSX_TestColumn}
+<h1>JSX_TestColumn01</h1>
+{JSX_TestColumn01}
+<h1>JSX_TestColumn02</h1>
+{JSX_TestColumn02}
+ 
+{JSX_TestColumn}
+<h1>JSX_TestColumn01</h1>
+{JSX_TestColumn01}
+<h1>JSX_TestColumn02</h1>
+{JSX_TestColumn02}
+</table>
+ 
+.Name
+ 
+.Name
+ 
+const JSXName:string=SS_Columns.find(({Key})=>Key === Key).Name
+ 
+JSON.stringify(
+ 
+SS_Columns.find(({Key})=>Key === Key)}
+ 
+Column.
+ 
+()=>{
+ 
+(Column) => 
+ 
+const JSX_TestColumn02:JSX.Element[] = SS_IndexColumns02.map((Column)=>
+        <td>
+        <div>
+        <td>{Column.Name}</td>
+        </div>
+        </td>
+        );
+ 
+        <td>{Column.Key}</td>
+        <td>{Column.IsSelect.toString()}</td>
+        <td>{Column.IsVisible.toString()}</td>
+ 
+        <td>{Column.Key}</td>
+        <td>{Column.IsSelect.toString()}</td>
+        <td>{Column.IsVisible.toString()}</td>
+ 
+    useEffect(()=>{
+        if(SS_IndexColumns01.length!==SS_IndexColumns02.length){
+            alert('Woke Fight with Sexist')
+            alert(SS_IndexColumns01.length)
+            alert(SS_IndexColumns02.length)
+        }
+    },[SS_IndexColumns01, SS_IndexColumns02])
+ 
+    const [SS_IndexColumns,setSS_IndexColumns]=useState<number[]>(SS_Columns.map(Column=>Column.Key))
+ 
+    let SS_IndexColumns = [...SS_IndexColumns02]
+ 
+    let SS_IndexColumns = [...SS_IndexColumns02]
+ 
+const [SS_IndexColumns,setSS_IndexColumns]=useState<number[]>(SS_Columns.map(Column=>Column.Key))
+ 
+={setSS_IndexColumn02}
+ 
+={SS_IndexColumn02}
+ 
+}
+            else if (IsFirst === false)
+            {return [...Columns,let_NewColumn]}
+ 
+            if(typeof IsFirst === 'undefined' || IsFirst === true)
+ 
+        IsFirst?:boolean
+ 
+let_UpdateColumns[0].Key
+ 
+setSS_Reset:(S:number)=>void,
+ 
+    setSS_PrivateReset,    // from ../index.js, Reset After update activate setSS_Filter
+ 
+    setSS_PrivateReset:(S:number)=>void,  
+ 
+        setSS_PrivateReset(Math.random())
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Reset(Math.random())
+ 
+    setSS_Reset:(S:number)=>void,
+ 
+    setSS_Reset,        // Used for f_Rename, f_Delete, f_UnSelect | Reset and Update Page
+ 
+    setSS_PrivateReset   = {setSS_PrivateReset}
+ 
+ key={SS_PrivateReset}
+ 
+    // Using SS_Columns useState hook and setSS_Reset
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Reset(Math.random())
+ 
+    setSS_Reset:(S:number)=>void,
+ 
+    setSS_Reset 
+ 
+    setSS_Reset:(S:number)=>void, 
+ 
+          
+ 
+          
+ 
+    setSS_Reset,        // Reset After update activate setSS_Filter
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Reset(Math.random())
+ 
+     :(S:number       )=>void,
+ 
+    setSS_Reset,     // from ../index.js, f_Rename, f_Delete | Reset and Update Page
+ 
+         (Math.random())
+ 
+           // from ../index.js, Reset after update Column
+ 
+           :(S:number)=>void
+ 
+key={SS_Reset}
+ 
+setSS_Reset={setSS_Reset}
+ 
+setSS_Reset={setSS_Reset}
+ 
+setSS_Reset:(S:number)=>void,
+ 
+setSS_Reset,
+ 
+    // Reset everything in C01_Table
+    const [SS_PrivateReset,setSS_PrivateReset]=useState<number>(0)
+ 
+            setSS_Reset={setSS_Reset}
+ 
+setSS_Reset,
+ 
+    // Reset everything in C01_Table
+    const [SS_PrivateReset,setSS_PrivateReset]=useState<number>(0)
+ 
+                setSS_Reset={setSS_Reset}
+ 
+    setSS_Reset={setSS_PrivateReset}
+ 
+    setSS_Reset={setSS_Reset}
+ 
+ key={SS_PrivateReset}
+ 
+    setSS_Reset={setSS_Reset}
+ 
+    SS_IndexColumns:number[],
+ 
+    SS_IndexColumns,    // Only use with Delete
+ 
+    SS_IndexColumns={SS_IndexColumns}
+ 
+// from ../index.js, f_Rename, f_Delete | Reset and Update Page
+ 
+// 
+ 
+from ../index.js, f_Rename, f_Delete | Update SS_Column
+ 
+setSS_Reset={setSS_Reset}
+ 
+        // SS_IndexColumns Hook do not interact with f_Filter
+ 
+ss_Columns:TS_ColumnName[]
+ 
+[...SS_Columns]
+ 
+        setSS_Reset(Math.random())
+ 
+        setSS_Columns(ss_Columns)
+ 
+    setSS_IndexColumn:(S:number[])=>void,
+ 
+    setSS_IndexColumns:(S:number[])=>void
+ 
+    setSS_Columns={setSS_Columns}
+ 
+    setSS_Columns,      // Sort Column
+ 
+    SS_IndexColumns={SS_IndexColumns}
+ 
+    SS_IndexColumns   :number[],
+    setSS_IndexColumns:(S:number[])=>void,
+ 
+    SS_IndexColumns,    // Update the index of Column inside C01_Table
+    setSS_IndexColumns, // -
+ 
+Private
+ 
+Private
+ 
+//****************************************************************************
+// JSX_01: Indicate the structure of let_FilterColumn and SS_Column
+//****************************************************************************
+    const JSX_Indicator:JSX.Element = <>
+<h1>Indicator</h1>
+<h3>SS_Column Length: {SS_Columns.length}</h3>
+<h3>SS_Filter: {SS_Filter}</h3>
+<h3>let_FilterColumn Type: {
+    JSON.stringify(let_FilterColumns)
+    // https://stackoverflow.com/questions/5612787/converting-an-object-to-a-string
+}</h3>
+<h3>let_FilterColumn Length: {
+    let_FilterColumns.length}</h3>
+<h3>let_FilterColumn: {
+    let_FilterColumns.constructor.toString()
+    // https://stackoverflow.com/questions/11182924/how-to-check-if-javascript-object-is-json
+}</h3>
+<hr/>
+</>
+ 
+    /*
+    let JSX_Columns:JSX.Element[] = [...SS_PrivateColumns].map(
+        (Column) => 
+            {
+            if(Column.IsVisible===true )
+            return <div key={Column.Key}>
+            <C_DefineColumn
+                // Property
+                ThisColumn={Column}
+                // Set State Hook
+                setSS_Reset={setSS_Reset}
+                SS_Columns={SS_Columns}
+                setSS_Columns={setSS_Columns}
+            />
+            </div>
+            else if(Column.Name.includes(SS_Filter))
+            return <div key={Column.Key}>
+            <C_DefineColumn
+                // Property
+                ThisColumn={Column}
+                // Set State Hook
+                setSS_Reset={setSS_Reset}
+                SS_Columns={SS_Columns}
+                setSS_Columns={setSS_Columns}
+            />
+            </div>
+            else return <></>
+        }
+            );
+        */
+ 
+useMemo 
+ 
+    
+    // SS_PrivateColumns is identical to SS_Columns except its object order.
+    const [SS_PrivateColumns,setSS_PrivateColumns]=useState<TS_ColumnName[]>(SS_Columns)
+ 
+        setSS_Reset={setSS_Reset}
+ 
+    setSS_Reset         // Reset after update Column
+ 
+    setSS_Reset       :(S:number)=>void
+ 
+        //setSS_Reset(Math.random())
+ 
+,false
+ 
+
+    //useEffect(()=>alert('let_Columns = '+JSON.stringify(let_Columns)),[])
+ 
+  
+ 
+   
+ 
+// We only use setSS_PrivateReset and SS_Columns for sorting columns.
+ 
+from ../index.js, 
+ 
+// from ../index.js, Update Columns
+ 
+from ../index.js, 
+ 
+    SS_IndexColumns    = {SS_IndexColumns}
+ 
+    setSS_Columns = {setSS_Columns}
+ 
+    SS_IndexColumns,      // from ../index.js, Sort Column
+ 
+    SS_IndexColumns:number[],
+ 
+    setSS_Columns:(S:TS_ColumnName[])=>void,
+ 
+    setSS_Columns,
+ 
+        setSS_Columns(ss_Columns)
+ 
+            SS_IndexColumns={SS_IndexColumns}
+            setSS_IndexColumns={setSS_IndexColumns}
+ 
+    SS_IndexColumns:number[],
+    setSS_IndexColumns:(S:number[])=>void,
+ 
+    SS_IndexColumns,    // Only used in f_Delete
+    setSS_IndexColumns,
+ 
+let ss_IndexColumns:number[] = SS_IndexColumns
+        for(let i:number=0;i<ss_IndexColumns.length;i++){
+            if(Columns[i].Key===ThisColumn.Key){
+                Columns.splice(i, 1);
+            }
+        }
+ 
+       
+ 
+
+    // useEffect(() => {
+    // setSS_PrivateColumn(prevPrivateColumn => {
+    //     let ss_IndexColumn = [...SS_IndexColumn];
+    //     let ss_PrivateColumn = [...prevPrivateColumn]; // Use the previous state
+    //     ss_PrivateColumn.sort((a, b) => {
+    //         return ss_IndexColumn.indexOf(a.Key) - ss_IndexColumn.indexOf(b.Key);
+    //         });
+    //     return ss_PrivateColumn; // Return the updated state
+    //     });
+    //     }, [SS_IndexColumn]); // Add SS_IndexColumn as a dependency
+ 
+
+    const [count, setCount] = useState<number>(0);
+    const [calculation, setCalculation] = useState<number>(0);
+ 
+{JSX_Count}
+ 
+
+
+    useEffect(() => {
+        setCalculation(() => count ** 1.001);
+    }, [count]); // <- add the count variable here
+
+    const JSX_Count:JSX.Element=<>
+<p>Count: {count}</p>
+<button onClick={() => setCount((c) => c + 1)}>+</button>
+<p>Calculation: {calculation}</p></>
+ 
+    function f_UpdateEffect(){
+        let ss_IndexColumn:number[]=[...SS_IndexColumn]
+        let ss_PrivateColumn:TS_ColumnName[]=[...SS_Columns]
+        // By ChatGPT
+        ss_PrivateColumn.sort((a, b) => {
+            return ss_IndexColumn.indexOf(a.Key) - ss_IndexColumn.indexOf(b.Key);
+        });
+        setSS_PrivateColumn(()=>ss_PrivateColumn)}
+ 
+async 
+ 
+async function Update(){
+        let ss_IndexColumn:number[]=[...SS_IndexColumn]
+        let ss_PrivateColumn:TS_ColumnName[]=[...SS_PrivateColumn]
+        // By ChatGPT
+        ss_PrivateColumn.sort((a, b) => {
+            return ss_IndexColumn.indexOf(a.Key) - ss_IndexColumn.indexOf(b.Key);
+        });
+        setSS_PrivateColumn(()=>ss_PrivateColumn)}
+ 
+async function Update(){
+        let ss_IndexColumn:number[]=[...SS_IndexColumn]
+        let ss_PrivateColumn:TS_ColumnName[]=[...SS_PrivateColumn]
+        // By ChatGPT
+        ss_PrivateColumn.sort((a, b) => {
+            return ss_IndexColumn.indexOf(a.Key) - ss_IndexColumn.indexOf(b.Key);
+        });
+ 
+let_Columns
+ 
+alert(JSON.stringify(ss_PrivateColumn))
+ 
+    const [SS_IndexColumn,setSS_IndexColumn]=useState<number[]>([2,4,3,0,1])
+const [SS_PrivateColumn,setSS_PrivateColumn]=useState<TS_ColumnName[]>(SS_Columns)
+ 
+    let ss_IndexColumn = [...SS_IndexColumn]
+    let ss_PrivateColumn = [...SS_PrivateColumn]
+    const Me_Sort = ss_PrivateColumn.slice().sort((a, b) => ss_IndexColumn.indexOf(a.Key) - ss_IndexColumn.indexOf(b.Key));
+    useEffect(()=>setSS_PrivateColumn(Me_Sort),[])
+    // useEffect(() => {
+    //     let ss_IndexColumn = [...SS_IndexColumn];
+    //     let ss_Columns=[...SS_Columns]
+    //     setSS_PrivateColumn(
+    //     ss_Columns.sort((a, b) => {
+    //       return ss_IndexColumn.indexOf(a.Key) - ss_IndexColumn.indexOf(b.Key);
+    //     }))}
+    //     ,
+    //     [SS_Columns,SS_IndexColumn]
+    //     ); // Add SS_IndexColumn as a dependency
+ 
+JSON.stringify(
+ 
+, [SS_IndexColumn]);
+ 
+useMemo(() => 
+ 
+(a, b) => {
+          return ss_IndexColumn.indexOf(a.Key) - ss_IndexColumn.indexOf(b.Key);
+        }
+ 
+SS_Columns,SS_IndexColumn
+ 
+() => {
+ 
+
+    }
+ 
+let ss_IndexColumn = [...SS_IndexColumn];
+        let ss_Columns=[...SS_Columns]
+ 
+:void
+ 
+        })});
+        }, 
+ 
+()=>{
+ 
+;
+        }
+ 
+        return ss_PrivateColumn; // Return the updated state
+ 
+        return ss_PrivateColumn; // Return the updated state
+ 
+revPrivateColumn => 
+ 
+        let ss_PrivateColumn = [...prevPrivateColumn]; // Use the previous state
+ 
+<p>Count: {count}</p>
+<button onClick={() => setCount((c) => c + 1)}>+</button>
+<p>Calculation: {calculation}</p>
+ 
+        //alert(JSON.stringify(SS_PrivateColumn))
+ 
+        alert(JSON.stringify(ss_PrivateColumn))
+ 
+SS_Columns
+ 
+
+    let ss_PrivateColumn=[...SS_PrivateColumn]
+    ArrayObject
+ 
+.sort((a, b) => {
+        return KeyArray.indexOf(a.key) - KeyArray.indexOf(b.key);
+    });
+ 
+    //const [SS_PrivateColumn,setSS_PrivateColumn]=useState<number[]>(SS_Columns.map(Column=>Column.Key))
+ 
+const [SS_PrivateColumn,setSS_PrivateColumn]=useState<TS_ColumnName[]>(SS_Columns)
+ 
+// Reset everything in C01_Table
+    const [SS_PrivateReset,setSS_PrivateReset]=useState<number>(0)
+ 
+const [SS_IndexColumn,setSS_IndexColumn]=useState<number[]>([4,2,3,0,1])
+ 
+SS_Columns.map(Column=>Column.Key)
+ 
+    //const [SS_PrivateColumns,setSS_PrivateColumns]=useState<TS_ColumnName[]>(SS_Columns)
+ 
+Private
+ 
+Private
+ 
+Private
+ 
+Private
+ 
 //****************************************************************************
 // JSX_01: Testing
 //****************************************************************************

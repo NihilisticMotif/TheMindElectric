@@ -16,15 +16,13 @@ const U_DefineTableHeader = (
 {
     // PARAMETER
     // HOOK: setState()
-    setSS_PrivateReset,    // from ../index.js, Reset After update activate setSS_Filter
-    SS_PrivateColumns,      // from ../index.js, Sort Column
-    setSS_PrivateColumns,   // from ../index.js, Sort Column
+    SS_Columns,
+    setSS_IndexColumns,   // from ../index.js, Sort Column
 }:{
     // TYPE
-    // HOOK: setState()
-    setSS_PrivateReset:(S:number)=>void,   
-    SS_PrivateColumns:TS_ColumnName[],
-    setSS_PrivateColumns:(S:TS_ColumnName[])=>void
+    // HOOK: setState() 
+    SS_Columns:TS_ColumnName[],
+    setSS_IndexColumns:(S:number[])=>void
 }
 ) => {
 //****************************************************************************
@@ -44,13 +42,15 @@ const U_DefineTableHeader = (
     }
 
     function f_DSort(IsD:boolean):void{
-        let ss_PrivateColumns:TS_ColumnName[] = [...SS_PrivateColumns]
-        ss_PrivateColumns.sort(f_Sort("Name"));
-        if(IsD===true){ss_PrivateColumns.reverse();}
+        // Get the Alphabet Name Order of SS_Columns
+        let ss_Columns:TS_ColumnName[] = [...SS_Columns]
+        ss_Columns.sort(f_Sort("Name"));
+        if(IsD===true){ss_Columns.reverse();}
         // https://www.w3schools.com/jsref/jsref_sort.asp
         // https://stackoverflow.com/questions/11182924/how-to-check-if-javascript-object-is-json
-        setSS_PrivateColumns(ss_PrivateColumns)
-        setSS_PrivateReset(Math.random())
+        
+        // Update SS_IndexColumns
+        setSS_IndexColumns(ss_Columns.map((Column)=>Column.Key))
     }
 
 return(

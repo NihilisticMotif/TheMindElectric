@@ -16,22 +16,23 @@ const R_FilterColumn = (
 {
     // PARAMETER
     // HOOK: setState()
-    setSS_Reset,    // from ../index.js, Reset After update activate setSS_Filter
-    setSS_Filter,   // from ../index.js, Filter Column that match with SS_Filter
-    SS_Columns,      // from ../index.js, Sort Column
-    setSS_Columns,   // from ../index.js, Sort Column
+    setSS_Filter,       // Filter Column that match with SS_Filter
+    SS_Columns,         // Sort and Filter Column
+    setSS_Columns,      // Reset Column, before filter the Column that match with SS_Filter
+    setSS_IndexColumns  // Sort Column
 }:{
     // TYPE
-    // HOOK: setState()
-    setSS_Reset:(S:number)=>void,   
+    // HOOK: setState()  
     setSS_Filter:(S:string)=>void,  
     SS_Columns:TS_ColumnName[],
-    setSS_Columns:(S:TS_ColumnName[])=>void
+    setSS_Columns:(S:TS_ColumnName[])=>void,
+    setSS_IndexColumns:(S:number[])=>void
 }) => {
 //****************************************************************************
 // FUNCTION_00: Update SS_Filter, so that index.js update the new filter word.
 //****************************************************************************
-    function f_Filter(ss_Columns:TS_ColumnName[]):void{
+    function f_Filter():void{
+        let ss_Columns:TS_ColumnName[]=[...SS_Columns]
         let let_Input:string = (document.getElementById('C02id_FilterColumnName') as HTMLInputElement).value
         // Reset IsVisible to false,
         // so that the only column that will appear
@@ -39,7 +40,6 @@ const R_FilterColumn = (
         let let_UpdateColumns=U_IsVisibleFalse(ss_Columns)
         setSS_Columns(let_UpdateColumns)
         setSS_Filter(let_Input)
-        setSS_Reset(Math.random())
     }
 //****************************************************************************
 // FUNCTION_01: Sort SS_Column
@@ -63,9 +63,8 @@ const R_FilterColumn = (
         if(IsD===true){ss_Columns.reverse();}
         // https://www.w3schools.com/jsref/jsref_sort.asp
         // https://stackoverflow.com/questions/11182924/how-to-check-if-javascript-object-is-json
-        setSS_Columns(ss_Columns)
-        setSS_Reset(Math.random())
-
+        
+        setSS_IndexColumns(ss_Columns.map((Column)=>Column.Key))
     }
 
 //****************************************************************************
@@ -78,7 +77,7 @@ const R_FilterColumn = (
 <td><input className='C02id' type ="text" id='C02id_FilterColumnName'></input></td>
 </div>
 <div className='C02id'>
-<td><button className='C02id' onClick={()=>f_Filter([...SS_Columns])}>OK</button></td>
+<td><button className='C02id' onClick={()=>f_Filter()}>OK</button></td>
 <td><button className='C02id' onClick={()=>f_DSort(true)}>Descending Sort</button></td>
 <td><button className='C02id' onClick={()=>f_DSort(false)}>Ascending Sort</button></td>
 </div>

@@ -6,7 +6,6 @@ export function C_CreateColumnName(
         // New Column Name
         NewName:string,
         IsNewSelect:boolean,
-        IsFirst?:boolean
         ):TS_ColumnName[]{
     // Check duplicate Column Name
     if(NewName.toString().length>0 
@@ -28,10 +27,7 @@ export function C_CreateColumnName(
                 IsSelect:IsNewSelect,
                 IsVisible: true
                 }
-            if(typeof IsFirst === 'undefined' || IsFirst === true)
-            {return [let_NewColumn,...Columns]}
-            else if (IsFirst === false)
-            {return [...Columns,let_NewColumn]}
+            return [let_NewColumn,...Columns]
         }
         return Columns
 }

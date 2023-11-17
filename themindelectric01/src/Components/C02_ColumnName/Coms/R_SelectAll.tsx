@@ -20,8 +20,8 @@ const R_SelectAll = (
     SS_Filter,
     // HOOK
     SS_Columns,
-    setSS_Columns,    // from ../index.js, f_Rename, f_Delete | Update SS_Column
-    setSS_Reset      // from ../index.js, f_Rename, f_Delete | Reset and Update Page
+    setSS_Columns,    
+    setSS_IndexColumns, // Only use with Delete     
 }:{ // TYPE
 
     // PROPERTY
@@ -29,20 +29,25 @@ const R_SelectAll = (
     // HOOK
     SS_Columns:TS_ColumnName[],
     setSS_Columns:(S:TS_ColumnName[])=>void,
-    setSS_Reset:(S:number)=>void,
+    setSS_IndexColumns:(S:number[])=>void,
 }
 )=>{
 //****************************************************************************
 // HOOK
 //****************************************************************************
+    // IsDefaul = true => Show Default Mode
+    // IsDefaul = false => Show Delete Warning Mode
     const [SS_IsDefault,setSS_IsDefault]= useState<boolean>(true)
+
+    // SS_IsDeleteSelect = true => Will Delete all the SS_Columns.filter(Column=>Column.IsSelect === true)
+    // SS_IsDeleteSelect = false => Will Delete all the SS_Columns.filter(Column=>Column.IsSelect === false)
     const [SS_IsDeleteSelect,setSS_IsDeleteSelect]=useState<boolean>(true)
+
 //****************************************************************************
 // FUNCTION_00: Reset and Update
 //****************************************************************************
-    function f_Reset(ss_Columns:TS_ColumnName[]):void{
+    function f_Update(ss_Columns:TS_ColumnName[]):void{
         setSS_Columns(ss_Columns);
-        setSS_Reset(Math.random())
     }
 
 //****************************************************************************
@@ -51,7 +56,7 @@ const R_SelectAll = (
     function f_SelectAll():void{
         let ss_Columns:TS_ColumnName[]= [...SS_Columns];
         let let_UpdateColumns:TS_ColumnName[]=U_IsSelect(ss_Columns,true)
-        f_Reset(let_UpdateColumns);
+        f_Update(let_UpdateColumns);
     }
 //****************************************************************************
 // FUNCTION_02: Select All Filtered Columns
@@ -59,7 +64,7 @@ const R_SelectAll = (
     function f_SelectAllFilter():void{
         let ss_Columns:TS_ColumnName[]= [...SS_Columns];
         let let_UpdateColumns:TS_ColumnName[]=U_IsSelect(ss_Columns,true,SS_Filter)
-        f_Reset(let_UpdateColumns);
+        f_Update(let_UpdateColumns);
     }
 //****************************************************************************
 // FUNCTION_03: Un Select AllColumns
@@ -67,7 +72,7 @@ const R_SelectAll = (
     function f_UnSelectAll():void{
         let ss_Columns:TS_ColumnName[]= [...SS_Columns];
         let let_UpdateColumns:TS_ColumnName[]=U_IsSelect(ss_Columns,false)
-        f_Reset(let_UpdateColumns);
+        f_Update(let_UpdateColumns);
     }
 
 //****************************************************************************
@@ -75,13 +80,18 @@ const R_SelectAll = (
 //****************************************************************************
     function f_DeleteSelect(IsSelect:boolean):void{
         let ss_Columns:TS_ColumnName[]= [...SS_Columns];
-        let let_NewColumns:TS_ColumnName[]=[]
+        let let_UpdateColumns:TS_ColumnName[]=[]
+        let let_UpdateIndex:number[]=[]
         for(let i:number=0;i<ss_Columns.length;i++){
             if(ss_Columns[i].IsSelect!==IsSelect){
-                let_NewColumns.push(ss_Columns[i])
+                let_UpdateColumns.push(ss_Columns[i])
+                let_UpdateIndex.push(ss_Columns[i].Key)
             }
         }
-        f_Reset(let_NewColumns);
+        setSS_Columns(let_UpdateColumns);
+        setSS_IndexColumns(let_UpdateIndex);
+        
+        // Reset the State of this function
         setSS_IsDefault(true)
         setSS_IsDeleteSelect(true)
     }
