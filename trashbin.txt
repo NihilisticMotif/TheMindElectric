@@ -1,3 +1,639 @@
+(e)=>
+ 
+// <>
+// <P00_Header/>
+// <P01_LeftPanel/>
+// </>
+ 
+let_ThisPanel!.setAttribute("style","width:"+SS_Width.toString()+"px");
+ 
+let let_ThisPanel=document.getElementById('P01id_Div')
+ 
+setSS_Width()
+ 
+        let let_NewWidth:number=0
+ 
+        const setFromEvent = (e) => setSS_MouseX({ x: e.clientX, y: e.clientY });
+        window.addEventListener("mousemove", setFromEvent);
+
+        return () => {
+          window.removeEventListener("mousemove", setFromEvent);
+        };
+ 
+            alert(let_ColorOfTheWind)
+ 
+            alert(let_ColorOfTheWind)
+ 
+    style={{backgroundColor: let_ColorOfTheWind}}
+ 
+            setSS_IsMouseDown(true)
+ 
+            setSS_IsMouseDown(false)
+ 
+"white"
+ 
+let let_ThisPanel=document.getElementById('P01id_Div')
+        let_ThisPanel!.setAttribute("style","width:"+SS_Width.toString()+"px");
+ 
+=false
+ 
+        let let_WIDTH:number=SS_Width
+ 
+        let let_width:number=let_WIDTH-5
+ 
+        let_thisPanel!.setAttribute("style","width:"+let_width.toString()+"px");
+ 
+        let let_thisPanel=document.getElementById('P01id_Div')
+ 
+
+#P01id_div {
+    background-color: rgb(102, 183, 36);
+    /*
+https://stackoverflow.com/questions/7357818/how-can-an-html-element-fill-out-100-of-the-remaining-screen-height-using-css
+*/
+    height: 100vh;
+    width: 495px;
+    margin: 0;
+    padding: 0;
+}
+ 
+et let_OffSetWidth:number=SS_Width
+        if(let_OffSetWidth-mouseX<5){
+            alert('Line Zone')
+        }
+        //alert(let_ThisPanel!.offsetWidth)
+ 
+    const [SS_Width,setSS_Width]=useState<number>(500)
+    const Ref_Click = useRef<number>(0)
+
+    useEffect(()=>{
+        let let_WIDTH:number=SS_Width
+        let let_width:number=let_WIDTH-5
+        let let_THISPanel=document.getElementById('P01id_Div')
+        let let_thisPanel=document.getElementById('P01id_Div')
+        let_THISPanel!.setAttribute("style","width:"+let_WIDTH.toString()+"px");
+        let_thisPanel!.setAttribute("style","width:"+let_width.toString()+"px");
+    },[SS_Width]
+    )
+ 
+</div>
+ 
+<div id='P01id_div' >
+ 
+        let let_ThisPanel=document.getElementById('P01id_Div')
+ 
+let let_OffSetWidth:number=let_ThisPanel!.offsetWidth
+ 
+    draggable
+ 
+    width: 495px;
+ 
+    width: 500px;
+ 
+        const mouseY:number = e.clientY;
+        //alert('Mouse:'+mouseX.toString()+','+mouseY.toString());
+ 
+</div>
+ 
+e: React.MouseEvent<HTMLDivElement>
+ 
+width()
+ 
+.pageX
+ 
+            <div>
+                <div className="content">
+                    <h3 className="h3">Chart </h3>
+                    ASP.NET charts, a well-crafted easy-to-use charting package, is used to add beautiful charts in web and mobile applications
+                </div>
+            </div>
+ 
+import SplitPane from "split-pane-react/esm/SplitPane";
+
+// Initialize Splitter control
+let splitObject: SplitPane = new Splitter({
+    height: '250px',
+    paneSettings: [
+        { size: '200px' },
+        { size: '200px' },
+        { size: '200px' }
+    ],
+    width: '600px'
+});
+
+// Render initialized Splitter
+splitObject.appendTo('#splitter');
+ 
+ from '@syncfusion/ej2-layouts';
+ 
+import { Splitter } from '@syncfusion/ej2-layouts';
+
+// Initialize Splitter control
+let splitObject: Splitter = new Splitter({
+    height: '250px',
+    paneSettings: [
+        { size: '200px' },
+        { size: '200px' },
+        { size: '200px' }
+    ],
+    width: '600px'
+});
+
+// Render initialized Splitter
+splitObject.appendTo('#splitter');
+ 
+P02_Canvas
+ 
+import React, { useState } from 'react';
+import SplitPane, { Pane } from 'split-pane-react';
+import 'split-pane-react/esm/themes/default.css';
+
+const P02_Canvas=()=>{
+  const [sizes, setSizes] = useState([100, '30%', 'auto']);
+
+  const layoutCSS = {
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  };
+
+  return (
+    <div style={{ height: 500 }}>
+      <SplitPane
+        split='vertical'
+        sizes={sizes}
+        onChange={setSizes}
+      >
+        <Pane minSize={50} maxSize='50%'>
+          <div style={{ ...layoutCSS, background: '#ddd' }}>
+            pane1
+          </div>
+        </Pane>
+        <div style={{ ...layoutCSS, background: '#d5d7d9' }}>
+          pane2
+        </div>
+        <div style={{ ...layoutCSS, background: '#a1a5a9' }}>
+          pane3
+        </div>
+      </SplitPane>
+    </div>
+  );
+};
+
+ 
+    main_text:80%
+ 
+<P00_Header/>
+ 
+</div>
+ 
+<div className='Id_Space'>
+ 
+
+.Id_Space{
+    margin-bottom:0px
+}
+ 
+</div>
+ 
+
+//****************************************************************************
+// INPUT
+//****************************************************************************
+{
+// PARAMETER
+// PERPERTY
+// HOOK
+}:{
+// TYPE
+// PERPERTY
+// HOOK
+}
+
+ 
+height: 50px;
+ 
+    margin:0
+ 
+<button>Open</button>
+<button>Login</button>
+<button>Help</button>
+<button>Save</button>
+<button>Import Data</button>
+<button>Export Data</button>
+<button>Export Image</button>
+ 
+</div>
+ 
+<div id='Body' >
+
+</div>
+ 
+<P00_Header/>
+ 
+<P01_LeftPanel/>
+ 
+</>
+ 
+    width: 100%;
+ 
+    display: flex;
+ 
+<h2>The Mind Electric</h2>
+ 
+<h2>The Mind Electric</h2>
+ 
+<button>Import Data</button>
+<button>Export Data</button>
+<button>Export Image</button>
+ 
+<button>Open</button>
+ 
+<button>Export Image</button>
+ 
+<h2>The Mind Electric</h2>
+ 
+<h2>The Mind Electric</h2>
+ 
+<h2>The Mind Electric</h2>
+ 
+    */
+ 
+    /*
+ 
+135, 17, 17), 0, 0)
+ 
+</div>
+ 
+<div id='App'>
+ 
+#App {
+}
+ 
+    width: 1000px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+ 
+    border: 3px solid rgb(255, 255, 255);
+ 
+
+#AddInput {
+
+}
+ 
+    height: 40px;
+    font-size: 25px;
+ 
+    border: 3px solid rgb(255, 255, 255);
+ 
+    border: 3px solid rgb(255, 255, 255);
+ 
+<C00_Header/>
+ 
+<>
+<table id='C99id_Table'>
+<tr>
+    {JSX_TH_Column_S}
+    <th>Edit</th>
+</tr>
+<tr>
+    {JSX_BUTTON_Column_S}
+    <td>-</td>
+</tr>
+
+</table>
+</>
+ 
+    const letPerson_S:TS_Person[]=[
+        {Name:'Mumu'  , Gender:false, Age: 25},
+        {Name:'CheChe', Gender: true, Age: 22},
+        {Name:'Tata'  , Gender: true, Age: 19}
+    ]
+
+    const JSX_TH_Column_S:JSX.Element[] = letPerson_S.map(Column => <th>{Column.Name+','+Column.Gender.toString()+','+Column.Age.toString()}</th>);
+    const JSX_BUTTON_Column_S:JSX.Element[] = letPerson_S.map(Column=>
+        <td>
+            <div id='C99id_Button'>
+            <button>Edit</button>
+            </div>
+        </td>
+        );
+ 
+/*
+ 
+<C02_ColumnName 
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_IndexColumns={SS_IndexColumns02}
+setSS_IndexColumns={setSS_IndexColumns02}
+/>
+<C01_Table 
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_IndexColumns={SS_IndexColumns01}
+setSS_IndexColumns={setSS_IndexColumns01}
+/>
+ 
+<div id='Body' >
+<C02_ColumnName 
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_IndexColumns={SS_IndexColumns02}
+setSS_IndexColumns={setSS_IndexColumns02}
+/>
+<C01_Table 
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_IndexColumns={SS_IndexColumns01}
+setSS_IndexColumns={setSS_IndexColumns01}
+/>
+</div>
+ 
+<div id='Body' >
+<C02_ColumnName 
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_IndexColumns={SS_IndexColumns02}
+setSS_IndexColumns={setSS_IndexColumns02}
+/>
+<C01_Table 
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_IndexColumns={SS_IndexColumns01}
+setSS_IndexColumns={setSS_IndexColumns01}
+/>
+ 
+
+<C01_Table 
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_IndexColumns={SS_IndexColumns01}
+setSS_IndexColumns={setSS_IndexColumns01}
+/>
+ 
+<C01_Table 
+SS_Columns={SS_Columns}
+setSS_Columns={setSS_Columns}
+SS_IndexColumns={SS_IndexColumns01}
+setSS_IndexColumns={setSS_IndexColumns01}
+/>
+ 
+
+{JSX_DivTestColumn}
+ 
+            // style={{ whiteSpace: 'nowrap' }}
+ 
+ 
+ 
+                    </div>
+ 
+                    <div className='C01id_P'>
+ 
+                    </div>
+ 
+                    <div>
+ 
+ style={{ whiteSpace: 'nowrap' }}
+ 
+</div>
+ 
+</div>
+ 
+Do you want to unselect 
+ 
+ {Column.Name}
+ 
+Do you want to delete 
+ 
+ {Column.Name}
+ 
+
+            //onDragEnter={(e) => {
+            //    // Update the Ref_DragOverColumn.current only if the drag is happening horizontally
+            //    if (e.clientX >= e.currentTarget.getBoundingClientRect().left && e.clientX <= e.currentTarget.getBoundingClientRect().right) {
+            //      Ref_DragOverColumn.current = index;
+            //    }
+            //    }}
+ 
+        const isDragged:boolean = index === Ref_DragColumn.current;
+ 
+            style={{ backgroundColor: isDragged ? 'black':'', cursor: 'grab' }}
+ 
+ : 'blue'
+ 
+            style={{ backgroundColor: 'lightblue', cursor: 'grab' }}
+ 
+ : 'white'
+ 
+isDragged ? 
+ 
+    // Fix this line
+ 
+        alert(ss_IndexColumns)
+ 
+        alert(ss_IndexColumns)
+ 
+ key={SS_PrivateReset}
+ 
+        setSS_PrivateReset(Math.random())
+ 
+    // Only Reset after f_Drag
+    const [SS_PrivateReset,setSS_PrivateReset]=useState<number>(0)
+ 
+ss_Celumns:TS_ColumnName[]
+ 
+SS_IndexColumns
+ 
+[Ref_DragColumn.current]
+ 
+
+
+ 
+// 
+ 
+            //onDragStart={()=>alert(index)}
+            //onDragEnter={()=>alert(index)}
+            onDragEnter={()=>{alert(Ref_DragOverColumn.current)}}
+ 
+=index
+ 
+        //alert(JSON.stringify(SS_PrivateColumn))
+ 
+
+
+  //  if(SS_IndexColumns01.length>SS_IndexColumns02.length && SS_IndexColumns01.length>SS_Columns.length){
+  //      
+  //  }
+ 
+
+
+  // // Delete SS_IndexColumns01 non-exist key
+  // for(let i:number=0;i<SS_IndexColumns01.length;i++){
+  //     if(ss_IndexColumns.includes(SS_IndexColumns01[i])===false){
+  //         let ss_IndexColumns01:number[]=SS_IndexColumns01
+  //         setSS_IndexColumns01(ss_IndexColumns01.splice(i,1))
+  //     }
+  // }
+
+  // // Delete SS_IndexColumns02 non-exist key
+  // for(let i:number=0;i<SS_IndexColumns02.length;i++){
+  //     if(ss_IndexColumns.includes(SS_IndexColumns02[i])===false){
+  //         let ss_IndexColumns02:number[]=SS_IndexColumns02
+  //         setSS_IndexColumns02(ss_IndexColumns02.splice(i,1))
+  //     }
+  // }
+
+    /*
+    // Update SS_IndexColumns01 everytime SS_IndexColumns02 is added
+    for(let i:number=0;i<SS_IndexColumns02.length;i++){
+        if(SS_IndexColumns01.includes(SS_IndexColumns02[i])===false){
+            let ss_IndexColumns01 =[...SS_IndexColumns01] 
+            setSS_IndexColumns01([...ss_IndexColumns01,SS_IndexColumns02[i]]);
+        }
+    }
+
+    // Update SS_IndexColumns02 everytime SS_IndexColumns01 is added
+    for(let i:number=0;i<SS_IndexColumns01.length;i++){
+        if(SS_IndexColumns02.includes(SS_IndexColumns01[i])===false){
+            let ss_IndexColumns02 =[...SS_IndexColumns02] 
+            setSS_IndexColumns02([SS_IndexColumns01[i],...ss_IndexColumns02]);
+        }
+    }
+    */
+ 
+  //  // Delete undefined SS_IndexColumns02 object
+  //  let ss_IndexColumns02:number[]=[...SS_IndexColumns02]
+  //  let IsDelete02:boolean=false
+  //  for(let i:number=0;i<SS_IndexColumns02.length;i++){
+  //      const let_Name:TS_ColumnName|undefined=SS_Columns.find(({Key})=>Key === SS_IndexColumns02[i])
+  //      if(typeof let_Name==='undefined'){
+  //          ss_IndexColumns02.splice(i, 1)
+  //          IsDelete02=true
+  //      }
+  //  }
+  //  if(IsDelete02===true){
+  //      setSS_IndexColumns02(ss_IndexColumns02)
+  //      IsDelete02=false
+  //  }
+  //  
+  //  for(let i:number=0;i<SS_IndexColumns02.length;i++){
+  //      const let_Name:TS_ColumnName|undefined=SS_Columns.find(({Key})=>Key === SS_IndexColumns02[i])
+  //      if(typeof let_Name==='undefined'){
+  //          let ss_IndexColumns02:number[]=[...SS_IndexColumns02]
+  //          setSS_IndexColumns02(ss_IndexColumns02.splice(i,1))
+  //      }
+  //  }
+ 
+    let ss_IndexColumns01:number[]=[...SS_IndexColumns01]
+    let ss_IndexColumns02:number[]=[...SS_IndexColumns02]
+ 
+let ss_IndexColumns01:number[]=[...SS_IndexColumns01]
+ 
+    let ss_IndexColumns01:number[]=[...SS_IndexColumns01]
+ 
+    // This code is not finished, because it does not garantee that
+    // setSS_IndexColumns01 will be updated when the element of SS_IndexColumns02 is deleted
+    // and vice versa.
+ 
+    let ss_Columns:TS_ColumnName[]=[...SS_Columns]
+    // Add new key to both SS_IndexColumns01 and SS_IndexColumns02
+ 
+        // Update SS_IndexColumns01
+ 
+        // Update SS_IndexColumns02
+ 
+        // else{
+        //     alert(let_Name.Name)
+        // }
+ 
+            //setSS_IndexColumns01(ss_IndexColumns01.splice(i, 1))
+ 
+alert(
+ 
+let ss_IndexColumns01:number[]=[...SS_IndexColumns01]
+ 
+            alert(ss_IndexColumns01[i])
+            alert(i)
+ 
+setSS_IndexColumns01(ss_IndexColumns01.splice(i, 1))
+ 
+            break
+ 
+            break
+ 
+    let let_Name=SS_Columns.find(({Key})=>Key === ThisKey)
+ 
+    
+    function JSXName(ThisKey:number):string{
+        const let_Name=SS_Columns.find(({Key})=>Key === ThisKey)
+        if (let_Name===undefined){
+            return 'undefined'
+        }
+        else{
+            return let_Name.Name
+        }
+    }
+ 
+            let ss_IndexColumns02:number[]=SS_IndexColumns02
+            alert(JSON.stringify(ss_IndexColumns02))
+            alert(JSON.stringify(ss_IndexColumns02[i]))
+            alert(JSON.stringify(ss_IndexColumns02.splice(i,1)))
+            setSS_IndexColumns02(ss_IndexColumns02.splice(i,1))
+ 
+        // Update SS_IndexColumns02
+        if(SS_IndexColumns02.includes(ss_IndexColumns[i])===false){
+            let ss_IndexColumns02 =[...SS_IndexColumns02] 
+            setSS_IndexColumns02([ss_IndexColumns[i],...ss_IndexColumns02]);
+        }
+ 
+        // Update SS_IndexColumns01
+        if(SS_IndexColumns01.includes(ss_IndexColumns[i])===false){
+            let ss_IndexColumns01 =[...SS_IndexColumns01] 
+            setSS_IndexColumns01([...ss_IndexColumns01,ss_IndexColumns[i]]);
+        }
+ 
+        // Update SS_IndexColumns01
+        if(SS_IndexColumns01.includes(ss_IndexColumns[i])===false){
+            let ss_IndexColumns01 =[...SS_IndexColumns01] 
+            setSS_IndexColumns01([...ss_IndexColumns01,ss_IndexColumns[i]]);
+        }
+ 
+        // Update SS_IndexColumns02
+        if(SS_IndexColumns02.includes(ss_IndexColumns[i])===false){
+            let ss_IndexColumns02 =[...SS_IndexColumns02] 
+            setSS_IndexColumns02([ss_IndexColumns[i],...ss_IndexColumns02]);
+        }
+ 
+,SS_IndexColumns01,SS_IndexColumns02
+ 
+let ss_IndexColumns:number[]=SS_Columns.map(Column=>Column.Key)
+ 
+let ss_IndexColumns:number[]=SS_Columns.map(Column=>Column.Key)
+ 
+let_All
+ 
+            let let_UpdateColumn01:number
+ 
+for(let j:number=0;j<;j++)
+ 
+let ss_IndexColumns01 =[...SS_IndexColumns01] 
+            setSS_IndexColumns01([...ss_IndexColumns01,ss_IndexColumns[i]]);
+ 
+,SS_IndexColumns01,SS_IndexColumns02
+ 
+ss_IndexColumns[i]
+ 
+    // Update SS_IndexColumns02 everytime SS_IndexColumns01 is added
+    for(let i:number=0;i<SS_IndexColumns01.length;i++){
+        if(SS_IndexColumns02.includes(SS_IndexColumns01[i])===false){
+            let ss_IndexColumns02 =[...SS_IndexColumns02] 
+            setSS_IndexColumns02([SS_IndexColumns01[i],...ss_IndexColumns02]);
+        }
+    }
+ 
+01
+ 
 SS_IndexColumns01[i]
  
 01.find((key) => SS_IndexColumns02.includes(key));

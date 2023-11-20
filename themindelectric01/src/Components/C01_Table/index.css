@@ -1,7 +1,16 @@
 
 
 #C01id_DivTable{
-    margin-top: 40px;
+    margin-top: 65px;
+}
+
+.C01id_P {
+/*
+* https://www.w3schools.com/cssref/pr_text_white-space.php
+* https://stackoverflow.com/questions/2787310/how-to-reduce-the-space-between-p-tags
+*/
+    white-space: nowrap;
+    margin: 0;
 }
 
 .C01id {
@@ -19,7 +28,7 @@
 }
 
 .C01id_Header {
-    background-color: rgb(193, 193, 193);
+     background-color: rgb(193, 193, 193);
      font-size: 16px;
      border: 1px solid rgb(205, 205, 205, 0);
      border-left: 5px solid rgb(205, 205, 205, 0);

@@ -1,5 +1,5 @@
 // React
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 // Components
 import R_FilterColumn from './Coms/R_FilterColumn';
@@ -37,11 +37,17 @@ setSS_IndexColumns:(S:number[])=>void
 //****************************************************************************
 // HOOK
 //****************************************************************************
+    // Drag and Drop Columns
+    const Ref_DragColumn = useRef<number>(0)
+    const Ref_DragOverColumn = useRef<number>(0)
+
     // SS_Filter filter Column by Search Name
     const [SS_Filter,setSS_Filter]=useState<string>('');
     
     // Copy SS_Column usinf useState, because I want to rememder the index of each object inside SS_Columns of C01_Table.
     const [SS_PrivateColumns,setSS_PrivateColumns]=useState<TS_ColumnName[]>(SS_Columns)
+
+    const [SS_PrivateReset,setSS_PrivateReset]=useState<boolean>(true)
 
     // SS_PrivateColumns only updated onces in useEffect.
     // It determine the order of SS_Columns
@@ -54,9 +60,22 @@ setSS_IndexColumns:(S:number[])=>void
             return ss_IndexColumn.indexOf(a.Key) - ss_IndexColumn.indexOf(b.Key);
         });
         setSS_PrivateColumns(()=>ss_PrivateColumn)
-        //alert(JSON.stringify(SS_PrivateColumn))
+        setSS_PrivateReset(false)
         }
-        ,[SS_Columns,SS_IndexColumns])
+        ,[SS_Columns,SS_IndexColumns,SS_PrivateReset])
+
+//****************************************************************************
+// FUNCTION_01: Drag and Drop Column
+//****************************************************************************
+    // https://youtu.be/_nZCvxJOPwU?si=ixJXOlrb40z19L2p
+    function f_Drag():void{
+        let ss_IndexColumns:number[]=SS_IndexColumns
+        const let_DragColumnCurrent:number=ss_IndexColumns[Ref_DragColumn.current]
+        ss_IndexColumns[Ref_DragColumn.current] = ss_IndexColumns[Ref_DragOverColumn.current]
+        ss_IndexColumns[Ref_DragOverColumn.current] = let_DragColumnCurrent
+        setSS_IndexColumns(ss_IndexColumns)
+        setSS_PrivateReset(true)
+    }
 
 //****************************************************************************
 // JSX_00: Filter SS_Column.Name by IsVisible=true
@@ -86,7 +105,13 @@ setSS_IndexColumns:(S:number[])=>void
     ));
 
     let JSX_Columns:JSX.Element[] = let_FilterColumns.map(
-        (Column) => <div key={Column.Key}>
+        (Column,index) => <div key={Column.Key}
+        draggable
+        onDragStart={()=>{Ref_DragColumn.current=index}}
+        onDragEnter={()=>{Ref_DragOverColumn.current=index}}
+        onDragEnd={()=>f_Drag()}
+        onDragOver={(e)=>e.preventDefault()}
+        >
             <C_DefineColumn
                 // Property
                 ThisColumn={Column}

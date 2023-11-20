@@ -41,9 +41,10 @@ setSS_IndexColumns:(S:number[])=>void,
 
     // Copy SS_Column usinf useState, because I want to rememder the index of each object inside SS_Columns of C01_Table.
     const [SS_PrivateColumns,setSS_PrivateColumns]=useState<TS_ColumnName[]>(SS_Columns)
-
+    const [SS_PrivateReset,setSS_PrivateReset]=useState<boolean>(true)
     // SS_PrivateColumns only updated onces in useEffect.
     // It determine the order of SS_Columns
+    
     useEffect(()=>{
         // https://stackoverflow.com/questions/53332321/react-hook-warnings-for-async-function-in-useeffect-useeffect-function-must-ret
         let ss_IndexColumn:number[]=[...SS_IndexColumns]
@@ -53,20 +54,21 @@ setSS_IndexColumns:(S:number[])=>void,
             return ss_IndexColumn.indexOf(a.Key) - ss_IndexColumn.indexOf(b.Key);
         });
         setSS_PrivateColumns(()=>ss_PrivateColumn)
-        //alert(JSON.stringify(SS_PrivateColumn))
+        setSS_PrivateReset(false)
         }
-        ,[SS_Columns,SS_IndexColumns])
+        ,[SS_Columns,SS_IndexColumns,SS_PrivateReset])
 
 //****************************************************************************
 // FUNCTION_01: Drag and Drop Column
 //****************************************************************************
     // https://youtu.be/_nZCvxJOPwU?si=ixJXOlrb40z19L2p
-    // Fix this line
-    function f_Drag(ss_Celumns:TS_ColumnName[]):void{
-        const let_DragColumnCurrent:TS_ColumnName=ss_Celumns[Ref_DragColumn.current]
-        ss_Celumns[Ref_DragColumn.current] = ss_Celumns[Ref_DragOverColumn.current]
-        ss_Celumns[Ref_DragOverColumn.current] = let_DragColumnCurrent
-        setSS_Columns(ss_Celumns)
+    function f_Drag():void{
+        let ss_IndexColumns:number[]=SS_IndexColumns
+        const let_DragColumnCurrent:number=ss_IndexColumns[Ref_DragColumn.current]
+        ss_IndexColumns[Ref_DragColumn.current] = ss_IndexColumns[Ref_DragOverColumn.current]
+        ss_IndexColumns[Ref_DragOverColumn.current] = let_DragColumnCurrent
+        setSS_IndexColumns(ss_IndexColumns)
+        setSS_PrivateReset(true)
     }
 
 //****************************************************************************
@@ -86,7 +88,7 @@ setSS_IndexColumns:(S:number[])=>void,
             draggable
             onDragStart={()=>{Ref_DragColumn.current=index}}
             onDragEnter={()=>{Ref_DragOverColumn.current=index}}
-            onDragEnd={()=>f_Drag(let_Columns)}
+            onDragEnd={()=>f_Drag()}
             onDragOver={(e)=>e.preventDefault()}
         >{Column.Name}</th>}
         // Rename
@@ -96,13 +98,15 @@ setSS_IndexColumns:(S:number[])=>void,
         // Delete Warning
         else if (Column.Display===2){
             return  <th >
-                    <p style={{ whiteSpace: 'nowrap' }}>Do you want to delete {Column.Name}</p> 
+                    <p className='C01id_P'>Do you want to delete</p> 
+                    <p className='C01id_P'>{Column.Name}</p> 
                     </th>
         }
         // Unselect Warning
         else{
             return  <th >
-                    <p style={{ whiteSpace: 'nowrap' }}>Do you want to unselect {Column.Name}</p> 
+                    <p className='C01id_P'>Do you want to unselect</p> 
+                    <p className='C01id_P'>{Column.Name}</p> 
                     </th>
         }
         }
@@ -133,7 +137,7 @@ setSS_IndexColumns:(S:number[])=>void,
     setSS_IndexColumns = {setSS_IndexColumns}
 />
 <div id='C01id_DivTable'>
-<table id='C01id_Table'  >
+<table id='C01id_Table'>
 <tr>
     <th>Row Index</th>
     {JSX_TH_Columns}
