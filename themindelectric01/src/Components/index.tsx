@@ -5,7 +5,7 @@ import { useState , useEffect} from 'react';
 import C01_Table from "./C01_Table";
 import C02_ColumnName from "./C02_ColumnName";
 import P00_Header from './P00_Header'
-import P01_LeftPanel from './P01_LeftPanel'
+import P01_Panel from './P01_Panel'
 // Type
 import TS_ColumnName from "./T02_ColumnName/An_Index";
 // CSS
@@ -181,14 +181,14 @@ div id='Body' >
 
 // <>
 // <P00_Header/>
-// <P01_LeftPanel/>
+// <P01_Panel/>
 // </>
 //****************************************************************************
 
     return(
 <>
 <P00_Header/>
-<P01_LeftPanel/>
+<P01_Panel/>
 </>
     )
 }

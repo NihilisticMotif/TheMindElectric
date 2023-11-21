@@ -1,3 +1,823 @@
+        // if(let_Up!.offsetHeight<let_MinimumHeight || let_Up!.offsetHeight>let_C!.offsetHeight-100-5){//|| let_Up!.offsetHeight>let_C!.offsetHeight-155){
+        //     let let_UH:number
+        //     let let_DH:number
+        //     if(let_Up!.offsetHeight<let_Down!.offsetHeight){
+        //         let_UH=let_MinimumHeight
+        //         let_DH=let_Down!.offsetHeight
+        //     }
+        //     else {
+        //         let_UH=let_Up!.offsetHeight
+        //         let_DH=let_MinimumHeight
+        //     }
+        //     let_Up!.setAttribute("style" ,"height:"+let_UH.toString()+'px');
+        //     let_Down!.setAttribute("style","height:"+let_DH.toString()+'px');
+        //     setSS_DeltaMemory(false)
+        //     setSS_InnerDown(false)
+        //     setSS_OuterDown(false)
+        // }
+ 
+        // Setting Minimum Height of P01id_Up and P01id_Down
+        // if(let_Up!.offsetHeight<let_MinimumHeight || let_Up!.offsetHeight>let_C!.offsetHeight-100-5){//|| let_Up!.offsetHeight>let_C!.offsetHeight-155){
+        //     let let_UH:number
+        //     let let_DH:number
+        //     if(let_Up!.offsetHeight<let_Down!.offsetHeight){
+        //         let_UH=let_MinimumHeight
+        //         let_DH=let_Down!.offsetHeight
+        //     }
+        //     else {
+        //         let_UH=let_Up!.offsetHeight
+        //         let_DH=let_MinimumHeight
+        //     }
+        //     let_Up!.setAttribute("style" ,"height:"+let_UH.toString()+'px');
+        //     let_Down!.setAttribute("style","height:"+let_DH.toString()+'px');
+        //     setSS_DeltaMemory(false)
+        //     setSS_InnerDown(false)
+        //     setSS_OuterDown(false)
+        // }
+ 
+
+
+ <h1>SS_Delta: {SS_Delta}</h1>
+ <h1>SS_Height: {SS_Height}</h1>
+ <h1>SS_InnerDown: {SS_InnerDown.toString()}</h1>
+ <h1>SS_OuterDown: {SS_OuterDown.toString()}</h1>
+ <h1>SS_InnerMemory: {SS_InnerMemory.toString()}</h1>
+
+ 
+            //let_ColorMouse='blue'
+            //let_Resize!.style.backgroundColor = let_ColorMouse
+ 
+            //let_ColorMouse='red'
+            //// https://www.w3schools.com/jsref/prop_style_color.asp
+            //let_Resize!.style.backgroundColor = let_ColorMouse
+ 
+            //let_ColorMouse='red'
+            //// https://www.w3schools.com/jsref/prop_style_color.asp
+            //let_Resize!.style.backgroundColor = let_ColorMouse
+ 
+            //let_ColorMouse='blue'
+            //let_Resize!.style.backgroundColor = let_ColorMouse
+ 
+<h1>hehe</h1>
+ 
+<div className='P01id_Space'>
+</div>
+ 
+
+<div className='P01id_Space'>
+</div>
+ 
+-top
+ 
+100vh
+ 
+
+        let let_UpHeight
+ 
+    flex-flow: column;
+ 
+flex-flow: column;
+ 
+        // Update width of Down Panel By ChatGPT
+ 
+
+    // SS_InnerDown = Is Mouse Click down in let_Resize
+    // SS_OuterDown = Is Mouse Click down in this components
+    // SS_InnerMemory = Is Mouse Click start at let_Resize
+ 
+<div ClassName=''></div>
+ 
+<P00_Header/>
+<P01_Panel/>
+ 
+<C_Panel/>
+ 
+<C_Panel/>
+ 
+<C_Panel/>
+ 
+<C_Panel/>
+ 
+padding: 0;
+ 
+/*
+https://stackoverflow.com/questions/7357818/how-can-an-html-element-fill-out-100-of-the-remaining-screen-height-using-css
+https://www.w3schools.com/css/css_link.asp
+
+    resize: horizontal;
+    overflow: auto;
+    direction: ltr;
+
+        margin: 0;
+            padding: 0;
+*/
+ 
+height: 100px;
+}
+ 
+<div>
+
+<h1>Hello</h1>
+</div>
+ 
+   
+ 
+<>
+<>
+<table id='C99id_Table'>
+<tr>
+    {JSX_TH_Column_S}
+    <th>Edit</th>
+</tr>
+<tr>
+    {JSX_BUTTON_Column_S}
+    <td>-</td>
+</tr>
+
+</table>
+</>
+</>
+ 
+    const letPerson_S:TS_Person[]=[
+        {Name:'Mumu'  , Gender:false, Age: 25},
+        {Name:'CheChe', Gender: true, Age: 22},
+        {Name:'Tata'  , Gender: true, Age: 19}
+    ]
+
+    const JSX_TH_Column_S:JSX.Element[] = letPerson_S.map(Column => <th>{Column.Name+','+Column.Gender.toString()+','+Column.Age.toString()}</th>);
+    const JSX_BUTTON_Column_S:JSX.Element[] = letPerson_S.map(Column=>
+        <td>
+            <div id='C99id_Button'>
+            <button>Edit</button>
+            </div>
+        </td>
+        );
+ 
+/*
+ 
+import C_Panel from './Coms/C_Panel'
+ 
+<C_Panel/>
+ 
+#P01id_Div {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+}
+
+#P01id_Left {
+    background-color: rgb(183, 131, 36);
+    /*
+https://stackoverflow.com/questions/7357818/how-can-an-html-element-fill-out-100-of-the-remaining-screen-height-using-css
+https://www.w3schools.com/css/css_link.asp
+
+    resize: horizontal;
+    overflow: auto;
+    direction: ltr;
+
+        margin: 0;
+            padding: 0;
+*/
+    height: 100vh;
+}
+
+#P01id_Resize {
+    cursor: col-resize;
+    width: 5px;
+}
+
+#P01id_Right {
+    background-color: rgb(205, 100, 100);
+    height: 100vh;
+}
+ 
+// React
+import { useState , useEffect } from 'react';
+
+// Components
+//import R_FilterColumn from './Coms/R_FilterColumn';
+
+// Type
+
+// CSS
+import './C_Panel.css'
+
+// Utility
+import _ from 'lodash';
+
+const C_Panel = (
+//****************************************************************************
+// INPUT
+//****************************************************************************
+{
+// PARAMETER
+// PERPERTY
+// HOOK
+}:{
+// TYPE
+// PERPERTY
+// HOOK
+}
+) => {
+//****************************************************************************
+// HOOK
+//****************************************************************************
+    // In this case, it initialize Height of Both Panels
+    const [SS_IsFirst,setSS_IsFirst]=useState<boolean>(true)
+
+    // SS_Delta = P01id_CRight.Height - P01id_CResize.Height
+    // SS_DeltaMemory == false : Forget SS_Delta
+    // SS_DeltaMemory == true  : Remember SS_Delta
+    // We do this because we do not want to update SS_Delta during mouse moving event.
+    const [SS_Delta,setSS_Delta]=useState<number>(0)
+    const [SS_DeltaMemory,setSS_DeltaMemory]=useState<boolean>(false)
+
+    // SS_Height = Height of Left panel
+    const [SS_Height,setSS_Height]=useState<number>(400)
+
+    // SS_InnerDown = Is Mouse Click down in let_Resize
+    // SS_OuterDown = Is Mouse Click down in this components
+    // SS_InnerMemory = Is Mouse Click start at let_Resize
+    const [SS_InnerDown, setSS_InnerDown] = useState<boolean>(false);
+    const [SS_OuterDown, setSS_OuterDown] = useState<boolean>(false);
+    const [SS_InnerMemory,setSS_InnerMemory] = useState<boolean>(false)
+
+    useEffect(()=>{
+        // let_Resize is in between Left and Right Panels.
+        let let_Resize=document.getElementById('P01id_CResize')
+        
+        // Left Panel
+        let let_Left=document.getElementById('P01id_CLeft')
+        // Right Panel
+        let let_Right=document.getElementById('P01id_CRight')  
+
+        // Minimum Height of Both Panels
+        let let_MinimumHeight=100
+
+        // Initialize Height of Both Panels
+        if(SS_IsFirst===true){
+            let_Left!.setAttribute("style","Height:400px");
+            let_Right!.setAttribute("style", "flex: 1");
+            setSS_IsFirst(false)
+        }
+        // Update Height of Right Panel By ChatGPT
+        else{
+            let_Right!.setAttribute("style", "flex: 1");
+        }
+
+        // Setting Minimum Height of P01id_CLeft and P01id_CRight
+        if(let_Left!.offsetHeight<let_MinimumHeight || let_Right!.offsetHeight<let_MinimumHeight){
+            let let_LW:number
+            let let_RW:number
+            if(let_Left!.offsetHeight<let_Right!.offsetHeight){
+                let_LW=let_MinimumHeight
+                let_RW=let_Right!.offsetHeight
+            }
+            else {
+                let_LW=let_Left!.offsetHeight
+                let_RW=let_MinimumHeight
+            }
+            let_Left!.setAttribute("style" ,"height:"+let_LW.toString()+'px');
+            let_Right!.setAttribute("style","height:"+let_RW.toString()+'px');
+            setSS_DeltaMemory(false)
+            setSS_InnerDown(false)
+            setSS_OuterDown(false)
+        }
+
+        // Update Height of Left Panel
+        if(SS_InnerMemory){
+            //let_ColorMouse='red'
+            //// https://www.w3schools.com/jsref/prop_style_color.asp
+            //let_Resize!.style.backgroundColor = let_ColorMouse
+            if(SS_Height<let_MinimumHeight){
+                let_Left!.setAttribute("style","height:"+let_MinimumHeight.toString()+"px");
+            }
+            else{
+                let_Left!.setAttribute("style","height:"+SS_Height.toString()+"px");
+            }
+        }
+        else{
+            //let_ColorMouse='blue'
+            //let_Resize!.style.backgroundColor = let_ColorMouse
+            setSS_DeltaMemory(false)
+        }
+        
+
+    },[SS_Height,SS_InnerDown,SS_OuterDown]
+    )
+
+//****************************************************************************
+// FUNCTION_01: Detect Mouse Click in P01id_CResize
+//****************************************************************************
+    function f_InnerDown():void{
+        setSS_InnerDown(true);
+        setSS_InnerMemory(true)
+    };
+
+    function f_InnerUp():void{
+        setSS_InnerDown(false);
+        setSS_InnerMemory(false)
+        setSS_DeltaMemory(false)
+    };
+
+//****************************************************************************
+// FUNCTION_01: Detect Mouse Click outside P01id_CResize
+//****************************************************************************
+    function f_OuterDown():void{
+        setSS_OuterDown(true);
+    };
+
+    function f_OuterUp():void{
+        setSS_OuterDown(false);
+        setSS_InnerMemory(false)
+        setSS_DeltaMemory(false)
+    };
+
+//****************************************************************************
+// FUNCTION_02: Detect Mouse Move
+//****************************************************************************
+    function f_MouseMove(e: React.MouseEvent<HTMLDivElement>):void{
+        let let_X:number = e.clientX;
+        if(SS_DeltaMemory===false){
+            let let_LeftHeight:number=document.getElementById('P01id_CLeft')!.offsetHeight
+            setSS_Delta(let_X-let_LeftHeight)
+            setSS_DeltaMemory(true)
+        }
+        setSS_Height(let_X-SS_Delta)
+    };
+
+//****************************************************************************
+// FUNCTION_02: Detect Mouse Move outside of P01id_CResize
+//****************************************************************************
+    function f_InnerLeave():void{
+        if(SS_InnerMemory===false){
+            setSS_InnerDown(false)
+        }
+    }
+
+//****************************************************************************
+// FUNCTION_02: Detect Mouse Move outside of P01id_CDiv
+//****************************************************************************
+    function f_OuterLeave():void{
+        setSS_InnerDown(false)
+        setSS_OuterDown(false)
+        setSS_InnerMemory(false)
+    }
+//****************************************************************************
+// JAX_00:
+//****************************************************************************
+
+return(
+<div id='P01id_CDiv'
+    onMouseDown={f_OuterDown} 
+    onMouseUp={f_OuterUp}
+    onMouseMove={f_MouseMove}
+    onMouseLeave={f_OuterLeave}
+    >
+<   div id='P01id_CLeft' 
+    >
+<h1>SS_Delta: {SS_Delta}</h1>
+<h1>SS_Height: {SS_Height}</h1>
+<h1>SS_InnerDown: {SS_InnerDown.toString()}</h1>
+<h1>SS_OuterDown: {SS_OuterDown.toString()}</h1>
+<h1>SS_InnerMemory: {SS_InnerMemory.toString()}</h1>
+</div>
+
+<   div id='P01id_CResize' 
+    onMouseDown ={f_InnerDown}
+    onMouseUp   ={f_InnerUp}
+    onMouseLeave={f_InnerLeave}
+    >
+</div>
+
+<div id='P01id_CRight'>
+
+</div>
+
+</div>
+)
+}
+ 
+C_Panel
+ 
+#P01id_Div {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+}
+
+#P01id_Left {
+    background-color: rgb(183, 131, 36);
+    /*
+https://stackoverflow.com/questions/7357818/how-can-an-html-element-fill-out-100-of-the-remaining-screen-height-using-css
+https://www.w3schools.com/css/css_link.asp
+
+    resize: horizontal;
+    overflow: auto;
+    direction: ltr;
+
+        margin: 0;
+            padding: 0;
+*/
+    height: 100vh;
+}
+
+#P01id_Resize {
+    cursor: col-resize;
+    width: 5px;
+}
+
+#P01id_Right {
+    background-color: rgb(205, 100, 100);
+    height: 100vh;
+}
+ 
+ , useRef , useCallback
+ 
+            let let_LW:number
+ 
+let let_MinimumWidth=100
+ 
+400px
+ 
+if(let_Left!.offsetWidth<50){
+            setSS_DeltaMemory(false)
+        }
+ 
+
+    const [SS_Exist,setSS_Exist]=useState<boolean>(true)
+ 
+        // Delete Left Panel
+        if(let_Left!.offsetWidth<50){
+            let_Left!.setAttribute("style","width:0px");
+            setSS_Exist(false)
+        }
+
+        // Delete Right Panel
+        if(let_Right!.offsetWidth<50){
+            let_Right!.setAttribute("style","width:0px");
+            let_Resize!.setAttribute("style","width:0px");
+            setSS_Exist(false)
+        }
+ 
+{
+ 
+}
+ 
+        // 
+ 
+
+#P01id_Div h1{
+}
+ 
+    let let_ColorMouse:string='red'
+ 
+            let_ColorMouse='red'
+            // https://www.w3schools.com/jsref/prop_style_color.asp
+            let_Resize!.style.backgroundColor = let_ColorMouse
+ 
+    let let_ColorMouse:string='red'
+ 
+if(SS_InnerMemory===false){}
+ 
+</boolean>
+ 
+Continue
+ 
+    function 
+ 
+//****************************************************************************
+// FUNCTION_00: By default JSX and function are in the same group.
+//****************************************************************************
+ 
+; min-width: 100px;
+ 
+; min-width: 100px;
+ 
+    style={{ display: 'flex' }}
+ 
+    margin: 0;
+    padding: 0;
+ 
+            alert('Hello')
+ 
+alert('Hello')
+ 
+alert('Hello')
+ 
+            alert('ddd')
+ 
+    width: 400px;
+ 
+    margin: 0;
+    padding: 0;
+ 
+
+    // By ChatGPT
+ 
+        // Calculate Width of P01id_Canvas 
+        // * The Div on right side that contain a control panel and 
+ 
+    
+ 
+Canvas contains
+ 
+P01id_
+ 
+const [SS_IsFirst,setSS_IsFirst]=useState<boolean>(true)
+ 
+const [SS_UpdateDelta,setSS_UpdateDelta]=useState<boolean>(true)
+ 
+--------------------
+ 
+|
+ 
+Visualization
+ 
+|                  |
+|                  |
+ 
+|                  |
+|                  |
+ 
+    onMouseMove={f_MouseMove}
+ 
+        //set (let_X)
+ 
+//****************************************************************************
+// FUNCTION_02: Detect Mouse Move
+//****************************************************************************
+
+    function f_MouseLeave(e: React.MouseEvent<HTMLDivElement>):void{
+        let let_X:number = e.clientX;
+        // let let_X:number = e.clientX;
+        // if(SS_InnerDown){
+        //     setSS_UpdateDelta(true)
+        //     f_MouseMove(e)
+        // }
+    }
+
+//****************************************************************************
+// FUNCTION_03
+//****************************************************************************
+    function f_OutsideMouse(e: React.MouseEvent<HTMLDivElement>):void{
+        let let_X:number = e.clientX;
+        if(let_X<SS_Width){
+
+        }
+    }
+
+ 
+<h1> : { }</h1>
+ 
+        set (let_X)
+ 
+    const [ ,set ]=useState<number>(0)
+ 
+    onMouseLeave={f_MouseLeave}
+ 
+<h1>SS_PosX: {SS_PosX}</h1>
+ 
+// 
+ 
+            // Update
+ 
+let_FullSetWidth-let_OffSetWidth
+ 
+100%
+ 
+let let_ThisCanvas=document.getElementById('P01id_Canvas')
+ 
+    width: 100%;
+ 
+    onMouseDown={f_MouseDown} 
+    onMouseUp={f_MouseUp}
+ 
+    onMouseDown={f_MouseDown} 
+ 
+
+onMouseDown= {
+        f_MouseDown
+    }
+ 
+    }
+ 
+#P01id_Canvas{
+    background-color: rgb(0,0,0);
+    height: 100vh;
+}
+ 
+#P01id_Canvas{
+    background-color: rgb(0,0,0);
+    height: 100vh;
+}
+ 
+
+</div>
+ 
+<div id='P01id_Canvas'>
+ 
+    function f_MouseOut
+ 
+<div id='P01id_Canvas'>
+ 
+,pos_X?:number
+ 
+        if(typeof pos_X!=='undefined'){
+            let_X=pos_X
+        }
+ 
+,let_X
+ 
+    width: 100%;
+ 
+const let_X:number = e.clientX;
+ 
+            const let_X:number = e.clientX;
+            setSS_Mousex(let_X)
+ 
+<div id='P01id_Canvas'>
+</div>
+ 
+width:100%
+ 
+#P01id_Space{
+    background-color: rgb(0,0,0);
+    height: 70vh;
+}
+ 
+<h1>SS_MouseX: {SS_MouseX}</h1>
+<h1>SS_Width: {SS_Width}  </h1>
+<h1>SS_Mousex: {SS_Mousex}</h1>
+ 
+<h1>SS_MouseX: {SS_MouseX}</h1>
+<h1>SS_Width: {SS_Width}  </h1>
+<h1>SS_Mousex: {SS_Mousex}</h1>
+ 
+    resize: horizontal;
+    overflow: auto;
+    direction: ltr;
+ 
+const throttledMouseMove = _.throttle(f_MouseMove, 100);
+ 
+    //const debouncedMouseLeave = debounce(f_MouseLeave, 100);
+    function debounce<Params extends any[]>(
+      func: (...args: Params) => any,
+      timeout: number,
+    ): (...args: Params) => void {
+      let timer: NodeJS.Timeout
+      return (...args: Params) => {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          func(...args)
+        }, timeout)
+      }
+    }
+ 
+,100)
+ 
+debounce(
+ 
+setSS_Mousex(let_X)
+ 
+    let let_Xx:number=React.MouseEvent<HTMLDivElement>.cl
+ 
+<h1>SS_MouseX: {SS_MouseX}</h1>
+<h1>SS_Width: {SS_Width}</h1>
+ 
+<h1>{SS_}</h1>
+ 
+        setSS_MouseFirst(false)
+ 
+(let_X-let_OffSetWidth)/2+let_OffSetWidth
+ 
+const let_X:number = e.clientX;
+ 
+setSS_MouseX(let_X-let_OffSetWidth)
+ 
+        const let_X:number = e.clientX;
+        //let let_ThisPanel=document.getElementById('P01id_Body')
+        let let_OffSetWidth:number=document.getElementById('P01id_Body')!.offsetWidth
+ 
+        setSS_MousePress(true)
+ 
+setSS_MouseX(let_X-let_OffSetWidth)
+ 
+setSS_MouseX()
+ 
+-let_OffSetWidth)+let_OffSetWidth
+ 
+        alert(let_X)
+        alert(let_OffSetWidth)
+ 
+overflow: auto;
+ 
+    resize: horizontal;
+ 
+    direction: ltr;
+ 
+        let_ThisPanel!.setAttribute("style","width:"+SS_Width.toString()+"px");
+ 
+let_ThisPanel!.setAttribute("style","width:"+SS_Width.toString()+"px");
+ 
+    background-color: rgb(183, 131, 36);
+/*
+    https://stackoverflow.com/questions/7357818/how-can-an-html-element-fill-out-100-of-the-remaining-screen-height-using-css
+    https: //www.w3schools.com/css/css_link.asp
+*/
+        height: 70vh;
+        width: 400px;
+        resize: horizontal;
+        overflow: auto;
+        direction: ltr;
+        margin: 0;
+        padding: 0;
+ 
+Button
+ 
+import './index.css';
+ 
+    onMouseDown={f_MouseDown} 
+    onMouseUp={f_MouseUp}
+ 
+#P01id_Div {
+}
+
+ 
+Button
+ 
+    display: flex;
+ 
+    background-color: rgb(183, 131, 36);
+/*
+https://stackoverflow.com/questions/7357818/how-can-an-html-element-fill-out-100-of-the-remaining-screen-height-using-css
+https: //www.w3schools.com/css/css_link.asp
+*/
+    height: 70vh;
+    width: 400px;
+    resize: horizontal;
+    overflow: auto;
+    direction: ltr;
+    margin: 0;
+    padding: 0;
+}
+ 
+cursor: col-resize;
+ 
+<h1>xxwsx</h1>
+ 
+<h1>xxwsx</h1>
+ 
+</div>
+ 
+/*
+To Do Now
+1. Make Resize button more user friendly
+2. P02_Footer
+3. Create UI similar to Desmos
+
+Reference:
+1. https://react.dev/reference/react/useCallback
+2. https://stackoverflow.com/questions/55565444/how-to-register-event-with-useeffect-hooks
+3. https://youtu.be/4qyuNBlc8ho?si=oHxlVrX-qQ3tCbnx
+4. https://www.w3schools.com/cssref/pr_class_cursor.php
+*/
+ 
+        // let let_e: React.MouseEvent<HTMLDivElement>
+        // let let_X:number=let_e.clientX
+        // let let_OffSetWidth:number=document.getElementById('P01id_Div')!.offsetWidth
+        // if(let_OffSetWidth-let_X<5){}
+ 
+            //let_ThisPanel!.setAttribute("style","width:"+SS_Width.toString()+"px");
+ 
+        //if(SS_IsMouseDown===true){
+        //    let let_OffSetWidth:number=document.getElementById('P01id_Div')!.offsetWidth
+        //    setSS_Width(let_OffSetWidth)
+        //}
+        //setSS_IsMouseDown(false)
+ 
+    onClick={f_Click}
+ 
+
+    function f_Click():void{
+        
+    }
+ 
+    // /function f_Click(e: React.MouseEvent<HTMLDivElement>):void{
+    // /    // By ChatGPT
+    // /    const let_X:number = e.clientX;
+// /
+    // /    setSS_Width(let_X)
+    // /    // https://stackoverflow.com/questions/294250/how-do-i-retrieve-an-html-elements-actual-width-and-height
+    // /    // https://stackoverflow.com/questions/40349987/how-to-suppress-error-ts2533-object-is-possibly-null-or-undefined
+    // /    // let let_OffSetWidth:number=document.getElementById('P01id_Div')!.offsetWidth
+    // /    // if(let_OffSetWidth-mouseX<5){
+    // /    //     setSS_Width(mouseX)
+    // /    //     //alert(document.getElementById('P01id_Div')!.offsetWidth)
+    // /    // }
+    // /    //alert(let_ThisPanel!.offsetWidth)
+    // /}
+ 
 (e)=>
  
 // <>
