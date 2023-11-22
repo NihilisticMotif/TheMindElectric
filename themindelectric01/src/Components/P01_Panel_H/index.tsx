@@ -1,65 +1,15 @@
-/*
-//****************************************************************************
-// UI
-//****************************************************************************
-
-// Example No.1
-P01id_Left       | P01id_Right
-+----------------+--------------------+
-|                |   Data             |
-| Utility 00     |   Visualization    |
-|----------------|                    |
-|                |                    |
-|                |--------------------|
-|                |                    |
-| Utility 01     |   Utility 02       |
-|                |                    |
-|                |                    |
-+----------------+--------------------+
-
-// Example No.2
-P01id_Left       | P01id_Right
-+----------------+--------------------+
-|                |   Data             |
-| Utility 00     |   Visualization    |
-|                |--------------------|
-|                |                    |
-|                |                    |
-|----------------|                    |
-| Utility 01     |   Utility 02       |
-|                |                    |
-|                |                    |
-+----------------+--------------------+
-
-// Example No.3
-P01id_Left   | P01id_Left
-+------------+------------------------+
-|            |       Data             |
-| Utility 00 |       Visualization    |
-|            |------------------------|
-|            |                        |
-|            |                        |
-|------------|                        |
-| Utility 01 |       Utility 02       |
-|            |                        |
-|            |                        |
-+------------+------------------------+
-
-*/
 
 // React
-import { useState , useEffect } from 'react';
+import { useState , useEffect} from 'react';
 
 // Components
-import C_Panel from './Coms/C_Panel'
+//import R_FilterColumn from './Coms/R_FilterColumn';
+import C_Panel from './Coms/C_Panel';
 
 // Type
 
 // CSS
-import './index.css'
-
-// Utility
-import _ from 'lodash';
+import './index.css';
 
 const P01_Panel = (
 //****************************************************************************
@@ -78,89 +28,96 @@ const P01_Panel = (
 //****************************************************************************
 // HOOK
 //****************************************************************************
-    // In this case, it initialize width of Both Panels
+    // In this case, it initialize height of Both Panels
     const [SS_IsFirst,setSS_IsFirst]=useState<boolean>(true)
 
-    // SS_Delta = P01id_Right.width - P01id_Resize.width
+    // SS_Delta = P01id_Up.height - P01id_Resize.height
     // SS_DeltaMemory == false : Forget SS_Delta
     // SS_DeltaMemory == true  : Remember SS_Delta
     // We do this because we do not want to update SS_Delta during mouse moving event.
     const [SS_Delta,setSS_Delta]=useState<number>(0)
     const [SS_DeltaMemory,setSS_DeltaMemory]=useState<boolean>(false)
 
-    // SS_Width = Width of Left panel
-    const [SS_Width,setSS_Width]=useState<number>(400)
+    // SS_Height = Height of Up panel
+    const [SS_Height,setSS_Height]=useState<number>(400)
 
     // SS_InnerDown = Is Mouse Click down in let_Resize
     // SS_OuterDown = Is Mouse Click down in this components
     // SS_InnerMemory = Is Mouse Click start at let_Resize
     const [SS_InnerDown, setSS_InnerDown] = useState<boolean>(false);
     const [SS_OuterDown, setSS_OuterDown] = useState<boolean>(false);
-    const [SS_InnerMemory,setSS_InnerMemory] = useState<boolean>(false);
+    const [SS_InnerMemory,setSS_InnerMemory] = useState<boolean>(false)
+    const [SS_Is2Panels,setSS_Is2Panels]=useState<boolean>(true)
+
+    let P01id_Panel:string = 'P01id_Panel'
+    let P01id_Up:string = 'P01id_Up'
+    let P01id_Resize:string='P01id_Resize'
+    let P01id_Down:string = 'P01id_Down'
 
 //****************************************************************************
     useEffect(()=>{
 //****************************************************************************
-        // let_Resize is in between Left and Right Panels.
-        let let_Resize=document.getElementById('P01id_Resize')
+        let let_C = document.getElementById(P01id_Panel)
         
-        // Left Panel
-        let let_Left=document.getElementById('P01id_Left')
-        // Right Panel
-        let let_Right=document.getElementById('P01id_Right')  
+        // Up Panel
+        let let_Up=document.getElementById(P01id_Up)
+        // Down Panel
+        let let_Down=document.getElementById(P01id_Down)  
 
         // Minimum Width of Both Panels
-        let let_MinimumWidth=100
+        let let_MinimumHeight=100
 
+        if(SS_Is2Panels===true){
 //****************************************************************************
         // Initialize width of Both Panels
+        // https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space
         if(SS_IsFirst===true){
-            let_Left!.setAttribute("style","width:400px");
-            let_Right!.setAttribute("style", "flex: 1");
+            let let_DownHeight=let_C!.offsetHeight-let_Up!.offsetHeight-5
+            let_Up!.setAttribute("style","height:600px");
+            let_Down!.setAttribute("style", "height:"+let_DownHeight.toString()+'px');
             setSS_IsFirst(false)
+            alert(SS_Is2Panels.toString())
         }
-        // Update width of Right Panel By ChatGPT
         else{
-            let_Right!.setAttribute("style", "flex: 1");
+            let let_DownHeight=let_C!.offsetHeight-let_Up!.offsetHeight-5
+            let_Down!.setAttribute("style", "height:"+let_DownHeight.toString()+'px');
         }
 
 //****************************************************************************
-        // Setting Minimum Width of P01id_Left and P01id_Right
-        if(let_Left!.offsetWidth<let_MinimumWidth || let_Right!.offsetWidth<let_MinimumWidth){
-            let let_LW:number
-            let let_RW:number
-            if(let_Left!.offsetWidth<let_Right!.offsetWidth){
-                let_LW=let_MinimumWidth
-                let_RW=let_Right!.offsetWidth
-            }
-            else {
-                let_LW=let_Left!.offsetWidth
-                let_RW=let_MinimumWidth
-            }
-            let_Left!.setAttribute("style" ,"width:"+let_LW.toString()+'px');
-            let_Right!.setAttribute("style","width:"+let_RW.toString()+'px');
-            setSS_DeltaMemory(false)
-            setSS_InnerDown(false)
-            setSS_OuterDown(false)
+        // Setting Minimum Height of P01id_Up and P01id_Down
+        // By ChatGPT
+        if (
+                let_Up!.offsetHeight < let_MinimumHeight ||
+                let_Up!.offsetHeight > let_C!.offsetHeight - 100 - 5
+        )   {
+            let let_UH = Math.max(let_MinimumHeight, Math.min(let_Up!.offsetHeight, let_C!.offsetHeight - 100 - 5));
+            let let_DH = let_C!.offsetHeight - let_UH - 5;
+            let_Up!.setAttribute("style", "height:" + let_UH.toString() + "px");
+            let_Down!.setAttribute("style", "height:" + let_DH.toString() + "px");
+            setSS_DeltaMemory(false);
+            setSS_InnerDown(false);
+            setSS_OuterDown(false);
         }
 
 //****************************************************************************
-        // Update Width of Left Panel
+        // Update Width of Up Panel
         if(SS_InnerMemory){
-            if(SS_Width<let_MinimumWidth){
-                let_Left!.setAttribute("style","width:"+let_MinimumWidth.toString()+"px");
+            if(SS_Height<let_MinimumHeight){
+                let_Up!.setAttribute("style","height:"+let_MinimumHeight.toString()+"px");
             }
             else{
-                let_Left!.setAttribute("style","width:"+SS_Width.toString()+"px");
+                let_Up!.setAttribute("style","height:"+SS_Height.toString()+"px");
             }
         }
         else{
             setSS_DeltaMemory(false)
-        }
+        }}
 //****************************************************************************
-    },[SS_Width,SS_InnerDown,SS_OuterDown]
+    }
+    ,[SS_Height,SS_InnerDown,SS_OuterDown,SS_Is2Panels,SS_IsFirst]
     )
 //****************************************************************************
+    let let_RandomKey=Math.random()
 
 //****************************************************************************
 // FUNCTION_00: Detect Mouse Click in P01id_Resize
@@ -193,13 +150,13 @@ const P01_Panel = (
 // FUNCTION_02: Detect Mouse Move
 //****************************************************************************
     function f_MouseMove(e: React.MouseEvent<HTMLDivElement>):void{
-        let let_X:number = e.clientX;
+        let let_Y:number = e.clientY;
         if(SS_DeltaMemory===false){
-            let let_LeftWidth:number=document.getElementById('P01id_Left')!.offsetWidth
-            setSS_Delta(let_X-let_LeftWidth)
+            let let_UpHeight:number=document.getElementById(P01id_Up)!.offsetHeight
+            setSS_Delta(let_Y-let_UpHeight)
             setSS_DeltaMemory(true)
         }
-        setSS_Width(let_X-SS_Delta)
+        setSS_Height(let_Y-SS_Delta)
     };
 
 //****************************************************************************
@@ -219,45 +176,54 @@ const P01_Panel = (
         setSS_OuterDown(false)
         setSS_InnerMemory(false)
     }
+
+//****************************************************************************
+// FUNCTION_05: Open Button Panel
+//****************************************************************************
+    function f_OpenKeyboard():void{
+        setSS_Is2Panels(true)
+        setSS_IsFirst(true)
+        // https://stackoverflow.com/questions/5898656/check-if-an-element-contains-a-class-in-javascript
+        document.getElementById('P01id_Down')!.classList.add('P01id_Down');
+        document.getElementById('P01id_Down')!.classList.remove('P01id_None');
+        document.getElementById('P01id_Resize')!.classList.add('P01id_Resize');
+        document.getElementById('P01id_Resize')!.classList.remove('P01id_None');
+        document.getElementById('P01id_Keyboard')!.classList.add('P01id_None');
+        document.getElementById('P01id_Keyboard')!.classList.remove('P01id_Keyboard');
+    }
 //****************************************************************************
 // JAX_00:
 //****************************************************************************
-
 return(
-
-<div id='P01id_Div'
+<div className='P01id_Panel' id={P01id_Panel}
     onMouseDown={f_OuterDown} 
     onMouseUp={f_OuterUp}
     onMouseMove={f_MouseMove}
-    onMouseLeave={f_OuterLeave}
-    >
+    onMouseLeave={f_OuterLeave}>
 
-<div id='P01id_Left' 
-    >
-<C_Panel Name={'Left'}/>
-{
-// <h1>SS_Delta: {SS_Delta}</h1>
-// <h1>SS_Width: {SS_Width}</h1>
-// <h1>SS_InnerDown: {SS_InnerDown.toString()}</h1>
-// <h1>SS_OuterDown: {SS_OuterDown.toString()}</h1>
-// <h1>SS_InnerMemory: {SS_InnerMemory.toString()}</h1>
-}
+<div className='P01id_Space'></div>
 
+<div className='P01id_Up' id={P01id_Up}>
+<C_Panel IsUp={true}
+/>
 </div>
 
-<div id='P01id_Resize' 
+<div className='P01id_Resize' id={P01id_Resize}
     onMouseDown ={f_InnerDown}
     onMouseUp   ={f_InnerUp}
-    onMouseLeave={f_InnerLeave}
-    >
+    onMouseLeave={f_InnerLeave}>
 </div>
 
-<div id='P01id_Right'>
-<C_Panel Name={'Right'}/>
+<div className='P01id_Down' id={P01id_Down}>
+<C_Panel 
+IsUp={false} 
+RandomKey={let_RandomKey}
+setSS_Is2Panels2={setSS_Is2Panels}
+/>
 </div>
-
+<button className='P01id_None' id='P01id_Keyboard' onClick={f_OpenKeyboard}>Keyboard</button>
 </div>
-)
+    )
 }
-
+// <button className='P01id_CallDown' id='P01id_CallDown'>Keyboard</button>
 export default P01_Panel

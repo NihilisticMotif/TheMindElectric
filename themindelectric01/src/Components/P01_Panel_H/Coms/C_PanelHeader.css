@@ -1,0 +1,23 @@
+.P01id_Button {
+    font-size: 13pt;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.P01id_CHeader {
+    background-color: rgb(78, 77, 92);
+    height: 35px;
+    display: flex;
+}
+
+.P01id_CHeader h1 {
+    font-size: 20px;
+    margin: auto;
+    color: aliceblue;
+}
+
+.P01id_None {
+    display: None;
+}

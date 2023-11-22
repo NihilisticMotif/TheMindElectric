@@ -1,3 +1,785 @@
+    const [SS_Reset,setSS_Reset]=useState<number>(0)
+ 
+        setSS_Reset(Math.random())
+ 
+SS_Reset={SS_Reset}
+ 
+    key={let_Reset}
+ 
+    let let_Reset:number 
+    if(typeof SS_Reset==='undefined'){
+        let_Reset=0
+    }
+    else{
+        let_Reset=SS_Reset
+    }
+ 
+SS_Reset,
+ 
+SS_Reset?:number
+ 
+const [SS_Reset,setSS_Reset]=useState<number>(0)
+ 
+        alert(Name)
+ 
+        alert(Name)
+        let let_ID=document.getElementById(Name)
+        let_ID!.setAttribute("style","width:0px")
+ 
+        let let_ID=document.getElementById(Name)
+        let_ID!.setAttribute("style","width:0px")
+ 
+    const [SS_ResetKeyboard,setSS_ResetKeyboard]=useState<boolean>(true)
+ 
+SS_ResetKeyboard={SS_ResetKeyboard}
+ 
+        setSS_ResetKeyboard(false)
+ 
+    let let_IsFirst:boolean
+    if(typeof SS_ResetKeyboard==='undefined'){
+        let_IsFirst=true
+    }else{
+        let_IsFirst=SS_ResetKeyboard
+    }
+ 
+SS_ResetKeyboard?:boolean,
+ 
+SS_ResetKeyboard,
+ 
+<h1>{let_IsFirst.toString()}</h1>
+<h1>{SS_IsFirst.toString()}</h1>
+ 
+<h1>{let_IsFirst.toString()}</h1>
+<h1>{SS_IsFirst.toString()}</h1>
+ 
+ResetKeyboard?:boolean,
+ 
+setSS_Is2Panels2?:(S:boolean)=>void
+ 
+// HOOK
+ 
+SS_ResetKeyboard,
+ 
+       const let_leftPanel = document.getElementById('P01id_CPanel' + let_RandomKey.toString() + 'L');
+        const let_rightPanel = document.getElementById('P01id_CPanel' + let_RandomKey.toString() + 'R');
+
+        // By Ch
+ 
+        if(let_leftPanel){
+        if(let_leftPanel!.classList.contains('P01id_None')){
+            let_leftPanel!.classList.remove('P01id_None');
+        }
+        if(let_leftPanel!.classList.contains('P01id_CHeader')===false){
+            let_leftPanel!.classList.add('P01id_CHeader');
+        }}
+
+        if(let_rightPanel){
+        if(let_rightPanel!.classList.contains('P01id_None')){
+            let_rightPanel!.classList.remove('P01id_None');
+        }
+        if(let_rightPanel!.classList.contains('P01id_CHeader')===false){
+            let_rightPanel!.classList.add('P01id_CHeader');
+        }}
+ 
+if(let_rightPanel!.classList.contains('P01id_None')){
+            let_rightPanel!.classList.remove('P01id_None');
+        }
+ 
+if(let_leftPanel!.classList.contains('P01id_None')){
+            let_leftPanel!.classList.remove('P01id_None');
+        }
+ 
+if(document.getElementById('P01id_CPanel'+let_RandomKey.toString()+'L')!.classList.contains('P01id_None')){
+            document.getElementById('P01id_CPanel'+let_RandomKey.toString()+'L')!.classList.remove('P01id_None');
+        }
+ 
+        document.getElementById('P01id_CPanel'+let_RandomKey.toString()+'R')!.classList.add('P01id_CHeader');
+ 
+document.getElementById('P01id_CPanel'+let_RandomKey.toString()+'L')!.classList.add('P01id_CHeader');
+ 
+        document.getElementById('P01id_CPanel'+let_RandomKey.toString()+'R')!.classList.remove('P01id_None');
+ 
+document.getElementById('P01id_CPanel'+let_RandomKey.toString()+'L')!.classList.remove('P01id_None');
+ 
+document.getElementById('P01id_CPanel'+let_RandomKey.toString()+'L')!.classList.remove('P01id_None');
+ 
+RandomKey={let_RandomKey00}
+ 
+    let let_RandomKey00=Math.random()
+ 
+// <div className='P01id_Space'>
+// </div>
+    let let_RandomKey00=Math.random()
+    let let_RandomKey01=Math.random()
+ 
+    const RandomKey:string=Math.random().toString()
+ 
+    margin-bottom: 0px;
+ 
+    margin-left: 0px;
+ 
+    transform: translateX(-900%);
+ 
+    float: left;
+ 
+background-color: rgb(78, 77, 92);
+ 
+<button className='P01id_Keyboard' id='P01id_Keyboard'>Keyboard</button>
+ 
+<>
+ 
+</>
+ 
+<button className='P01id_Keyboard' id='P01id_Keyboard'>Keyboard</button>
+ 
+</>
+ 
+<button className='P01id_Keyboard' id='P01id_Keyboard'>Keyboard</button>
+ 
+ setSS_Is2Panels2={setSS_Is2Panels}
+ 
+    let JSX_Button
+ 
+    let JSX_Button
+ 
+<button className='P01id_CallDown' id='P01id_CallDown'>Keyboard</button>
+ 
+<button className='P01id_CallDown' id='P01id_CallDown'>Keyboard</button>
+ 
+
+.P01id_CallDown{
+    margin-left: 0;
+}
+ 
+<button className='P01id_CallDown' id='P01id_CallDown'>Keyboard</button>
+ 
+<button>Keyboard</button>
+ 
+100vh
+ 
+calc(
+ 
+-50px)
+ 
+    useEffect=(()=>{
+        if(typeof setSS_Is2Panels2 !== 'undefined'&& SS_Is2PanelsTO===false){
+            setSS_Is2Panels2(false)
+        }
+    },[SS_Is2PanelsTO])
+ 
+            if()
+ 
+    Name:string
+ 
+    Name,
+ 
+        setSS_Is2Panels2!(false)
+ 
+    setSS_Is2Panels2:(S:boolean)=>void
+ 
+    setSS_Is2Panels2
+ 
+            setSS_Is2Panels2={setSS_Is2Panels2}
+ 
+            setSS_Is2Panels2={setSS_Is2Panels2}
+ 
+setSS_Is2Panels2:(S:boolean)=>void
+ 
+setSS_Is2Panels2
+ 
+ setSS_Is2Panels2={setSS_Is2Panels}
+ 
+ setSS_Is2Panels2={setSS_Is2Panels}
+ 
+
+        if(SS_Is2Panels===true){
+ 
+
+    const [SS_Is2Panels,setSS_Is2Panels]=useState<boolean>(true)
+ 
+        let let_ID=document.getElementById(Name)
+        let_ID!.setAttribute("style","width:0px")
+        //let_ID!.setAttribute("style","visibility: hidden")
+ 
+    else{
+        
+    }
+ 
+//****************************************************************************
+        let let_C = document.getElementById(P01id_Panel)
+        
+        // Up Panel
+        let let_Up=document.getElementById(P01id_Up)
+        // Down Panel
+        let let_Down=document.getElementById(P01id_Down)  
+
+        // Minimum Width of Both Panels
+        let let_MinimumHeight=100
+ 
+            <button className='P01id_Button'>Close</button>
+ 
+    <C_Panel Name='Down'/>
+ 
+let_MinimumWidth
+ 
+'P01id_CHeader'
+ 
+    key={SS_Reset}
+ 
+    const [SS_Reset,setSS_Reset]=useState<number>(0)
+ 
+    else{
+        if(let_Right!.offsetWidth===0){
+        }
+    }
+    //        let_Right!.setAttribute("style","width:0px");
+    //        let_Left!.setAttribute("style","width:100vh");
+    //    }
+    //    else{
+    //        let_Right!.setAttribute("style","width:100vh");
+    //        let_Left!.setAttribute("style","width:0px");
+
+    //    }
+    //}
+ 
+'P01id_CHeader'
+ 
+.P01id_Delete h1 {
+     font-size: 20px;
+     margin: auto;
+     color: aliceblue;
+}
+ 
+div className='P01id_CHeader'
+ 
+div
+ 
+div className='P01id_CHeader'
+ 
+div
+ 
+style={let_Style}
+ 
+       let_Style='visibility: hidden;'
+ 
+    let let_Style={visibility:isVisible}
+ 
+import { isVisible } from '@testing-library/user-event/dist/utils';
+ 
+Visible
+ 
+:string
+ 
+:string
+ 
+            document.getElementById(P01id_CPanel+let_JSXKey+'R')?.remove()
+ 
+        // let_Resize is in between Left and Down Panels.
+        let let_Resize=document.getElementById(P01id_Resize)
+ 
+id={Name}
+ 
+id={let_Id}
+ 
+    let let_Id:string='let_Id'+Name+ResizeName
+ 
+            let let_Id=document.getElementById('let_Id'+P01id_Right+P01id_CResize)
+            let_Id!.setAttribute("style","width:0px");
+ 
+        else{
+            let let_Id=document.getElementById('let_Id'+P01id_Left+P01id_CResize)
+            let_Id!.setAttribute("style","width:0px");
+        }
+ 
+//
+ 
+alert('Alone')
+ 
+            let_Right!.setAttribute("style","width:0px");
+ 
+    */
+ 
+    /*
+ 
+
+.P01id_Button{
+    font-size: 13pt;
+    float: right;
+    margin-right: 10px;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.P01id_CHeader{
+    background-color: rgb(78, 77, 92);
+    height:35px;
+    display:flex;
+}
+
+.P01id_CHeader h1{
+    font-size: 20px;
+    margin: auto;
+    color: aliceblue;
+}
+ 
+            //JSX_RightHeader=<></>
+ 
+            Ref=''
+ 
+    // Optional
+    Ref?:string
+ 
+    // Optional
+    Ref
+ 
+    //if(document.getElementById(P01id_Right)!.offsetWidth===0){
+   //     document.getElementById(P01id_Left)!.setAttribute("style","flex:1");
+   //     JSX_RightHeader=<></>
+   // }else{
+   //     JSX_LeftHeader=<></>
+   // }
+ 
+.getElementById(P01id_Left)!
+ 
+   //if(document.getElementById(P01id_Right)!.offsetWidth===0){
+   //     document.getElementById(P01id_Left)!.setAttribute("style","flex:1");
+   //     JSX_RightHeader=<></>
+   // }else{
+   //     JSX_LeftHeader=<></>
+   // }
+ 
+//
+ 
+//
+ 
+//
+ 
+'P01id_C'+let_Side+'Header'+
+ 
+    let let_Side:string
+    if(IsLeft===true){
+        let_Side='Left'
+    }else{
+        let_Side='Right'
+    }
+ 
+    IsLeft:boolean
+ 
+    IsLeft,
+ 
+            IsLeft={false}
+ 
+            IsLeft={true}
+ 
+{JSX_RightHeader}
+ 
+//****************************************************************************
+// FUNCTION_05: Close Panel
+//****************************************************************************
+    function f_Close(Name:string):void{
+        let let_ID=document.getElementById(Name)
+        let_ID!.setAttribute("style","width:0px")
+        let let_Resize=document.getElementById(P01id_CResize)
+        let_Resize!.setAttribute("style","width:0px")
+        setSS_Is2Panels(false)
+    }
+
+//****************************************************************************
+// FUNCTION_06: Open Panel
+//****************************************************************************
+    function f_Open():void{
+        let let_Resize=document.getElementById(P01id_CResize)
+        let_Resize!.setAttribute("style","width:5px")
+        setSS_IsFirst(true)
+        setSS_Is2Panels(true)
+    }
+
+ 
+<C_PanelHeader
+Name={P01id_Right}
+ResizeName={P01id_CResize}
+IsLeft={false}
+setSS_IsFirst={setSS_IsFirst}
+SS_Is2Panels={SS_Is2Panels}
+setSS_Is2Panels={setSS_Is2Panels}
+/>
+ 
+ else 
+ 
+
+    if(SS_Is2Panels===true){
+        JSX_LeftHeader =<div className='P01id_CHeader' id={'P01id_CLeftHeader'+Name}>
+            <h1>The Ruler of Everything</h1>
+            <button className='P01id_Button' onClick={()=>{f_Close(P01id_Left)}} >Close</button>
+            </div>
+        JSX_RightHeader=<div className='P01id_CHeader' id={'P01id_CRightHeader'+Name}>
+            <h1>The Ruler of Everything</h1>
+            <button className='P01id_Button' onClick={()=>{f_Close(P01id_Right)}}>Close</button>
+            </div>
+    }
+ 
+<C_PanelHeader
+Name={P01id_Left}
+ResizeName={P01id_CResize}
+IsLeft={true}
+setSS_IsFirst={setSS_IsFirst}
+SS_Is2Panels={SS_Is2Panels}
+setSS_Is2Panels={setSS_Is2Panels}
+/>
+ 
+/*
+// VSCode Show
+const C_PanelHeader: ({ Name, ResizeName, IsLeft, setSS_IsFirst, SS_Is2Panels, setSS_Is2Panels }: {
+    Name: string;
+    ResizeName: string;
+    IsLeft: boolean;
+    setSS_IsFirst: (S: boolean) => void;
+    SS_Is2Panels: boolean;
+    setSS_Is2Panels: (S: boolean) => void;
+}) => JSX.Element
+*/
+ 
+// C_PanelHeader.tsx
+ 
+/*
+// VSCode Show
+(alias) const C_PanelHeader: ({}: {}) => JSX.Element
+*/
+ 
+Name={Name}
+ 
+<C_PanelHeader/>
+ 
+<C_PanelHeader
+Name={Name}
+ResizeName={}
+/>
+ 
+<C_CreateColumn
+Name={Name}
+
+/>
+ 
+//
+ 
+<C_PanelHeader/>
+ 
+<C_PanelHeader/>
+ 
+<C_PanelHeader/>
+ 
+Name='hh'
+ 
+Resi
+ 
+Name
+ 
+<C_PanelHeader
+        Name={Name}
+        ResizeName={P01id_CResize}
+        />
+ 
+ Name={Name}
+ 
+</>
+ 
+<>
+ 
+ Name={Name}
+ 
+</>
+ 
+        
+ 
+        
+ 
+<div className='P01id_CHeader'>
+            <h1>The Ruler of Everything</h1>
+            <button className='P01id_Button'>Close</button>
+            <button className='P01id_Button' onClick={f_Open}>Open New Tab</button>
+            </div>
+ 
+{C_PanelHeader} from ''
+ 
+IsLeftLength,
+ 
+    if()
+ 
+IsLeftLength:number;
+ 
+Left
+ 
+Name:string;
+ 
+Name:string
+ 
+SS_IsFirst,
+ 
+SS_IsFirst:boolean;
+ 
+    flex-direction: row-reverse;
+ 
+    display: inline-block;
+    vertical-align: middle;
+ 
+        // let_Resize is in between Left and Right Panels.
+        let let_Resize=document.getElementById(P01id_CResize)
+ 
+
+        let let_LeftHeader=document.getElementById('P01id_CLeftHeader'+Name)
+
+        let let_RightHeader=document.getElementById('P01id_CRightHeader'+Name)
+ 
+CClose
+ 
+
+.P01id_COpenButton {
+    font-size: 13pt;
+    float:right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+ 
+            <button className='P01id_COpenButton' onClick={f_Open}>Open New Tab</button>
+ 
+<button className='P01id_COpenButton' onClick={f_Open}>Open New Tab</button>
+ 
+    margin-left: auto;
+ 
+    width: 60px;
+ 
+    width: 60px;
+ 
+            let_LeftHeader!.setAttribute("style","flex: 1");
+ 
+            let_RightHeader!.setAttribute("style","flex: 1");
+ 
+            let_RightHeader!.setAttribute("style","flex: 1");
+ 
+            let_LeftHeader!.setAttribute("style","width:"+let_LW.toString()+'px');
+ 
+            let_RightHeader!.setAttribute("style","width:"+let_RW.toString()+'px');
+ 
+                let_LeftHeader!.setAttribute("style","width:"+let_MinimumWidth.toString()+"px");
+ 
+                let_LeftHeader!.setAttribute("style","width:"+SS_Width.toString()+"px");
+ 
+et_LeftHeader!.setAttribute("style","width:"+SS_Width.toString()+"px");
+ 
+let_LeftHeader!.setAttribute("style","width:"+let_MinimumWidth.toString()+"px");
+ 
+let_Left!.setAttribute("style" ,"width:"+let_LW.toString()+'px');
+ 
+let_RightHeader!.setAttribute("style","width:"+let_RW.toString()+'px');
+ 
+
+//****************************************************************************
+        // Update Left and Right Header Tab
+ 
+        let_LeftHeader!.setAttribute("style","width:"+let_Left!.offsetWidth.toString()+"px");
+        let_RightHeader!.setAttribute("style","width:"+let_Right!.offsetWidth.toString()+"px");
+ 
+let_Left!.offsetWidth
+ 
+id={'P01id_CLeftHeader'+Name}
+ 
+id={'P01id_CRightHeader'+Name}
+ 
+{}
+ 
+{JSX_RightHeader}
+ 
+{JSX_LeftHeader}
+ 
+calc(
+ 
+ - 180px)
+ 
+Close
+ 
+
+.P01id_COpenButton {
+    width: 60px;
+    font-size: 13pt;
+    margin-left: calc(100vh - 180px);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ 
+CClose
+ 
+CClose
+ 
+</div>
+ 
+</div>
+ 
+</div>
+ 
+    let JSX_LeftDiv=<div className=''></div>
+ 
+    margin-right: 100px;
+ 
+    top: 0;
+    right: 10;
+ 
+    margin-top: 1px;
+    margin-right: 2px;
+ 
+    font-family: tahoma;
+ 
+    line-height: 12px;
+ 
+        position: absolute;
+ 
+    width: 100px;
+ 
+        let let_L=document.getElementById(P01id_Left)
+        alert(let_L!.offsetWidth)
+        let let_R=document.getElementById(P01id_Right)
+        alert(let_R!.offsetWidth)
+ 
+setSS_Is2Panels(true)
+ 
+!
+ 
+setSS_Is2Panels(true)
+ 
+    else{
+        if(let_Right!.offsetWidth===0){
+            let_Left!.setAttribute("style","flex:1");
+            JSX_RightButton=<></>
+        }
+        else{
+            JSX_LeftButton=<></>
+        }
+    }
+ 
+    
+<button onClick={()=>{f_Close(P01id_Right)}}>X</button>
+ 
+JSX_RightButton}
+ 
+//****************************************************************************
+        // let_Resize is in between Left and Right Panels.
+        let let_Resize=document.getElementById(P01id_CResize)
+        
+        // Left Panel
+        let let_Left=document.getElementById(P01id_Left)
+        // Right Panel
+        let let_Right=document.getElementById(P01id_Right)  
+
+        // Minimum Width of Both Panels
+        let let_MinimumWidth=100
+ 
+let_RW=
+ 
+&& SS_Is2Panels===true
+ 
+ if(SS_Is2Panels===true)
+ 
+
+    const [SS_Is2Panels,setSS_Is2Panels] =useState<boolean>(true)
+ 
+    const [SS_InnerMemory,setSS_InnerMemory] = useState<boolean>(false);
+
+    const [SS_Is2Panels,setSS_Is2Panels] =useState<boolean>(true)
+ 
+        if(SS_Is2Panels===true){
+ 
+        setSS_Is2Panels(false)
+ 
+    const letPerson_S:TS_Person[]=[
+        {Name:'Mumu'  , Gender:false, Age: 25},
+        {Name:'CheChe', Gender: true, Age: 22},
+        {Name:'Tata'  , Gender: true, Age: 19}
+    ]
+
+    const JSX_TH_Column_S:JSX.Element[] = letPerson_S.map(Column => <th>{Column.Name+','+Column.Gender.toString()+','+Column.Age.toString()}</th>);
+    const JSX_BUTTON_Column_S:JSX.Element[] = letPerson_S.map(Column=>
+        <td>
+            <div id='C99id_Button'>
+            <button>Edit</button>
+            </div>
+        </td>
+        );
+ 
+<>
+<table id='C99id_Table'>
+<tr>
+    {JSX_TH_Column_S}
+    <th>Edit</th>
+</tr>
+<tr>
+    {JSX_BUTTON_Column_S}
+    <td>-</td>
+</tr>
+
+</table>
+</>
+ 
+/*
+ 
+            if(SS_Is2Panels===true){
+ 
+            if(SS_Is2Panels===true){
+ 
+P01id_Left
+ 
+ocument.
+ 
+    <button>C</button>
+ 
+<button>C</button>
+ 
+-50px
+ 
+
+#P01id_CPanelUp{
+}
+ 
+    margin-top:50px
+ 
+background-color: rgb(100, 163, 205);
+ 
+    background-color: rgb(205, 100, 100);
+ 
+            alert('SS_InnerMemory')
+ 
+<C_Panel Name='Up'/>
+ 
+import _ from 'lodash';
+ 
+<C_Panel Name='Up'/>
+ 
+<C_Panel Name={'Right'}/>
+ 
+<C_Panel Name={'Left'}/>
+{
+// <h1>SS_Delta: {SS_Delta}</h1>
+// <h1>SS_Width: {SS_Width}</h1>
+// <h1>SS_InnerDown: {SS_InnerDown.toString()}</h1>
+// <h1>SS_OuterDown: {SS_OuterDown.toString()}</h1>
+// <h1>SS_InnerMemory: {SS_InnerMemory.toString()}</h1>
+}
+ 
+// Components
+import C_Panel from './Coms/C_Panel'
+ 
++Name
+ 
++Name
+ 
++Name
+ 
++Name
+ 
+Name
+ 
+Name:string
+ 
         // if(let_Up!.offsetHeight<let_MinimumHeight || let_Up!.offsetHeight>let_C!.offsetHeight-100-5){//|| let_Up!.offsetHeight>let_C!.offsetHeight-155){
         //     let let_UH:number
         //     let let_DH:number
